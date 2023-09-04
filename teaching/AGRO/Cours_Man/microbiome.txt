@@ -1,0 +1,23 @@
+Human microbiome aging clocks based on deep learning and tandem of permutation feature importance and accumulated local effects. 
+
+The human gut microbiome is a complex ecosystem that both affects and is affected by its host status.  
+
+Previous analyses of gut microflora revealed associations between specific microbes and host health and disease status, genotype and diet.  
+
+Here, we developed a method of predicting biological age of the host based on the microbiological profiles of gut microbiota using a curated dataset of 1,165 healthy individuals (3,663 microbiome samples).  
+
+Our predictive model, a human microbiome clock, has an architecture of a deep neural network and achieves the accuracy of 3.94 years mean absolute error in cross-validation.  
+
+The performance of the deep microbiome clock was also evaluated on several additional populations.  
+
+We further introduce a platform for biological interpretation of individual microbial features used in age models, which relies on permutation feature importance and accumulated local effects.  
+
+This approach has allowed us to define two lists of 95 intestinal biomarkers of human aging.  
+
+We further show that this list can be reduced to 39 taxa that convey the most information on their host’s aging.  
+
+Overall, we show that (a) microbiological profiles can be used to predict human age; and microbial features selected by models are age-related. 
+
+Gut microbiota is a complex ecosystem that carries multiple important functions in the organism.  
+
+Apart from being a core element of the digestive system, microbiota regulates immunity, processes xenobiotics, produces important metabolites, and even affects higher neural functions.
