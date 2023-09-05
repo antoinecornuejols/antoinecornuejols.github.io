@@ -1,0 +1,469 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Cours Apprentissage automatique et data mining (Introduction)</TITLE>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="User-Agent: Mozilla/3.0Gold (Macintosh; I; PPC)">
+</HEAD>
+<BODY>
+
+<table width="100%" border="0" height="64" bordercolordark="#003399" name="Identit&eacute;">
+  <tr>
+    <td width="63%" height="30">
+      <div align="center"><b><a href="http://www.agroparistech.fr/ufr-info/membres/cornuejols/index.html">Homepage</a></b> </div>
+    </td>
+    <td width="37%" height="30">
+      <div align="center"><img src="../../../ID-photo-USA-08-1.jpg" width="44" height="56"></div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="1" cellspacing = 1 cellpadding = 3>
+  <tr bgcolor="#CCCCFF" align="center">
+    <td width = 16%> <a href="http://www.agroparistech.fr/ufr-info/membres/cornuejols/Research/index.html">Research</a> </td>
+    <td width = 17%>
+      <div align="center"> <a href="http://www.agroparistech.fr/ufr-info/membres/cornuejols/Papers/papers.html">Papers</a> </div>
+    </td>
+    <td width = 17% bgcolor="#FFCCCC">
+      <div align="center"><b><font color="#BF0F00"><a href="http://www.agroparistech.fr/ufr-info/membres/cornuejols/Teaching/index.html">Teaching</a></font></b><font color="#BF0F00"> <br>
+      (mostly in French)</font></div>
+    </td>
+    <td width = 17%> <a href="../Links/intro-links.html">Links</a> </td>
+    <td width = 17%> <a href="../../Contracts/contracts.html">Research contracts</a> </td>
+    <td width = 16%> <a href="../Culture/intro-culture.html">Culture</a> </td>
+  </tr>
+</table>
+<H2 ALIGN=CENTER><FONT COLOR="#1C74BD">Cours IA-Fouille&nbsp; :&nbsp; Apprentissage
+    Artificiel et fouille de donn&eacute;es</FONT></H2>
+
+<CENTER><P>
+<HR WIDTH="100%"><p></P></CENTER>
+<CENTER>
+<!-- <P><font face="Georgia, Times New Roman, Times, serif">Master 2 R (Informatique
+  et Syst&egrave;mes Intelligents)</font></P>
+-->
+</CENTER>
+
+<CENTER>
+  <P><font face="Georgia, Times New Roman, Times, serif">1er semestre 2023-2024</font></P>
+</CENTER>
+
+<CENTER>
+  <P><font face="Georgia, Times New Roman, Times, serif">Enseignants :&nbsp;&nbsp;&nbsp;<b> <font color="#000099">Antoine
+          Cornu&eacute;jols</font></b> et
+      <strong><font color="#000099">Christine Martin</font></strong></font></P>
+</CENTER>
+
+<P>
+<HR WIDTH="100%">
+<p><font color="#CC3333">Derni&egrave;re mise &agrave; jour : &nbsp;<!-- #BeginDate format:En2 -->05-Sept-2023<!-- #EndDate --> 
+  </font></P>
+
+<!-- ==================================================================== -->
+<H3>Organisation du cours :</H3>
+
+<ul>
+        <li><b>&nbsp;Contr&ocirc;le des connaissances</b> : 
+        </li>
+      <ul>
+        <li>&nbsp;4 <strong>quizz</strong> donn&eacute;s en chaque d&eacute;but des cours d'A. Cornu&eacute;jols
+            (sur 5 points chacun) : 12 % de la note finale</li>
+          <li>&nbsp;2 <strong>devoirs &agrave; la maison</strong> pour le cours
+              d'A. Cornu&eacute;jols (sur 10 points chacun) : 6 % + 12 % de la note finale</li>
+
+          <li>&nbsp;1 <strong>Contr&ocirc;le sur table</strong> : 20 % de la note finale</li>
+          <li>&nbsp;1 <strong>Contr&ocirc;le sur table (partie Fouille de donn&eacute;es)</strong> : 50 % de la note finale</li>
+          
+      </ul>
+</ul>
+  <ul>
+    <li>Copie des transparents 
+            du cours accessibles et actualis&eacute;s sur les liens
+       ci-dessous</li>
+    <li>Le <b>livre</b> (pour ceux qui sont int&eacute;ress&eacute;s) &quot;<a href="https://www.editions-eyrolles.com/Livre/9782416001048/apprentissage-artificiel">Apprentissage
+               artificiel : Concepts et algorithmes. De Bayes et Hume au Deep learning. </a>&quot; (V. Barra &amp; A. Cornu&eacute;jols &amp; 
+      L. Miclet. Eyrolles, 2021 ; 4&egrave;me &eacute;dition)</li>
+  </ul>
+
+<!-- ==================================================================== -->
+<H3>Programme pr&eacute;visionnel :</H3>
+<table width="100%" border="1">
+  <tr> 
+    <td width="14%" bgcolor="#CCCCFF"><b><font color="#990000">Dates :</font></b></td>
+    <td width="52%" bgcolor="#CCCCFF"><b><font color="#990000">Programme :</font></b></td>
+    <td width="34%" bgcolor="#CCCCFF"><b><font color="#990000">Devoirs et notes 
+      diverses :</font></b></td>
+  </tr>
+<!-- ==================================================================== -->
+
+<!-- ==================================================================== -->
+  <tr> 
+    <td width="14%" bgcolor="#CCCCFF"> 
+      <p><b>06-09-23</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">1-1-11</font>)</p>
+    </td>
+    
+<!-- ==================================================================== -->
+    <td width="52%" bgcolor="#FFFFFF"> 
+      <p align="right">(<b>Antoine Cornu&eacute;jols</b>)</p>
+      <p>&nbsp;&nbsp;&nbsp;&#8226; <a href="Tr-intro-ML-iodaa-23-23.pdf">Introduction &agrave; l'apprentissage
+          artificiel</a>
+          
+          </p>
+      
+</td>
+    
+    <td width="34%" bgcolor="#FFCCCC">&nbsp;
+    <p><a href="TD-VS-IODAA.pdf">TD fait en classe</a></p>
+   </td>
+  </tr>
+<!-- ==================================================================== -->
+
+<!-- ==================================================================== -->
+  <tr> 
+    <td width="14%" height="120" bgcolor="#CCCCFF"> 
+      <p><b>13-09-23</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">1-1-11</font>)</p>
+    </td>
+    
+<!-- ==================================================================== -->
+    <td width="52%"> 
+      <p align="right">(<b>Antoine Cornu&eacute;jols</b>)</p>
+         <p>&nbsp;&nbsp;&nbsp;&#8226; <a >Les r&eacute;seaux connexionnistes et un peu de th&eacute;orie</a>
+
+    </td>
+    
+    <td width="34%" bgcolor="#FFCCCC"> 
+      <p>Quizz n&deg;1</p>
+ 
+    <p><strong><a href=>Devoir &agrave; la maison</a></strong> <var>&agrave; rendre pour <strong><font color="#FF0000">le 25 septembre</font></strong></var> &agrave; 09h00.</p>
+
+    </td>
+
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCFF">
+      <p><b>25-09-23</b></p>
+      <p align="right">14h00 - 17h15  (<font color="#FF0000">1-1-11</font>)</p>
+    </td>
+    
+    <td bgcolor="#FFFFFF">
+          <p align="right">(<b>Antoine Cornu&eacute;jols</b>)</p>
+          <p>&nbsp;&nbsp;&nbsp;&#8226; <a >Les r&eacute;seaux connexionnistes</a>
+          </p>
+   
+      
+    </td>
+
+    
+<!-- ==================================================================== -->
+    <td bgcolor="#FFCCCC">
+          <p>Quizz n&deg;2</p>
+          <p><a  >Notebook</a></p>
+        <p><a href=><strong><a  >Devoir &agrave; la maison</strong></a> sur
+        les perceptrons multicouche <BLINK><var>&agrave; rendre pour le <strong><font color="#FF0000">8 novembre</font></strong></var></BLINK> sur e-campus</p>
+
+          <p><a  href="https://towardsdatascience.com/the-decade-of-artificial-intelligence-6fcaf2fae473">Quelques jalons sur l'apprentissage automatique durant 2010-2020.</a></p>
+              <p> <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning/">A series of 4 entries in a blog about the history of Neural Networks</a>
+      </p>
+<!--      <p>&nbsp;Quizz n&deg;3 <a href="ISI-3/Quizz_3-students.pdf">(&agrave; pr&eacute;parer)</a></p>
+      <p>- Article sur <a href="http://homepages.cwi.nl/%7Esbohte/publication/paugam_moisy_bohte_SNNChapter.pdf">les &quot;spiking
+      neurons networks&quot;</a></p>
+      <p><strong>Bases de donn&eacute;es</strong> :</p>
+      <p>- <a href="TD-TP/iris.arff">iris.arff</a></p>
+      <p>-&nbsp;<a href="TD-TP/credit.arff">credit.arff</a></p>
+      <p>- <a href="TD-TP/tic-tac-toe.arff">tic-tac-toe.arff</a></p>
+ -->
+
+<!--          <p><strong>Devoir &agrave; la maison</strong> sur
+        les perceptrons multicouche <BLINK><var>&agrave; rendre pour le <strong><font color="#FF0000">15 novembre</font></strong></var></BLINK> par
+        email &agrave; : antoine.cornuejols at agroparistech.fr</p>
+-->
+
+
+
+
+    </td>
+</tr>
+<!-- ==================================================================== -->
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCFF">
+      <p><b>02-10-23</b></p>
+      <p align="right">14h00 - 17h15  (<font color="#FF0000">1-1-11</font>)</p>
+    </td>
+    
+    <td bgcolor="#FFFFFF">
+          <p align="right">(<b>Antoine Cornu&eacute;jols</b>)</p>
+          <p>&nbsp;&nbsp;&nbsp;&#8226; <a >Les r&eacute;seaux de neurones profonds</a>
+          </p>
+          <p>&nbsp;&nbsp;&nbsp;&#8226; <a >R&eacute;seaux de neurones : probl&egrave;mes pratiques</a>
+          <p>&nbsp;&nbsp;&nbsp;&#8226; <a >M&eacute;thodologie d'&eacute;valuation de performance</a>
+          <p>&nbsp;&nbsp;&nbsp;&#8226; <a >Comment comparer des algorithmes</a>
+   
+      
+    </td>
+
+    
+<!-- ==================================================================== -->
+    <td bgcolor="#FFCCCC">
+          <p>Quiz n&deg;3</p>
+            <p>- Article sur <a href="http://arxiv.org/pdf/1206.5538.pdf">les r&eacute;seaux
+      de neurones profonds</a></p>
+            <p>- Article sur <a href="https://arxiv.org/pdf/1803.07870.pdf">le &quot;reservoir
+      computing&quot;</a>, et <a href="https://www.ai.rug.nl/minds/uploads/2508_Lukoseviciusetal12.pdf">un autre</a>, et <a href="Recent-advances-in-physical-reservoir-computing-A-review.pdf">un r&eacute;cent.</p>
+
+
+    </td>
+</tr>
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCFF">
+      <p><b>04-10-23</b></p>
+      <p align="right">14h00 - 17h15  (<font color="#FF0000">1-1-11</font>)</p>
+    </td>
+    
+    <td bgcolor="#FFFFFF">
+          <p align="right">(<b>Antoine Cornu&eacute;jols</b>)</p>
+          <p>&nbsp;&nbsp;&nbsp;&#8226; <a  >Panorama de probl&egrave;mes pratiques</a>
+          </p>
+          <p>&nbsp;&nbsp;&nbsp;&#8226; <a  >L'&eacute;valuation des algorithmes </a>
+          </p>
+          <p>&nbsp;&nbsp;&nbsp;&#8226; <a  >Comparer des algorithmes </a>
+          </p>
+          <p>&nbsp;&nbsp;&nbsp;&#8226; <a  >Les arbres de d&eacute;cision</a>
+          </p>
+   
+      
+    </td>
+
+    
+<!-- ==================================================================== -->
+    <td bgcolor="#FFCCCC">
+          <p>Quiz n&deg;4</p>
+
+
+    </td>
+</tr>
+
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr>
+    <td bgcolor="#CCCCFF">
+      <p><b>05-10-23</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">1-1-11</font>)</p>
+    </td>
+    <td bgcolor="#CCFFCC"><p align="right">(<b>Christine Martin </b>)</p>
+    </p> Cours <p>
+    </td>
+    
+    <td bgcolor="#FFFFFF">
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr>
+    <td bgcolor="#CCCCFF">
+      <p><b>09-10-23</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">1-1-11</font>)</p>
+    </td>
+    <td bgcolor="#CCFFCC"><p align="right">(<b>Christine Martin </b>)</p>
+    </p> Cours <p>
+    </td>
+    
+    <td bgcolor="#FFFFFF">
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr>
+    <td bgcolor="#CCCCFF">
+      <p><b>13-10-23</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">1-1-11</font>)</p>
+    </td>
+    <td bgcolor="#CCFFCC"><p align="right">(<b>Christine Martin </b>)</p>
+    </p> Cours <p>
+    </td>
+    
+    <td bgcolor="#FFFFFF">
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr>
+    <td bgcolor="#CCCCFF">
+      <p><b>16-10-23</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">1-1-11</font>)</p>
+    </td>
+    <td bgcolor="#CCFFCC"><p align="right">(<b>Christine Martin </b>)</p>
+    </p> Cours <p>
+    </td>
+    
+    <td bgcolor="#FFFFFF">
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr>
+    <td bgcolor="#CCCCFF">
+      <p><b>20-10-23</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">1-1-11</font>)</p>
+    </td>
+    <td bgcolor="#CCFFCC"><p align="right">(<b>Christine Martin </b>)</p>
+    </p> Cours <p>
+    </td>
+    
+    <td bgcolor="#FFFFFF">
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  
+
+<!-- ==================================================================== -->
+  <tr> 
+    <td width="14%" bgcolor="#CCCCFF"> 
+      <p><b>09-11-23</b></p>
+      <p align="right">09h00 - 12h00  (<font color="#FF0000">1-1-11</font>)</p></td>
+      
+    <td width="52%" bgcolor="#D3FFFF"><p>&nbsp;&nbsp;<b>Contr&ocirc;le des Connaissances en 3h
+          </b>(salle 1-1-11)</p>
+          
+      <p>&nbsp;&nbsp;<u>Remarque</u> : Le contr&ocirc;le comportera une partie
+        sur l'apprentissage et une partie sur la fouille de donn&eacute;es. <a >Une
+        partie du contr&ocirc;le sur l'apprentissage
+        sera donn&eacute;e en avance pour aider &agrave; pr&eacute;parer
+        le contr&ocirc;le</a>. </p></td>
+        
+<!-- ==================================================================== -->
+    <td width="34%" bgcolor="#D3FFFF">
+      <p>&nbsp</p>
+     <p><a   href="">Vue partielle du contr&ocirc;le des connaissances (partie sur l'apprentissage</a> (A. Cornu&eacute;jols))</p>
+ 
+    
+      <p>&nbsp</p>
+      </td>
+      
+  </tr>
+
+
+<!-- ==================================================================== -->
+
+<!-- ==================================================================== -->
+</table>
+<H3>&nbsp;</H3>
+<h3>Sources bibliographiques et url :</h3>
+<ul>
+  <li>&nbsp;V. Barra &amp; Cornu&eacute;jols A. &amp; Miclet L. : <u>Apprentissage
+               artificiel : Concepts et algorithmes. De Bayes et Hume au Deep learning</u>. Eyrolles, 2021<br>
+  &nbsp; (L'ouvrage de r&eacute;f&eacute;rence)</li>
+</ul>
+<p><strong>Livres sur l'apprentissage artificiel en g&eacute;n&eacute;ral</strong> :</p>
+<ul>
+  <li> &nbsp;Barber D. :<u> Bayesian Learning and Machine Learning</u>. Cambridge
+    University Press,
+    2012.<br>
+    &nbsp;(Un livre tr&egrave;s bien fait dans une perspective bay&eacute;sienne.)
+</ul>
+<ul>
+  <li> &nbsp;Duda, Hart &amp; Stork :<u> Pattern classification</u> (2nd &eacute;d.).
+    Wiley-Interscience, 2001.<br>
+&nbsp;(Orient&eacute; sur la reconnaissance de formes. Des graphiques exemplaires.
+Une r&eacute;f&eacute;rence)
+</ul>
+<ul>
+  <li>&nbsp;Flach P. : <u>Machine Learning. The art and science of algorithms
+        that make sense of data</u>.
+      Cambridge University Press, 2012.<br>
+&nbsp;(Un tr&egrave;s bon livre d'introduction &agrave; l'apprentissage artificiel. Ne couvre
+  pas vraiment la fouille de donn&eacute;es.)</li>
+</ul>
+<ul>
+  <li>&nbsp;Hand, Mannila &amp; Smyth : <u>Data mining</u>. Springer, 2001.<br>
+    &nbsp;(Livre assez complet, mais n&eacute;cessairement plus superficiel car couvrant aussi la fouille de donn&eacute;es)</li>
+</ul>
+<ul>
+  <li>&nbsp;Hastie, Tibshirani &amp; Friedman : <u>The elements of statistical 
+    learning. Data mining, inference and prediction</u>. Springer, 2001.<br>
+    &nbsp;(Un peu difficile, mais tr&egrave;s informatif. Une typographie exemplaire. 
+    Un livre technique en couleurs !)</li>
+</ul>
+<ul>
+  <li>&nbsp;Haykin S. : <u>Neural netwoks. A comprehensive foundation</u>. Prentice 
+    Hall, 1999.<br>
+  &nbsp;(Une somme incroyable)</li>
+</ul>
+ <ul>
+  <li>&nbsp;Haykin S. : <u>Neural netwoks and Learning Machines</u>. Prentice
+    Hall, 2008.<br>
+&nbsp;(Toujours remarquable)
+  </li>
+</ul>
+<ul>
+  <li> &nbsp;Mitchell T. : <u>Machine Learning</u>. McGraw Hill, 1997. <br>
+    &nbsp; (Un bon livre d'introduction, mais qui &agrave; date)</li>
+</ul>
+<ul>
+  <li> &nbsp;Marsland S. : <u>Machine Learning. An algorithmic perspective</u>.
+    CRC Press, 2009. <br>
+    &nbsp; (Un livre d'introduction, assez superficiel, avec des bouts de code en Python.)</li>
+</ul>
+<ul>
+  <li> &nbsp;Murphy S. : <u>Machine Learning. A probabilistic perspective</u>.
+    MIT Press, 2012. <br>
+&nbsp; (Le titre dit tout. Un livre incroyablement complet dans une perspective
+bay&eacute;sienne.)</li>
+</ul>
+<p><strong></strong></p>
+<p><strong>Livres portant sur des sujets sp&eacute;cifiques</strong> :</p>
+<ul>
+  <li>&nbsp;Bishop C. : <u>Neural networks for pattern recognition</u>. Clarendon 
+    Press, 1995.<br>
+&nbsp;(Un bon livre d'introduction. Orient&eacute; vers les r&eacute;seaux 
+    de neurones, mais discute des probl&egrave;mes importants en apprentissage
+    artificiel)
+  </li>
+</ul>
+<ul>
+  <li>&nbsp;Cristianini N. &amp; Shawe-Taylor J. : <u>Support Vectors Machines
+      and other kernel-based learning methods</u>. Cambridge University Press,
+      2000.</li>
+</ul>
+<ul>
+  <li>Dreyfus, Martinez, Samuelides, Gordon, Badran Thiria : <u>Apprentissage statistique</u>. <br>
+  (Porte sur l'apprentissage par r&eacute;seaux de neurones, malgr&eacute; le titre laissant entendre une port&eacute;e plus g&eacute;n&eacute;rale).</li>
+</ul>
+<ul>
+  <li>&nbsp;Webb A. : <u>Statistical pattern recognition</u>. Arnold, 1999.<br>
+    &nbsp;(Un livre d'introduction simple et de bon aloi. Injustement trop peu 
+    mentionn&eacute;) <br>
+  </li>
+</ul>
+<p><strong>Liens Internet</strong> :</p>
+<ul>
+  <li>&nbsp;<a href="http://www.ai.univie.ac.at/oefai/ml/ml-resources.html">http://www.support-vector.net</a><br>
+    &nbsp; (Un point d'entr&eacute;e sur les machines &agrave; vecteurs de support)</li>
+</ul>
+<ul>
+  <li>&nbsp;<a href="http://www.ai.univie.ac.at/oefai/ml/ml-resources.html">http://www.ai.univie.ac.at/oefai/ml/ml-resources.html</a><br>
+    &nbsp; (Un site recensant de tr&egrave;s nombreuses ressources en Apprentissage 
+    Artificiel)</li>
+</ul>
+<H3>&nbsp;</H3>
+<!-- 
+<h3>Propositions de stages :</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+-->
+</BODY>
+</HTML>
