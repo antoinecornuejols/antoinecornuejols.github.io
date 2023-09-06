@@ -1,0 +1,308 @@
+\documentclass[a4paper, french]{article}
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}   		% A utiliser pour la mise en page finale et les guillemets
+\usepackage{lmodern}          % fortement conseillé pour les pdf. On peut mettre autre chose : kpfonts, fourier,...
+
+\usepackage{array}
+\usepackage{slashbox,booktabs,amsmath}
+\usepackage{graphics}
+\usepackage{color}
+\usepackage{xcolor,colortbl}
+
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{Gray}{gray}{0.95}
+
+\newcolumntype{a}{>{\columncolor{Gray}}c}
+
+
+\title{Le titre en français}
+\author{A. Author}
+\date{\today}
+
+\begin{document}       % C'est ici que ça commence vraiment
+
+\maketitle
+
+% ------------------------------------------------------------------------------------------------
+\begin{abstract}
+Ici, c'est la place du résumé
+\end{abstract}
+% ------------------------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+Le problème \ldots
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Tableaux}
+\label{sec:tableaux}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+Notre démarche\footnote{Inspirée par celle d'Einstein en 1905.} \ldots telle que décrite dans la section \ref{sec:intro}.
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Des exemples de tableaux}
+% ------------------------------------------------------------------------------------------------
+
+
+
+\begin{center}
+\begin{tabular}{rl}
+$x_1$ &{\em vole}\\
+$x_2$ &{\em a des plumes}\\
+$x_3$ &{\em pond des \oe ufs}\\
+$x_4$ &{\em mammif\`{e}re}\\
+$x_5$ &{\em nage sous l'eau}\\
+\end{tabular}
+\end{center}
+
+Sur cette représentation, un ensemble d'objets  ${\cal S} = \{s_1, s_2, s_3, s_4\}$ peut être décrit par le tableau suivant :
+
+
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c||l}
+
+& $x_1$ & $x_2$ & $x_3$ & $x_4$ & $x_5$ & {\tt commentaire}\\
+ \hline \hline
+$s_1$&$1$ &$1$ &$1$& $0$ & $0$&{\tt oie}\\
+\hline
+$s_2$&$0$ &$0$ &$1$& $1$ &$1$&{\tt ornithorynque}\\
+\hline
+$s_3$&$1$ &$0$ &$0$& $1$ &$0$&{\tt rhinolophe}\\
+\hline
+$s_4$&$1$ &$1$ &$1$& $0$& $0$&{\tt cygne}\\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+\begin{center}
+\begin{tabular}{|l||c|}
+\hline
+Description & \'Etiquette \\
+\hline \hline
+1 grand carré rouge & $-$ \\
+\hline
+1 grand carré vert & + \\
+\hline
+2 petits carrés rouges & + \\
+\hline
+2 grands cercles rouges & $-$ \\
+\hline
+1 grand cercle vert & + \\
+\hline
+1 petit cercle rouge & + \\
+\hline
+1 petit carré vert & $-$ \\
+\hline
+1 petit carré rouge & + \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|clll||a|}
+\hline
+\rowcolor{LightCyan}
+{\color{blue}\textbf{Nb}} & {\color{blue}\textbf{Taille}}  & {\color{blue}\textbf{Forme}}  & {\color{blue}\textbf{Couleur}}  & \textbf{\'Etiquette} \\
+\hline \hline
+1 & grand & carré & rouge & $-$ \\
+\hline
+1 & grand & carré & vert & \textbf{+} \\
+\hline
+2 & petit & carré & rouge & \textbf{+} \\
+\hline
+2 & grand & cercle & rouge & $-$ \\
+\hline
+1 & grand & cercle & vert & \textbf{+} \\
+\hline
+1 & petit & cercle & rouge & \textbf{+} \\
+\hline
+1 & petit & carré & vert & ${\mathbf -}$ \\
+\hline
+1 & petit & carré & rouge & \textbf{+} \\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+Négatif : (\textit{petit} \& \textit{vert})  $\vee$ (\textit{grand} \& \textit{rouge})
+
+\medskip
+Positif : (\textit{grand} \& \textit{vert})  $\vee$ (\textit{petit} \& \textit{rouge})
+
+\smallskip
+Positif (plus spécifique) : (\textit{grand} \& \textit{carré) \& }\textit{vert})  $\vee$ (\textit{1} \& \textit{petit} \& \textit{rouge}) $\vee$ (\textit{2} \& \textit{petit} \& \textit{carré} \& \textit{rouge})
+
+
+\begin{center}
+\begin{tabular}{|clll||a|}
+\hline
+\rowcolor{LightCyan}
+{\color{blue}\textbf{Nb}} & {\color{blue}\textbf{Taille}}  & {\color{blue}\textbf{Forme}}  & {\color{blue}\textbf{Couleur}}  & \textbf{\'Etiquette} \\
+\hline \hline
+1 & grand & carré & rouge & $-$ \\
+\hline
+1 & grand & carré & vert & \textbf{+} \\
+\hline
+2 & petit & carré & rouge & \textbf{+} \\
+\hline
+2 & grand & cercle & rouge & $-$ \\
+\hline
+1 & grand & cercle & vert & \textbf{+} \\
+\hline
+1 & petit & cercle & rouge & \textbf{+} \\
+\hline
+1 & petit & carré & vert & ${\mathbf -}$ \\
+\hline
+1 & petit & carré & rouge & \textbf{+} \\
+\hline \hline
+2 & petit & cercle & rouge & \textbf{?} \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{|clll||a|}
+\hline
+\rowcolor{LightCyan}
+{\color{blue}\textbf{Nb}} & {\color{blue}\textbf{Taille}}  & {\color{blue}\textbf{Forme}}  & {\color{blue}\textbf{Couleur}}  & \textbf{\'Etiquette} \\
+\hline \hline
+1 & grand & carré & rouge & $-$ \\
+\hline
+1 & grand & carré & vert & \textbf{+} \\
+\hline
+2 & petit & carré & rouge & \textbf{+} \\
+\hline
+2 & grand & cercle & rouge & $-$ \\
+\hline
+1 & grand & cercle & vert & \textbf{+} \\
+\hline
+1 & petit & cercle & rouge & \textbf{+} \\
+\hline
+1 & petit & carré & vert & ${\mathbf -}$ \\
+\hline
+1 & petit & carré & rouge & \textbf{+} \\
+\hline \hline
+2 & petit & cercle & vert & \textbf{?} \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{|clll||a|}
+\hline
+\rowcolor{LightCyan}
+{\color{blue}\textbf{Nb}} & {\color{blue}\textbf{Taille}}  & {\color{blue}\textbf{Forme}}  & {\color{blue}\textbf{Couleur}}  & \textbf{\'Etiquette} \\
+\hline \hline
+1 & grand & carré & rouge & $-$ \\
+\hline
+1 & grand & carré & vert & \textbf{+} \\
+\hline
+2 & petit & carré & rouge & \textbf{+} \\
+\hline
+2 & grand & cercle & rouge & $-$ \\
+\hline
+1 & grand & cercle & vert & \textbf{+} \\
+\hline
+1 & petit & cercle & rouge & \textbf{+} \\
+\hline
+1 & petit & carré & vert & ${\mathbf -}$ \\
+\hline
+1 & petit & carré & rouge & \textbf{+} \\
+\hline \hline
+1 & - & cercle & - & \textbf{?} \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\bigskip
+
+Supposons que nous considérions une tâche de discrimination entre deux classes, et qu'après apprentissage, on observe sur un ensemble de test constitués de 105 exemples positifs et 60 exemples négatifs, les performances suivantes :
+
+\medskip
+Remarque : on a besoin des packages : \texttt{array} et \texttt{slashbox}
+
+\bigskip
+SVM : 
+%\begin{center}
+\setlength\extrarowheight{2pt}
+\begin{tabular}{|c||c|c|}
+    \hline
+\backslashbox{\textit{Estim\'e}}{\textit{Réel}}
+& \textbf{$+$} & \textbf{$-$} \\
+\hline\hline
+\textbf{$+$} & 94  & 37\\
+\hline
+\textbf{$-$} & 11 & 23 \\
+\hline
+\end{tabular}
+%\end{center}
+\hspace{1cm}
+Bayésien naïf : 
+\setlength\extrarowheight{2pt}
+\begin{tabular}{|c||c|c|}
+    \hline
+\backslashbox{\textit{Estim\'e}}{\textit{Réel}}
+& \textbf{$+$} & \textbf{$-$} \\
+\hline\hline
+\textbf{$+$} & 72  & 29\\
+\hline
+\textbf{$-$} & 33 & 31 \\
+\hline
+\end{tabular}
+
+\bigskip
+Apparemment, le système SVM (voir chapitre \ref{chap.kernels}) est plus performant sur cette tâche, puisque son taux d'erreur est de : $\frac{11 + 37}{165} = 0.29$ au lieu de $\frac{29 + 33}{165} = 0.375$ pour le classifieur bayésien naïf (voir chapitre \ref{Chap-theorie}). Pourtant, ce critère d'erreur n'est peut-être pas celui qui nous intéresse en priorité.
+
+
+\bigskip
+
+\begin{table}[htbp]%[htbp]   h : placer la figure ici
+% Sinon la figure sera placée en haut de la page suivante (t) ou en bas (b), voire sur une page seule (p)
+\begin{tabular}{llllll}
+\toprule
+\textbf{Date} &\makebox[3em]{5/31}&\makebox[3em]{6/1}&\makebox[3em]{6/2}
+&\makebox[3em]{6/3}&\makebox[3em]{6/4}\\
+\midrule
+\textbf{Room} &&&&&\\
+Meeting Room &&&&&\\
+Auditorium &&&&&\\
+Seminar Room &&&&&\\
+\bottomrule
+\end{tabular}
+\caption{Room availability \textit{vs} dates.}
+\end{table}
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Et maintenant quelques figures}
+% ------------------------------------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Résultats}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Conclusion}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+\end{document}
