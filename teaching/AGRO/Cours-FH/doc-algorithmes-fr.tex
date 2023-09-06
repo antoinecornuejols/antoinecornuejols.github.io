@@ -1,0 +1,252 @@
+\documentclass[a4paper, french]{article}
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}   		% A utiliser pour la mise en page finale et les guillemets
+\usepackage{lmodern}          % fortement conseillé pour les pdf. On peut mettre autre chose : kpfonts, fourier,...
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[french,boxed,ruled,lined]{algorithm2e}
+
+\newcommand{\Prob}{\textbf{\textsf{\textup{P}}}}  % Probability over a set
+\newcommand{\prob}{\textbf{\textsf{\textup{p}}}}  % Probability density
+
+
+\title{Le titre en français}
+\author{A. Author}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% ------------------------------------------------------------------------------------------------
+\begin{abstract}
+Ici, c'est la place du résumé
+\end{abstract}
+% ------------------------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+Le problème \ldots
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Méthode}
+\label{sec:methode}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+Notre démarche\footnote{Inspirée par celle d'Einstein en 1905 \cite{einstein1905electrodynamics}.} \ldots telle que décrite dans la section \ref{sec:intro}.
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Quelques équations}
+% ------------------------------------------------------------------------------------------------
+
+Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and
+identically distributed random variables with
+$\operatorname{E}[X_i] = \mu$ and
+$\operatorname{Var}[X_i] = \sigma^2 < \infty$, and let
+\begin{equation*}
+S_n = \frac{1}{n}\sum_{i}^{n} X_i
+\end{equation*}
+denote their mean. Then as $n$ approaches infinity, the
+random variables $\sqrt{n}(S_n - \mu)$ converge in
+distribution to a normal $N(0, \sigma^2)$.
+
+% bonus points: the N for normal is usually set in a caligraphic
+% font; you can get this using $\mathcal{N}(0, \sigma^2)$.
+
+\subsubsection{Equations sur plusieurs lignes}
+% ------------------------------------------------------------------------------------------------
+
+\subsubsection{Equations avec alignement (et référence interne)}
+% ------------------------------------------------------------------------------------------------
+
+\begin{equation}
+\label{eq-h-reelle-optimale}
+\begin{split}
+h^{\star} \; &= \; \operatornamewithlimits{ArgMin}_{h \in \cal{H}}\; R_{\text{Réel}}(h) \\
+&= \;
+\operatornamewithlimits{ArgMin}_{h \in \cal{H}}\; \int_{\mathbf{x} \in {\cal X}, y \in {\cal Y}} \ell(h(\mathbf{x}), y) \; \prob_{{\cal X}{\cal Y}} \; d\mathbf{x} dy
+\end{split}
+\end{equation}
+
+\subsubsection{Equations avec conditions}
+% ------------------------------------------------------------------------------------------------
+
+\begin{equation}
+l(u_{i},h({\mathbf x}_{i})) =
+\begin{cases}
+\;\; 0 & \text{si $u_{i} = h({\mathbf x}_{i})$}  \\
+\;\; 1 & \text{si $u_{i} \neq h({\mathbf x}_{i})$}
+\end{cases}
+\end{equation}
+
+
+\subsubsection{Equations avec parenthèses en-dessous}
+% ------------------------------------------------------------------------------------------------
+
+\begin{equation}
+R_{\text{Réel}}(h^{\star}_{\cal S}) - R^{\star} \; = \; \underbrace{\bigl[R_{\text{Réel}}(h^{\star}_{\cal S}) - R_{\text{Réel}}(h^{\star}) \bigr]}_{\text{Erreur d'estimation}} \; + \; \underbrace{\bigl[R_{\text{Réel}}(h^{\star}) - R^{\star} \bigr]}_{\text{Erreur d'approximation}}
+\end{equation}
+
+
+\subsubsection{Equations avec noms de fonctions : log, ...}
+% ------------------------------------------------------------------------------------------------
+
+\begin{equation*}
+h^{\star} \;\; = \;\; \operatornamewithlimits{ArgMin}_{h \in {\cal H}}
+      \bigl\{ - \log \prob_{\cal H}(h) - \log {\prob}_{{{\cal Z}^m}|{\cal H}=h}({\cal S}_m) \bigr\}
+\end{equation*}
+
+
+\subsubsection{Equations encadrées}
+% ------------------------------------------------------------------------------------------------
+
+\begin{equation}
+\addtolength{\fboxsep}{2pt}
+%\addtolength{\fboxrule}{5pt}
+\boxed{~~~
+R_{\text{Emp}}(h) \; = \; \frac{1}{m} \, \sum_{i=1}^{m} \ell(h({\mathbf x}_i, u_i)) 
+~~~}
+\end{equation}
+
+
+\subsubsection{Autres exemples}
+% ------------------------------------------------------------------------------------------------
+
+D'où l'on tire facilement que : $\varepsilon \; = \; \sqrt{\frac{\log{|{\cal H}|} + \log{\frac{1}{\delta}}}{2 \, m}}$, c'est-à-dire que :
+\begin{equation*}
+\label{eq-cvgce-normale}
+\forall h \in {\cal H}, \forall \delta \leq 1 : \;\;\;\; P^m\Biggl[R_{\text{Réel}}(h) \; \leq \; R_{\text{Emp}}(h) \; + \; \sqrt{\frac{\log{|{\cal H}|} + \log{\frac{1}{\delta}}}{2 \, m}} \, \Biggr] \; > \; 1 - \delta
+\end{equation*}
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Algorithmes}
+% ------------------------------------------------------------------------------------------------
+
+
+\subsubsection{Algorithme du Perceptron version stochastique}
+% ------------------------------------------------------------------------------------------------
+
+\begin{algorithm}
+\dontprintsemicolon
+\Deb{
+ Prendre ${\mathbf a}_{(0)}$  et $\alpha$ positif quelconques \;
+$t \leftarrow 0$ \;
+\Tq{$t \leq t_{max}$}{
+    tirer au hasard une donn\'{e}e d'apprentissage ${\mathbf x}$ \;
+    \eSi{${\mathbf x}$ est bien class\'{e}}{
+        ${\mathbf a}_{t+1} \leftarrow {\mathbf a}_{t}$ \;}
+     {
+         \eSi{$ {\mathbf x} \in \omega_1$}{
+              ${\mathbf a}_{t+1}\leftarrow {\mathbf a}_{t} +  \alpha
+{\mathbf x} $ \;}
+{
+${\mathbf a}_{t+1}\leftarrow {\mathbf a}_{t} -  \alpha
+{\mathbf x} $ \;
+}
+}
+$t \leftarrow t+1$ \;
+}
+}
+\caption{{\bf Le perceptron, version stochastique}}
+\label{percep.stoch}
+\end{algorithm}
+
+
+\subsubsection{Algorithme de l'espace des versions}
+% ------------------------------------------------------------------------------------------------
+
+\begin{algorithm}[ht!]
+\dontprintsemicolon
+%\begin{small}
+\Res{
+Initialiser $G$ comme l'hypoth\`ese la plus
+g\'en\'erale de
+${\mathcal H}$ \;
+Initialiser $S$ comme l'hypoth\`ese la moins
+g\'en\'erale de
+${\mathcal H}$ \;
+\PourCh{exemple ${\mathbf  x}$}{
+\eSi{${\mathbf  x}$ est un exemple positif}{
+    Enlever de $G$ toutes les hypoth\`eses  qui ne couvrent pas ${\mathbf 
+x}$ \;
+\PourCh{hypoth\`ese $s$ de $S$ qui ne couvre pas ${\mathbf  x}$}{
+Enlever $s$ de $S$ \;
+{\tt G\'en\'eraliser}($s$,${\mathbf  x}$,$S$) \;
+c'est-\`a-dire : ajouter \`a $S$ toutes les g\'en\'eralisations
+minimales $h$ de $s$ telles que : \;
+\hspace{1cm} $\bullet$ $h$ couvre ${\mathbf  x}$ et \;
+\hspace{1cm} $\bullet$ il existe dans $G$ un \'el\'ement plus
+g\'en\'eral que $h$ \;
+Enlever de $S$ toute  hypoth\`ese plus g\'en\'erale qu'une autre
+hypoth\`ese de
+$S$ \;
+}}
+{
+\cc{${\mathbf  x}$ est un exemple n\'egatif}
+Enlever de $S$ toutes les hypoth\`eses qui couvrent  ${\mathbf  x}$ \;
+\PourCh{hypoth\`ese $g$ de $G$ qui  couvre  ${\mathbf  x}$}{
+Enlever $g$ de $G$ \;
+{\tt Sp\'ecialiser}($g$,${\mathbf  x}$,G) \;
+c'est-\`a-dire : ajouter \`a $G$ toutes les sp\'ecialisations
+maximales $h$ de $g$ telles que : \;
+\hspace{1cm} $\bullet$ $h$ ne couvre pas ${\mathbf  x}$ et \;
+\hspace{1cm} $\bullet$ il existe dans $S$ un \'el\'ement plus
+sp\'ecifique que $h$ \;
+Enlever de $G$ toute  hypoth\`ese plus sp\'ecifique qu'une autre
+hypoth\`ese de
+$G$ \;
+}
+}
+}
+}
+\caption{{\bf Algorithme d'\'elimination des candidats.}
+\index{algorithme d'\'elimination des candidats}}
+\label{algo:elim:cand}
+%\end{small}
+\end{algorithm}
+
+
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Résultats}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Conclusion}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+
+
+\bibliography{mybib}{}
+\bibliographystyle{plain}
+
+%\bibliographystyle{abbrv}
+%\bibliographystyle{acm}
+%\bibliographystyle{alpha}
+%\bibliographystyle{amsplain}
+%\bibliographystyle{annotate}
+
+
+\end{document}
+
+
+
