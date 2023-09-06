@@ -1,0 +1,1103 @@
+\documentclass[a4paper, french]{article}
+%\documentclass[a4paper,french,twocolumn]{article}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\oddsidemargin}{-46pt}
+\setlength{\marginparwidth}{0cm}
+
+% !TEX encoding = UTF-8 Unicode
+
+\usepackage[utf8]{inputenc}%              encodage␣du␣fichier␣source
+
+\usepackage[T1]{fontenc}%                  gestion␣des␣accents␣(pour␣les␣pdf)
+\usepackage[francais]{babel}%             autres␣:␣english,␣greek,␣etc.
+\usepackage{textcomp}%                      caracteres␣additionnels
+\usepackage{amsmath,amssymb,amsfonts}  %      pour␣les␣maths
+\usepackage{lmodern}%                        variantes␣:␣txfonts,␣fourier,␣etc.
+%\usepackage[a4paper]{geometry}%       taille␣correcte␣du␣papier
+\usepackage{graphicx}%                        pour␣inclure␣des␣images
+\usepackage{color}
+\usepackage{xcolor,colortbl}%                pour␣gerer␣les␣couleurs
+\usepackage{microtype}%
+\usepackage{makeidx} %                       pour créer un index
+
+\usepackage[french,boxed,ruled,lined]{algorithm2e}
+
+\usepackage{verbatim}
+\usepackage{listings}
+
+\usepackage{framed}
+
+\usepackage{array}
+\usepackage{slashbox,booktabs,amsmath}
+
+\usepackage{url}
+%\usepackage[authoryear,square,sort&compress]{natbib}
+%\usepackage{enumerate}
+\usepackage[noindentafter]{titlesec}  % L'option noindentafter ne marche pas
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{.1cm}
+\setlength{\itemsep}{1cm}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+
+
+
+%\newenvironment{itemize}
+%{\begin{list}{}
+%	{\setlength\itemsep{1cm}}}
+%	{\end{list}}
+
+
+\newcommand{\Prob}{\textbf{\textsf{\textup{P}}}}  % Probability over a set
+\newcommand{\prob}{\textbf{\textsf{\textup{p}}}}  % Probability density
+\newcommand{\Reel}{\mathbb{R}}  % l'ensemble des rels
+\def\Real{\textrm{I\kern-0.21emR}} %idem mais sans doublage de la boucle
+\newcommand{\Esp}{\mathbb E}     %Esperance
+
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{Gray}{gray}{0.95}
+
+\newcolumntype{a}{>{\columncolor{Gray}}c}
+
+\lstnewenvironment{code-latex}[1][]{
+\lstset{
+xleftmargin=2em,%␣espace␣a␣gauche
+xrightmargin=2em,%␣espace␣a␣droite
+aboveskip=\topsep,%␣espace␣au-dessus
+belowskip=\topsep,%␣espace␣en-dessous
+frame=single,
+rulecolor=\color{green!5},
+backgroundcolor=\color{green!5},
+upquote=true,
+columns=flexible,
+basicstyle=\ttfamily,
+language={[LaTeX]TeX},
+texcsstyle=*\color{blue},
+commentstyle=\color{gray},
+moretexcs={abslabeldelim,setlength,abstitleskip},
+#1
+} }{}
+
+\newcommand{\reel}{\mathbb{R}}  % l'ensemble des rels
+\newcommand{\reeld}[1]{\reel^{#1}}  % l'ensemble des rels a #1 dimensions  E.g. \reeld{3}
+
+\makeindex
+
+
+\begin{document}
+
+\begin{center}
+\large
+AgroParisTech ~~  DA - IODAA  \medskip\\ 
+\Large
+{\bf TP  << Prise en main >>  de  \textit{\LaTeX}} \\ %\smallskip\\
+%\vspace{0.4cm}
+%\Large{2007-2008}\\
+\vspace{0.4cm}
+\small
+\url{http://www.agroparistech.fr/ufr-info/membres/cornuejols/Teaching/AGRO/Cours-FH/iodaa-cours-FH.html}
+%\large{(20 juin 2013)}
+\end{center}
+\hrule
+%\maketitle
+
+%\section{Recommandations}
+\noindent
+
+
+%\bigskip
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Introduction} 
+\label{sec_intro}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Pourquoi \LaTeX} 
+% ------------------------------------------------------------------------------------------------
+
+\subsubsection{Historique} 
+% ------------------------------------------------------------------------------------------------
+
+\begin{enumerate}
+
+   \item Langage TEX créé par Donald Knuth à partir de 1977. Un travail énorme réalisé avec des typographes. Permet de créer des documents d’une très grande qualité. Mais d’accès très difficile.
+
+   \item Développement de LaTeX, une surcouche de TEX, par Leslie Lamport en 1985.
+
+   \item Dernier développement : LaTeX$\epsilon$.
+
+\end{enumerate}
+
+
+\subsubsection{Utilisations} 
+% ------------------------------------------------------------------------------------------------
+
+Depuis le milieu des années 1980, \LaTeX ~est utilisé dans les communautés académiques en mathématiques, physique et informatique notamment.
+
+L'utilisation de \LaTeX ~devient de plus en plus obligatoire dans les milieux académiques des <<~sciences dures~>> et pour la rédaction d'articles scientifiques. Mais reste malgré tout assez confidentiel. (voir section \ref{sec_intro}).
+
+Un vecteur favorisant son utilisation plus large est la plate-forme de travail collaboratif Overleaf. 
+
+
+\subsubsection{Principes de base} 
+% ------------------------------------------------------------------------------------------------
+
+\begin{itemize}
+   \item Compilation
+   \item Séparation fond de la forme
+   \item Grande base de développeurs et accès public
+   \item Nombreuses bibliothèques spécialisées : math, graphiques, automates, beamer, …
+\end{itemize}
+
+
+\subsubsection{Avantages} 
+% ------------------------------------------------------------------------------------------------
+
+\begin{itemize}
+   \item Portabilité : multi-plateformes. Peu d’incompatibilités entre versions. Légèreté du document source.
+   \item Gratuité
+   \item Très large base de développeurs
+   \item Beaucoup d’éditeurs, de revues et de conférences demandent ce format
+   \item Très pratique pour la rédaction d’ouvrages ou de gros rapports
+   \item Très bonne finition
+\end{itemize}
+
+
+
+\subsubsection{Inconvénients} 
+% ------------------------------------------------------------------------------------------------
+
+\begin{itemize}
+   \item Accès difficile même pour un document simple.
+   \item Demande beaucoup de temps dès que l’on veut faire des choses nouvelles et un peu sophistiquées
+   \item Pas toujours facile de contrôler l’aspect car le système « décide » de la mise en page. 
+   \item Pas WYSIWIG mais avec les compilateurs modernes, ce n’est pas un problème
+\end{itemize}
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Installation de \LaTeX} 
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+ 
+ Utiliser TeXMaker qui est multi plate-formes.
+ 
+ % ------------------------------------------------------------------------------------------------
+\subsection{Le compilateur} 
+% ------------------------------------------------------------------------------------------------
+
+\begin{itemize}
+   \item Sous Windows 	: MikTEX ( ?)
+   \item Sous Linux 	: TEXLive ( ?)
+   \item Sous Mac OS X	: MacTEX (basé sur TeX Live)
+\end{itemize}
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{L'éditeur de texte} 
+% ------------------------------------------------------------------------------------------------
+
+\begin{itemize}
+   \item Sous Windows : MikTEX ( ?)
+   \item Sous Linux : TEXLive ( ?)
+   \item Sous Mac OS X : TeXshop
+\end{itemize}
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Premier contact} 
+\label{sec:intro}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Un premier fichier minimal} 
+% ------------------------------------------------------------------------------------------------
+
+Tapez ce qui suit dans votre éditeur de texte et compilez.
+
+\begin{code-latex}[language={[LaTeX]TeX}]
+\documentclass{article}
+\begin{document}
+Hello World! % your content goes here...
+\end{document}
+\end{code-latex}
+
+Vous pouvez aussi vous reporter au fichier \texttt{exemple-1.tex}.
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Compilation} 
+% ------------------------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Commandes} 
+% ------------------------------------------------------------------------------------------------
+
+Les signes \$, \#, \{, \} et \& ont une signification particulière pour le compilateur LaTeX. Si vous voulez les utilisez dans du texte, vous devez les « échapper ». en les faisant précéder d’un $\backslash$.
+
+Taper le texte : 
+
+\begin{quotation}
+In March 2006, Congress raised that ceiling an additional \$0.79 trillion to \$8.97 trillion, which is approximately 68\% of GDP. As of October 4, 2008, the $\backslash$Emergency Economic Stabilization Act of 2008" raised the current debt ceiling to \$11.3 trillion.
+\end{quotation}
+
+Les espaces sont agrégés.
+
+Qu’en est-il des accents ?
+
+\begin{itemize}
+   \item Les accents avec $\backslash$
+   \item Le problème de l’encodage des textes. Utiliser utf8. (et donc la commande qui va avec : \begin{verbatim}\usepackage[utf8]{inputenc}  
+   % compatible mac osx, Linux et windows (si celui-ci est assez récent) \end{verbatim}
+). 
+\end{itemize}
+
+%Voir dans le petit document de base : \verb"\texttt, \textit, \textbf", ... 
+
+Voir dans le petit document de base : {\color{blue}\lstinline$\texttt, \textit, \textbf$}, ... 
+
+Les lignes de commentaires commencent par un \%
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Itemize et enumerate} 
+% ------------------------------------------------------------------------------------------------
+
+Sans oublier que ces environnements peuvent être imbriqués. 
+
+\medskip
+\textbf{Exercice} :
+
+\'Ecrire le code \LaTeX permettant d'obtenir les listes imbriquées suivantes :
+
+\begin{enumerate}
+   \item Première liste :
+   \begin{itemize}
+      \item \'Elément 1
+      \item \'Elément 2
+   \end{itemize}
+   \item Deuxième liste
+   \begin{itemize}
+      \item \'Elément A
+      \item \'Elément B 
+      \item Élément C
+\end{itemize}
+
+\end{enumerate}
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{\'Ecrire des équations} 
+\label{sec_equation}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+Un premier exemple de texte impliquant des expressions mathématiques et des équations :
+
+\begin{framed}
+Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with
+$\operatorname{E}[X_i] = \mu$ and
+$\operatorname{Var}[X_i] = \sigma^2 < \infty$, and let
+\begin{equation}
+S_n = \frac{1}{n}\sum_{i}^{n} X_i
+\label{eq-un}
+\end{equation}
+denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n} (S_n - \mu)$ converge in
+distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+\end{framed}
+
+Voir équation \ref{eq-un}.
+
+\smallskip
+Qui peut être obtenu par le code suivant :
+
+\begin{code-latex}[language={[LaTeX]TeX}]
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and
+identically distributed random variables with
+$\operatorname{E}[X_i] = \mu$ and
+$\operatorname{Var}[X_i] = \sigma^2 < \infty$, and let
+\begin{equation*}
+S_n = \frac{1}{n}\sum_{i}^{n} X_i
+\end{equation*}
+denote their mean. Then as $n$ approaches infinity, the
+random variables $\sqrt{n}(S_n - \mu)$ converge in
+distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+
+\end{document}
+\end{code-latex}
+
+\medskip
+Reproduisez ces codes dans votre fichier et compilez pour vérifier que tout se passe bien.
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Les tableaux} 
+\label{sec-tableaux}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+Des exemples de tableaux :
+
+\begin{center}
+\begin{tabular}{r|l}
+$x_1$ & \textit{vole}    \\
+$x_2$ & \textit{a des plumes}    \\
+$x_3$ & \textit{pond des \oe ufs}   \\
+$x_4$ & \textit{mammif\`{e}re}    \\
+$x_5$ & \textit{nage sous l'eau}   \\
+\end{tabular}
+\end{center}
+
+Sur cette représentation, un ensemble d'objets  ${\cal S} = \{s_1, s_2, s_3, s_4\}$ peut être décrit par le tableau suivant :
+
+
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c||l} 
+
+    & $x_1$ & $x_2$ & $x_3$ & $x_4$ & $x_5$ & {\tt commentaire} \\
+ \hline \hline
+$s_1$ & $1$ & $1$ & $1$ & $0$ & $0$ & {\tt oie} \\
+\hline
+$s_2$ & $0$ & $0$ & $1$ & $1$ & $1$ & {\tt ornithorynque} \\
+\hline
+$s_3$ & $1$ & $0$ & $0$ & $1$ & $0$ & {\tt rhinolophe} \\
+\hline
+$s_4$ & $1$ & $1$ & $1$ & $0$ & $0$ & {\tt cygne} \\
+\hline
+\end{tabular}
+\end{center}
+
+Que l'on obtient avec le code (en ayant pris soin au préalable de mettre {\color{blue}\lstinline$\usepackage{array}$}  dans le préambule du code) : 
+
+\begin{code-latex}[language={[LaTeX]TeX}]
+\begin{center}
+\begin{tabular}{rl}
+$x_1$ &\textit{vole}\\
+$x_2$ &\textit{a des plumes}\\
+$x_3$ &\textit{pond des \oe ufs}\\
+$x_4$ &\textit{mammif\`{e}re}\\
+$x_5$ &\textit{nage sous l'eau}\\
+\end{tabular}
+\end{center}
+\end{code-latex}
+
+et :
+\begin{code-latex}[language={[LaTeX]TeX}]
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c||l}
+
+& $x_1$ & $x_2$ & $x_3$ & $x_4$ & $x_5$ & {\tt commentaire}\\
+ \hline \hline
+$s_1$&$1$ &$1$ &$1$& $0$ & $0$&{\tt oie}\\
+\hline
+$s_2$&$0$ &$0$ &$1$& $1$ &$1$&{\tt ornithorynque}\\
+\hline
+$s_3$&$1$ &$0$ &$0$& $1$ &$0$&{\tt rhinolophe}\\
+\hline
+$s_4$&$1$ &$1$ &$1$& $0$& $0$&{\tt cygne}\\
+\hline
+\end{tabular}
+\end{center}
+\end{code-latex}
+
+
+
+\medskip
+Reproduisez ces codes dans votre fichier et compilez pour vérifier que tout se passe bien.
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Les figures} 
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+De nombreux documents gagnent à inclure des figures. Il est possible de dessiner des figures en utilisant le langage \LaTeX ou un des packages conçus à cet effet, mais souvent on réalise les figures en utilisant un autre logiciel, et on les inclue par les commandes {\color{blue}\lstinline$\begin{figure}$} et {\color{blue}\lstinline$\includegraphics{}$} dans le document. 
+
+Voici deux figures ainsi obtenues : 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45\linewidth,angle=15]{Fig-roc-curves.pdf}
+\caption{En rouge : la courbe ROC de deux fonctions de base $f_i$ and $f_j$. En bleu : la courbe ROC des fonctions  $\frac{|\cap_n^{i,j}|}{n}$ quand $n$ varie de 0 à $m$. }
+\label{fig-roc-curves-1}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.35\linewidth]{Fig-roc-curves.pdf}
+\includegraphics[width=0.35\linewidth,angle=25]{Fig-roc-curves.pdf}
+\caption{En rouge : la courbe ROC de deux fonctions de base $f_i$ and $f_j$. En bleu : la courbe ROC des fonctions  $\frac{|\cap_n^{i,j}|}{n}$ quand $n$ varie de 0 à $m$. }
+\label{fig-roc-curves-2}
+\end{figure}
+
+\begin{code-latex}[language={[LaTeX]TeX}]
+\begin{figure}
+\centering
+\includegraphics[width=0.35\linewidth,angle=35]{Fig-roc-curves.pdf}
+\caption{En rouge : la courbe ROC de deux fonctions de base $f_i$ and $f_j$. 
+En bleu : la courbe ROC des fonctions  $\frac{|\cap_n^{i,j}|}{n}$  quand $n$ varie de 0 \`a $m$.}
+\label{fig-roc-curves-1}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.35\linewidth]{Fig-roc-curves.pdf}
+\includegraphics[width=0.35\linewidth,angle=25]{Fig-roc-curves.pdf}
+\caption{En rouge : la courbe ROC de deux fonctions de base $f_i$ and $f_j$. 
+En bleu : la courbe ROC des fonctions  $\frac{|\cap_n^{i,j}|}{n}$ quand $n$ varie de 0 \`a $m$.}
+\label{fig-roc-curves-2}
+\end{figure}
+\end{code-latex}
+
+Vous noterez que le placement (e.g. des figures \ref{fig-roc-curves-1} et \ref{fig-roc-curves-2}) est décidé par \LaTeX. On peut cependant avoir (un peu) de contrôle sur le placement des figures. Nous verrons comment. 
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Les documents structurés} 
+\label{sec_docu_structures}
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+Le document que vous avez maintenant commence à avoir l'aspect d'un grenier mal rangé. Les documents sont généralement structurés par des têtes de chapitres, des sections, des sous-sections, voire des structures encore plus fines. 
+
+Vous trouverez sur le site ({\color{blue}\url{http://www.agroparistech.fr/ufr-info/membres/cornuejols/Teaching/AGRO/Cours-FH/iodaa-cours-FH.html}}) un canevas de document structuré correspondant à un article. Récupérez le code de ce canevas et placez-y les codes que nous avons développés jusque là dans différentes sections. 
+
+Vous noterez les structures suivantes (qui n'épuisent pas ce qui est possible en \LaTeX).
+
+\begin{enumerate}
+   \item Titres et abstracts
+   \item Les sections et sous-sections
+   \item Les références internes \lstinline$\label$ et \lstinline$\ref$
+   \item Les notes de bas de page
+\end{enumerate}
+
+\medskip
+Nous allons ajouter des références internes, telles que l'on puisse fans un texte faire références à d'autres parties du texte. Par exemple : << Ainsi que nous avons vu à la section \ref{sec-tableaux}, nous pouvons créer des tableaux en \LaTeX ...~>>. 
+
+Ceci se fait grâce aux commandes {\color{blue}\lstinline$\label$} et {\color{blue}\lstinline$\ref$}. 
+
+Je peux aussi me référer à l'équation (\ref{eq-un}) de la même manière. 
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Ajout d'équations} 
+% ------------------------------------------------------------------------------------------------
+
+Et si maintenant, nous ajoutions des équations dans notre document. Voici dans la suite celles qu'il faudrait inclure. Pour cela allez voir sur Internet les codes \LaTeX adéquats.
+
+\smallskip
+\textbf{Remarque} : Il va falloir ajouter des packages dans le préambule du document, et définir des nouvelles commandes qui nous sont propres.
+
+
+\subsubsection{Equations sur plusieurs lignes}
+% ------------------------------------------------------------------------------------------------
+
+Dans l'environnement standard :
+
+\begin{eqnarray}
+\lefteqn{z_1 + z_2 + \cdots + z_n = } \nonumber \\
+& & x_1 y_1 + x_2 y_2 \nonumber \\
+& & + \, x_3 y_3 \, + \cdots + \, x_n y_n
+\end{eqnarray}
+
+
+\subsubsection{Equations avec alignement (et référence interne)}
+% ------------------------------------------------------------------------------------------------
+
+\begin{equation}
+\label{eq-h-reelle-optimale}
+\begin{split}
+h^{\star} \; &= \; \operatornamewithlimits{ArgMin}_{h \in \cal{H}}\; R_{\text{Réel}}(h) \\
+&= \;
+\operatornamewithlimits{ArgMin}_{h \in \cal{H}}\; \int_{\mathbf{x} \in {\cal X}, y \in {\cal Y}} \ell(h(\mathbf{x}), y) \; \prob_{{\cal X}{\cal Y}} \; d\mathbf{x} dy
+\end{split}
+\end{equation}
+
+ou bien une autre :
+
+\begin{align*}
+\frac{\partial \texttt{SCE}}{\partial{\mathbf w}} \; &= \; - {\bf X}^{\top} ({\mathbf S}_{y} - {\bf X} {\mathbf w}) \\
+\frac{\partial^{2} \texttt{SCE}}{\partial {\mathbf w} \partial {\mathbf w}^{\top}} \; &= \; - {\bf X}^{\top} {\bf X}
+\end{align*}
+
+
+\subsubsection{Equations avec conditions}
+% ------------------------------------------------------------------------------------------------
+
+\begin{equation}
+l(u_{i},h({\mathbf x}_{i})) =
+\begin{cases}
+\;\; 0 & \text{si $u_{i} = h({\mathbf x}_{i})$}  \\
+\;\; 1 & \text{si $u_{i} \neq h({\mathbf x}_{i})$}
+\end{cases}
+\end{equation}
+
+
+\subsubsection{Equations avec parenthèses en-dessous}
+% ------------------------------------------------------------------------------------------------
+
+\begin{equation}
+R_{\text{Réel}}(h^{\star}_{\cal S}) - R^{\star} \; = \; 
+\underbrace{\bigl[R_{\text{Réel}}(h^{\star}_{\cal S}) - R_{\text{Réel}}(h^{\star}) \bigr]}
+_{\text{Erreur d'estimation}} \; 
++ \; \underbrace{\bigl[R_{\text{Réel}}(h^{\star}) - R^{\star} \bigr]}_{\text{Erreur d'approximation}}
+\end{equation}
+
+
+\subsubsection{Equations avec noms de fonctions : log, ...}
+% ------------------------------------------------------------------------------------------------
+
+\begin{equation*}
+h^{\star} \;\; = \;\; \operatornamewithlimits{ArgMin}_{h \in {\cal H}}
+      \bigl\{ - \log \prob_{\cal H}(h) - \log {\prob}_{{{\cal Z}^m}|{\cal H}=h}({\cal S}_m) \bigr\}
+\end{equation*}
+
+
+\subsubsection{Equations encadrées}
+% ------------------------------------------------------------------------------------------------
+
+\begin{equation}
+\addtolength{\fboxsep}{2pt}
+%\addtolength{\fboxrule}{5pt}
+\boxed{~~~
+R_{\text{Emp}}(h) \; = \; \frac{1}{m} \, \sum_{i=1}^{m} \ell(h({\mathbf x}_i, u_i)) 
+~~~}
+\end{equation}
+
+Et si on veut encadrer plusieurs lignes à la fois :
+
+\begin{equation}
+\fbox{$
+   \begin{array}{rcl}
+      x + y + z & = & 0 \\
+      2x + 2y + 2z & = & 0
+   \end{array}
+$}
+\end{equation}
+
+\begin{equation}
+\fbox{~~~$
+\begin{split}
+\frac{\partial {\mathbf A}}{\partial x^j} \; &= \; \frac{\partial A^i}{\partial x^j} \, {\mathbf e}_i \; + \; A^k (\Gamma_{k j}^i \, {\mathbf e}_i) \\
+&= \;
+\biggl( \frac{\partial A^i}{\partial x^j} \; + \; A^k \, \Gamma_{k j}^i \biggr) \, {\mathbf e}_i
+\end{split}
+~~~ $}
+\end{equation}
+
+
+\begin{equation}
+\fcolorbox{red}{white}{~~~$
+\begin{split}
+\frac{\partial {\mathbf A}}{\partial x^j} \; &= \; \frac{\partial A^i}{\partial x^j} \, {\mathbf e}_i \; + \; A^k (\Gamma_{k j}^i \, {\mathbf e}_i) \\
+&= \;
+\biggl( \frac{\partial A^i}{\partial x^j} \; + \; A^k \, \Gamma_{k j}^i \biggr) \, {\mathbf e}_i
+\end{split}
+~~~ $}
+\end{equation}
+
+
+
+\subsubsection{Autres exemples}
+% ------------------------------------------------------------------------------------------------
+
+D'où l'on tire facilement que : $\varepsilon \; = \; \sqrt{\frac{\log{|{\cal H}|} + \log{\frac{1}{\delta}}}{2 \, m}}$, c'est-à-dire que :
+\begin{equation*}
+\label{eq-cvgce-normale}
+\forall h \in {\cal H}, \forall \delta \leq 1 : \;\;\;\; P^m\Biggl[R_{\text{Réel}}(h) \; \leq \; R_{\text{Emp}}(h) \; + \; \sqrt{\frac{\log{|{\cal H}|} + \log{\frac{1}{\delta}}}{2 \, m}} \, \Biggr] \; > \; 1 - \delta
+\end{equation*}
+
+
+
+% ------------------------------------------------------------------------------------------------
+\subsection{Ajout de tableaux} 
+% ------------------------------------------------------------------------------------------------
+
+\smallskip
+\textbf{Remarque} : Il va falloir ajouter des packages dans le préambule du document, et définir des nouvelles commandes qui nous sont propres.
+
+
+\begin{center}
+\begin{tabular}{|l||c|}
+\hline
+Description & \'Etiquette \\
+\hline \hline
+1 grand carré rouge & $-$ \\
+\hline
+1 grand carré vert & + \\
+\hline
+2 petits carrés rouges & + \\
+\hline
+2 grands cercles rouges & $-$ \\
+\hline
+1 grand cercle vert & + \\
+\hline
+1 petit cercle rouge & + \\
+\hline
+1 petit carré vert & $-$ \\
+\hline
+1 petit carré rouge & + \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|clll||a|}
+\hline
+\rowcolor{LightCyan}
+{\color{blue}\textbf{Nb}} & {\color{blue}\textbf{Taille}}  & {\color{blue}\textbf{Forme}}  & {\color{blue}\textbf{Couleur}}  & \textbf{\'Etiquette} \\
+\hline \hline
+1 & grand & carré & rouge & $-$ \\
+\hline
+1 & grand & carré & vert & \textbf{+} \\
+\hline
+2 & petit & carré & rouge & \textbf{+} \\
+\hline
+2 & grand & cercle & rouge & $-$ \\
+\hline
+1 & grand & cercle & vert & \textbf{+} \\
+\hline
+1 & petit & cercle & rouge & \textbf{+} \\
+\hline
+1 & petit & carré & vert & ${\mathbf -}$ \\
+\hline
+1 & petit & carré & rouge & \textbf{+} \\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+
+Supposons que nous considérions une tâche de discrimination entre deux classes, et qu'après apprentissage, on observe sur un ensemble de test constitués de 105 exemples positifs et 60 exemples négatifs, les performances suivantes :
+
+\medskip
+Remarque : on a besoin des packages : \texttt{array} et \texttt{slashbox}
+
+\bigskip
+SVM : 
+%\begin{center}
+\setlength\extrarowheight{2pt}
+\begin{tabular}{|c||c|c|}
+    \hline
+\backslashbox{\textit{Estim\'e}}{\textit{Réel}}
+& \textbf{$+$} & \textbf{$-$} \\
+\hline\hline
+\textbf{$+$} & 94  & 37\\
+\hline
+\textbf{$-$} & 11 & 23 \\
+\hline
+\end{tabular}
+%\end{center}
+\hspace{1cm}
+Bayésien naïf : 
+\setlength\extrarowheight{2pt}
+\begin{tabular}{|c||c|c|}
+    \hline
+\backslashbox{\textit{Estim\'e}}{\textit{Réel}}
+& \textbf{$+$} & \textbf{$-$} \\
+\hline\hline
+\textbf{$+$} & 72  & 29\\
+\hline
+\textbf{$-$} & 33 & 31 \\
+\hline
+\end{tabular}
+
+\bigskip
+Apparemment, le système SVM est plus performant sur cette tâche, puisque son taux d'erreur est de : $\frac{11 + 37}{165} = 0.29$ au lieu de $\frac{29 + 33}{165} = 0.375$ pour le classifieur bayésien naïf. Pourtant, ce critère d'erreur n'est peut-être pas celui qui nous intéresse en priorité.
+
+
+\bigskip
+
+\begin{table}[htbp]%[htbp]   h : placer la figure ici
+% Sinon la figure sera placée en haut de la page suivante (t) ou en bas (b), voire sur une page seule (p)
+\begin{tabular}{llllll}
+\toprule
+\textbf{Date} &\makebox[3em]{5/31}&\makebox[3em]{6/1}&\makebox[3em]{6/2}
+&\makebox[3em]{6/3}&\makebox[3em]{6/4}\\
+\midrule
+\textbf{Room} &&&&&\\
+Meeting Room &&&&&\\
+Auditorium &&&&&\\
+Seminar Room &&&&&\\
+\bottomrule
+\end{tabular}
+\caption{Room availability \textit{vs} dates.}
+\end{table}
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{La bibliographie} 
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+Il est essentiel de rendre à César ce qui est à César et d'attribuer à qui de droit les sources que nous avons utilisées pour notre travail. C'est le rôle de la bibliographie qui est ajoutée en général en fin de document. 
+
+Par exemple : 
+
+%\begin{framed}
+\medskip
+Notre démarche\footnote{Inspirée par celle d'Einstein en 1905 \cite{einstein1905electrodynamics}.} \ldots telle que décrite dans la section \ref{sec:intro}. Les résultats obtenus complètent ceux rapportés dans \cite{saitta2011phase}.
+\medskip
+%\end{framed}
+
+Il faut créer un fichier .bib.  Ici, par exemple, il pourrait être :
+
+\begin{code-latex}[language={[LaTeX]TeX}]
+@article{einstein1905electrodynamics,
+  title={On the electrodynamics of moving bodies},
+  author={Einstein, Albert and others},
+  journal={Annalen der Physik},
+  volume={17},
+  number={891},
+  pages={50},
+  year={1905}
+}
+
+
+@book{saitta2011phase,
+  title={Phase Transitions in Machine Learning},
+  author={Saitta, Lorenza and Giordana, Attilio and Cornu\'ejols, Antoine},
+  year={2011},
+  publisher={Cambridge University Press}
+}
+\end{code-latex}
+
+... dans lequel il n'y a que deux << entrées >>.
+
+\medskip
+\textbf{Remarque} : il faut compiler le code \LaTeX, puis utiliser la commande bibtex, puis recompiler à nouveau le code \LaTeX. 
+
+\`A faire aussi quand on change de style de bibliographie. Par exemple  passer de $\backslash$bibliographystyle\{abbrv\} à $\backslash$bibliographystyle\{acm\}.
+
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{\'Ecrire des algorithmes} 
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+Pour nous, il est très utile de pouvoir inclure la description d'algorithmes dans nos documents. 
+
+Par exemple :
+
+\begin{algorithm}[ht!]
+\dontprintsemicolon
+%\begin{small}
+\Res{
+Initialiser $G$ comme l'hypoth\`ese la plus
+g\'en\'erale de
+${\mathcal H}$ \;
+Initialiser $S$ comme l'hypoth\`ese la moins g\'en\'erale de ${\mathcal H}$ \;
+\PourCh{exemple ${\mathbf  x}$}{
+   \eSi{${\mathbf  x}$ est un exemple positif}{
+    Enlever de $G$ toutes les hypoth\`eses  qui ne couvrent pas ${\mathbf x}$ \;
+       \PourCh{hypoth\`ese $s$ de $S$ qui ne couvre pas ${\mathbf  x}$}{
+            Enlever $s$ de $S$ \;
+            {\tt G\'en\'eraliser}($s$,${\mathbf  x}$,$S$) \;
+            c'est-\`a-dire : ajouter \`a $S$ toutes les g\'en\'eralisations minimales $h$ de $s$ telles que : \;
+        \hspace{1cm} $\bullet$ $h$ couvre ${\mathbf  x}$ et \;
+        \hspace{1cm} $\bullet$ il existe dans $G$ un \'el\'ement plus g\'en\'eral que $h$ \;
+         Enlever de $S$ toute  hypoth\`ese plus g\'en\'erale qu'une autre hypoth\`ese de $S$ \;
+}
+}
+{
+   \cc{${\mathbf  x}$ est un exemple n\'egatif}   % un commentaire
+   Enlever de $S$ toutes les hypoth\`eses qui couvrent  ${\mathbf  x}$ \;
+   \PourCh{hypoth\`ese $g$ de $G$ qui  couvre  ${\mathbf  x}$}{
+       Enlever $g$ de $G$ \;
+       {\tt Sp\'ecialiser}($g$,${\mathbf  x}$,G) \;
+       c'est-\`a-dire : ajouter \`a $G$ toutes les sp\'ecialisations maximales $h$ de $g$ telles que : \;
+       \hspace{1cm} $\bullet$ $h$ ne couvre pas ${\mathbf  x}$ et \;
+       \hspace{1cm} $\bullet$ il existe dans $S$ un \'el\'ement plus sp\'ecifique que $h$ \;
+        Enlever de $G$ toute  hypoth\`ese plus sp\'ecifique qu'une autre hypoth\`ese de $G$ \;
+}
+}
+}
+}
+\caption{{\bf Algorithme d'\'elimination des candidats.}
+\index{algorithme d'\'elimination des candidats}}
+\label{algo:elim:cand}
+%\end{small}
+\end{algorithm}
+
+
+Nous allons devoir ajouter la ligne {\color{blue}\lstinline$\usepackage[french,boxed,ruled,lined]{algorithm2e}$} dans le préambule.
+
+\medskip
+Voici le code correspondant :
+
+\begin{small}
+
+\begin{code-latex}[language={[LaTeX]TeX}]
+\begin{algorithm}[ht!]
+\dontprintsemicolon
+%\begin{small}
+\Res{
+Initialiser $G$ comme l'hypoth\`ese la plus g\'en\'erale de
+${\mathcal H}$ \;
+Initialiser $S$ comme l'hypoth\`ese la moins g\'en\'erale de
+${\mathcal H}$ \;
+\PourCh{exemple ${\mathbf  x}$}{
+\eSi{${\mathbf  x}$ est un exemple positif}{
+    Enlever de $G$ toutes les hypoth\`eses  qui ne couvrent pas ${\mathbf 
+x}$ \;
+\PourCh{hypoth\`ese $s$ de $S$ qui ne couvre pas ${\mathbf  x}$}{
+Enlever $s$ de $S$ \;
+{\tt G\'en\'eraliser}($s$,${\mathbf  x}$,$S$) \;
+c'est-\`a-dire : ajouter \`a $S$ toutes les g\'en\'eralisations
+minimales $h$ de $s$ telles que : \;
+\hspace{1cm} $\bullet$ $h$ couvre ${\mathbf  x}$ et \;
+\hspace{1cm} $\bullet$ il existe dans $G$ un \'el\'ement plus g\'en\'eral que $h$ \;
+Enlever de $S$ toute  hypoth\`ese plus g\'en\'erale qu'une autre hypoth\`ese de
+$S$ \;
+}}
+{
+\cc{${\mathbf  x}$ est un exemple n\'egatif}
+Enlever de $S$ toutes les hypoth\`eses qui couvrent  ${\mathbf  x}$ \;
+\PourCh{hypoth\`ese $g$ de $G$ qui  couvre  ${\mathbf  x}$}{
+Enlever $g$ de $G$ \;
+{\tt Sp\'ecialiser}($g$,${\mathbf  x}$,G) \;
+c'est-\`a-dire : ajouter \`a $G$ toutes les sp\'ecialisations maximales $h$ de $g$ telles que : \;
+\hspace{1cm} $\bullet$ $h$ ne couvre pas ${\mathbf  x}$ et \;
+\hspace{1cm} $\bullet$ il existe dans $S$ un \'el\'ement plus
+sp\'ecifique que $h$ \;
+Enlever de $G$ toute  hypoth\`ese plus sp\'ecifique qu'une autre hypoth\`ese de
+$G$ \;
+}
+}
+}
+}
+\caption{{\bf Algorithme d'\'elimination des candidats.}
+\index{algorithme d'\'elimination des candidats}}
+\label{algo:elim:cand}
+%\end{small}
+\end{algorithm}
+\end{code-latex}
+
+\end{small}
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{La création d'index} 
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+Dès qu'un document est grand et/où qu'il utilise une terminologie ou des acronymes peu usités, il est utile d'ajouter un index à la fin du document pour aider le lecteur à retrouver où, dans le document, ces termes ont été définis et utilisés. 
+
+Voici par exemple le code d'une phrase dans laquelle deux termes sont associés à une entrée d'index :
+
+\begin{code-latex}[language={[LaTeX]TeX}]
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+\end{code-latex}
+
+\medskip
+La commande {\color{blue}\lstinline$\index{}$} permet de définir des entrées d'index. 
+
+\`A la fin, il faut compiler une fois le document, puis utiliser la commande {\color{blue}makeindex}, puis recompiler.
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Changer l'apparence d'un document} 
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+\noindent
+\textbf{Passer en double colonne}
+
+\twocolumn
+
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+
+
+
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+\section{Les commandes personnelles} 
+% ------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45\linewidth,angle=15]{Fig-roc-curves.pdf}
+\caption{La figure est maintenant dans l'environnement double colonne. }
+\label{fig-roc-curves-1}
+\end{figure}
+
+
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+
+\begin{figure*}[t!]
+\centering
+\includegraphics[width=0.45\linewidth,angle=15]{Fig-roc-curves.pdf}
+\caption{Pour avoir une figure sur la largeur de la page, même dans l'environnement de double colonne, il faut mettre << * >> dans \{figure*\} }
+\label{fig-roc-curves-1}
+\end{figure*}
+
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+For instance, in bioinformatics\index{Bioinformatics}, many research 
+works look for the identification of genes\index{Genes} that respond 
+to some conditions in the environment, or for finding proteins that 
+could potentially interact with some given target drugs. 
+
+
+
+
+
+
+\onecolumn
+
+\begin{code-latex}[language={[LaTeX]TeX}]
+\newcommand{\Prob}{\textbf{\textsf{\textup{P}}}}  % Probability over a set
+\newcommand{\prob}{\textbf{\textsf{\textup{p}}}}  % Probability density
+\newcommand{\Reel}{\mathbb{R}}  % l'ensemble des rels
+\def\Real{\textrm{I\kern-0.21emR}} %idem mais sans doublage de la boucle
+\newcommand{\Esp}{\mathbb E}     %Esperance
+\end{code-latex}
+
+
+
+
+\bibliography{mybib}{}
+%\bibliographystyle{plain}
+%\bibliographystyle{alpha}
+
+%\bibliographystyle{abbrv}
+%\bibliographystyle{acm}
+%\bibliographystyle{alpha}
+%\bibliographystyle{amsplain}
+%\bibliographystyle{annotate}
+\bibliographystyle{abbrv}
+
+
+\begin{small}
+\printindex
+\end{small}
+
+
+\end{document}
+
+
+
