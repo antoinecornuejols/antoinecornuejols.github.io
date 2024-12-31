@@ -17,7 +17,7 @@
 </CENTER>
 
 <CENTER>
-  <P><font face="Georgia, Times New Roman, Times, serif">2nd quarter 2023-2024</font></P>
+  <P><font face="Georgia, Times New Roman, Times, serif">2nd quarter 2024-2025</font></P>
 </CENTER>
 
 <CENTER>
@@ -40,7 +40,7 @@
   </tr>
 </table>
 
-<p><font color="#CC3333">Last update: &nbsp;<!-- #BeginDate format:En2 -->09-Mar-2024<!-- #EndDate --> 
+<p><font color="#CC3333">Last update: &nbsp;<!-- #BeginDate format:En2 -->31-Dec-2025<!-- #EndDate --> 
   </font></P>
 
 <H3>Course Organization:</H3>
@@ -151,15 +151,22 @@
 
   <tr> 
     <td width="14%" bgcolor="#D4FCFF"> 
-      <p><b>11-01-2024</b></p>
+      <p><b>09-01-2025</b></p>
       <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
     </td>
     <td width="52%" bgcolor="#FFFFFF"> 
       <p align="right">(Antoine Cornu&eacute;jols)</p>
-      <p> <a href="Tr-intro-inductionS-2023-24.pdf"><font color="#3397AD">Learning as <b>generalization</b></font></a></p>      
+      <p> <b>&nbsp;&nbsp;&nbsp;- </b> Introduction to the course. Out-of-Distribution learning. </p>
+        <p> <b>Central question of the course</b>: <em>What makes you believe that what you have learned so far from training examples or task will be relevant to new examples or tasks? </em> </p>
+      <p> <a href="Tr-intro-inductionS-2023-24.pdf"><font color="#3397AD">Examination of <b>classical induction</b></font></a></p>      
        <p><b>&nbsp;&nbsp;&nbsp;- </b>The statistical theory of learning for a stationary world. (The In-Distribution assumption)
-      <p><b>&nbsp;&nbsp;&nbsp;- </b>Why it does not seem to apply to deep learning. </p>
-      </p>
+      <p><a href="Tr_OOD_for_learning_better-2024-25.pdf"><font color="#3397AD">Out-of-Distribution learning <b>for the sake of learning better</b> or with less (annotated) examples</a> </font></p>
+      <ul>
+        <li> 
+          <p><b>Semi-supervised</b> learning </p> 
+        </li>
+      </ul>
+
     <br>      
         
     <td bgcolor="#FEEAE0">
@@ -168,17 +175,47 @@
 <!-- ==================================================================== -->
   <tr> 
     <td width="14%" height="120" bgcolor="#D4FCFF"> 
-      <p><b>18-01-2024</b></p>
+      <p><b>16-01-2025</b></p>
       <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
     </td>
 
     <td width="52%" bgcolor="#FFFFFF"> 
       <p align="right">(Antoine Cornu&eacute;jols)</p>
-      <p> <b><font color="#3397AD">When the distribution P_X is changed to better learn</font></b> </p>
+      <p><a href="Tr_OOD_for_learning_better-2024-25.pdf"><font color="#3397AD">Out-of-Distribution learning <b>for the sake of learning better</b> or with less (annotated) examples (followup)</font></a> </p>
+      <ul>
+        <li> 
+          <p>Learning when classes are severely <b>unbalanced</b> </p>
+        </li>
+        <li> 
+          <p>Learning from <b>positive examples only</b> </p>
+        </li>
+        <li> 
+          <p><b>Active</b> learning </p>
+        </li>
+      </ul>
+
+      <p> <b><font color="#3397AD">O.O.D. through multiple agents</font></b> </p>
       <ul>
         <li>
-      <p><a href="Tr-collaborative_learning-2021-22-v2.pdf">When <b>the learning agent modifies the input distribution</b>: Boosting, bagging, Random Forests. What they are. Theoretical approaches. </a></p>  
+          <p>Co-training, self-training and tri-training </p>  
        </li> 
+        <li>
+          <p>Boosting </p>  
+       </li> 
+        <li>
+          <p>Blending </p>  
+       </li> 
+     </ul>
+      <p> <b><font color="#3397AD">Domain adaptation and tracking</font></b> </p>
+     <ul>
+        <li>
+          <p>Tracking: an intriguing idea </p>  
+       </li> 
+        <li>
+          <p>Domain adaptation (co-variate shift) </p>  
+       </li> 
+     </ul>
+
        <li>
         <p>Extension to other ensemble methods?</p>
        </li>
@@ -203,8 +240,77 @@
 <!-- ==================================================================== -->
 <!-- ==================================================================== -->
   <tr> 
+    <td width="14%" height="120" bgcolor="#D4FCFF"> 
+      <p><b>23-01-2025</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
+    </td>
+
+    <td width="52%" bgcolor="#FFFFFF"> 
+      <p align="right">(Antoine Cornu&eacute;jols)</p>
+      <p> <b><font color="#3397AD">Transfer learning</font></b> </p>
+      <p>What can be transferred:</p>
+      <ol>
+        <li>
+          <p><b>Representation</b></p>
+        </li>
+        <li>
+          <p>Underlying <b>regularities</b> supposedly more stable among learning tasks</p>
+        </li>
+        <li>
+          <p>The <b>decision</b> function</p>
+        </li>
+        <li>
+          <p><b>Others</b>: the loss function, the optimizer, ... </p>
+        </li>
+      </ol>
+      <p>(1) <b>Learning a representation</b></p>
+
+      <ul>
+        <li>
+          <p>Fine tuning</p>
+        </li>
+        <li>
+          <p>Self-supervised learning</p>
+        </li>
+        <li>
+          <p>Contrastive learning</p>
+        </li>
+        <li>
+          <p>Foundation models. Prompting. Zero-shot learning</p>
+        </li>
+      </ul>
+
+      <p>(2) <b>Discovering underlying regularities</b> to transfer</p>
+
+      <ul>
+        <li>
+          <p>Domain adversarial learning</p>
+        </li>
+        <li>
+          <p>Invariant Risk Minimization</p>
+        </li>
+       </ul>
+
+       <br>
+ 
+ <!--       <p><b>&nbsp;&nbsp;&nbsp;- </b>The statistical theory of learning / The no-free-lunch theorem / Another perspective: Explanation-Based-Learning / What kind of validation? -->
+    </td>
+         
+    <td width="34%" bgcolor="#FEEAE0">
+          <p>&#149; Quiz No 2</p>
+<!--          <p>&#149; <a href="exercice-boosting.pdf">Exercise on boosting</a> </p> 
+-->
+<p>&#149; <a href="Tr-collaborative_learning-2023-24-v2.pdf">Slides of the class</a>
+          <p></p>
+
+    </td>
+
+  </tr>
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr> 
     <td width="14%" height="120" bgcolor="#FFCCCC"> 
-      <p><b>26-01-2024</b></p>
+      <p><b>30-01-2025</b></p>
       <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
     </td>
     
@@ -224,45 +330,45 @@
 <!-- ==================================================================== -->
   <tr> 
     <td width="14%" bgcolor="#D4FCFF"> 
-      <p><b>01-02-2024</b></p>
+      <p><b>06-02-2025</b></p>
       <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
     </td>
     
     <td width="52%"> 
       <p align="right">       (Antoine Cornu&eacute;jols)</p>
-      <p> <b><font color="#3397AD">When the training distribution differs from the test one</font></b> </p>
-      <a href="Tr-P_train-not-P_test.pdf">Slides (1)</a>
+      <p> <b><font color="#3397AD">Transfer learning</font></b> </p>
+
+      <p>(3) Transfering the <b>decision function</b> instead of the representation</p>
+
       <ul>
         <li>
-          <p> What to do with imbalanced data classes </p>
+          <p><b>TransBoost</b></p>
+          <ul><b>- </b>   What are the <strong>ingredients</strong> for a successful (detrimental) transfer? </ul>
+          <ul><b>- </b>   What <strong>role for the source</strong>? Role and measure of similarity between source and target in TL? </ul>
         </li>
         <li>
-          <p> Learning with positive only examples </p>
+          <p><b>Analogy</b> making and ordering effects. The MDLp (Minimum Description Length Problem)</p>
         </li>
         <li>
-          <p> Semi-supervised learning </p>
+          <p><b>Cognitive tunnel effect</b></p>
+          <ul><b>- </b>   How to transfer from one conceptual domain to another one. Is there a better ordering?</ul> 
         </li>
-        <li>
-          <p> Active learning </p>
-        </li>
-      </ul>
-      <p> <b><font color="#3397AD">Learning agents that communicate</font></b> </p>
-      <a href="Tr-communicating_agents_learning-2023-24-v2.pdf">Slides (2)</a>
+       </ul>
+
+      <p> <b><font color="#3397AD">Curriculum learning</font></b> </p>
+
       <ul>
         <li>
-          <p> <b>Co-training</b>. Having independent and complementary views. </p>
+          <p> <b>Sequence of tasks</b>. How to organize them? </p>
         </li>
         <li>
-          A curiosity: blending.
+          <p>How to <b>measure the difficulty</b> of new examples</p>
         </li>
         <li>
-          <p><b>Distillation</b>. Two agents: one acting as a teacher, the other as a student. Modification of the training examples. Points towards curriculum learning.</p>
+          <p><b>Catastrophic forgetting</b>. </p>
         </li>
         <li>
-          <p><b>Multi-task learning</b>. Minimizing the differences between the learnt hypotheses.</p>
-        </li>
-        <li>
-          <p><b>The MDLp (Minimum Description Length Problem)</b>. Communication between “agents”. Application to analogy making.</p>
+          <p><b>Curriculum</b>: the space of tasks and the space of biases.</p>
         </li>
       </ul>
  
@@ -282,7 +388,7 @@
     <br>      
     </td>
     <td width="34%" bgcolor="#FEEAE0">
-      <p>&#149; Quiz No 2</p>
+      <p>&#149; Quiz No 3</p>
     </td>
 
   </tr>
@@ -290,45 +396,34 @@
 <!-- ==================================================================== -->
   <tr> 
     <td width="14%" height="120" bgcolor="#D4FCFF"> 
-      <p><b>08-02-2024</b></p>
+      <p><b>13-02-2025</b></p>
       <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
     </td>
     
     <td bgcolor="#FFFFFF"><p align="right">(Antoine Cornu&eacute;jols)</p>
       <p></p>
-      <p> <b><font color="#3397AD">When P(X) is changed but not P(Y|X)</font></b> </p>
+      <p> <b><font color="#3397AD">When the teacher and the learner do not share the same cognitive capacities</font></b> </p>
       <a href="Tr-P_train-not-P_test.pdf">Slides of the class</a>
       <ul>
         <li>
-          <p> <b>Covariate shift / Domain Adaptation</b>. </p>
+          <p> <b>LUPI</b> (Learning Using Privileged Information): not the same X.</p>
         </li>
         <li>
-          An intriguing idea: tracking
+          <p><b>Distillation</b>. Not the same H.</p>
+        </li>
+        <li>
+          <p><b>Coaching</b>. Not the same gain function.</p>
         </li>
       </ul>
 
 
-     <p> <b>(<a href="Tr-communicating_agents_learning-2023-24-v2.pdf">Communicating agents</a>)</b> </p>
-
-
-<!--            <p>&#149; <a ><b>Continual learning</b></a></p>   
-            <p><b>&nbsp;&nbsp;&nbsp;- </b>   The "classical" scenario in deep NNs. 
-            <p><b>&nbsp;&nbsp;&nbsp;- </b>   What is empirically observed: catastrophic forgetting and negative interactions between certain types of tasks. How do we understand this at this time? 
-            <p>&#8226; How to cope with catastrophic forgetting </p>
-            <p>&#8226; Distillation. Questions and methods </p>
-<p>&#149; <a href="Tr_Continual_Learning-21-22.pdf"><b>Continual learning (NEW)</b></a></p>   
-            <p><b>&nbsp;&nbsp;&nbsp;- </b>   The "classical" scenario in deep NNs. 
-            <p><b>&nbsp;&nbsp;&nbsp;- </b>   What is empirically observed: catastrophic forgetting and negative interactions between certain types of tasks. How do we understand this at this time? 
-            <p>&#8226; How to cope with catastrophic forgetting </p>
-            <p>&#8226; Distillation. Questions and methods </p>
-          -->
-    <br>      
+   <br>      
       <p align=right> 
       </p>
     </td>
 
     <td bgcolor="#FEEAE0">
-      <p>&#149; Quiz No 3</p>
+      <p>&#149; Quiz No 4</p>
      </p>
     </td>
 
@@ -337,50 +432,33 @@
 <!-- ==================================================================== -->
   <tr> 
     <td width="14%" height="120" bgcolor="#D4FCFF"> 
-      <p><b>15-02-2024</b></p>
+      <p><b>20-02-2025</b></p>
       <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
     </td>
     
     <td bgcolor="#FFFFFF"><p align="right">(Antoine Cornu&eacute;jols)</p>
       <p></p>
-     <p> <b><font color="#3397AD">When P(Y|X) changes (1)</font></b> </p>
+     <p> <b><font color="#3397AD">On-line learning. A succession of small transfer steps</font></b> </p>
       <a href="Tr_Curriculum_learning-23-24(1-123).pdf">Slides of the class</a>
       <ul>
         <li>
-          <p> <b>Continual</b> learning. </p>
+          <p> A <b>theoretical</b> perspective. </p>
         </li>
        <li>
-          <p> <b>Transfer</b> learning. </p>
-          <ul><b>- </b>   What are the <strong>ingredients</strong> for a successful (detrimental) transfer? </ul>
-          <ul><b>- </b>   What <strong>role for the source</strong>? Role and measure of similarity between source and target in TL? </ul>
-
+          <p> <b>Empirical approaches</b>. </p>
         </li>
-        <li>
-          <p> Sequencing effects and <b>Curriculum</b> learning.</p>
-           <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- </b>   A geometry on the space of learning tasks
-         </li>
        </ul>
 
-<!--     <p> <b>(<a href="Tr_Curriculum_Learning-22-23.pdf">Curriculum Learning</a>)</b> </p> -->
+      <p> <b><font color="#3397AD">General conclusions</font></b> </p>
 
 
-<!--      <p>&#149; <a ><b>Sequential effects and curriculum learning</b></a></p>   
-            <p><b>&nbsp;&nbsp;&nbsp;- </b>   Sequencing effects 
-            <p><b>&nbsp;&nbsp;&nbsp;- </b>   Curriculum learning within a single task
-            <p><b>&nbsp;&nbsp;&nbsp;- </b>   Curriculum learning between tasks
-      <p>&#149; <a  href="Tr_Curriculum_Learning-21-22.pdf"><b>Sequential effects and curriculum learning</b></a></p>   
-            <p><b>&nbsp;&nbsp;&nbsp;- </b>   Sequencing effects 
-            <p><b>&nbsp;&nbsp;&nbsp;- </b>   Curriculum learning within a single task
-            <p><b>&nbsp;&nbsp;&nbsp;- </b>   Presentation of <em> <a href="https://openreview.net/pdf?id=O3Y56aqpChA">(ICLR-2021)-Self-training For Few-shot Transfer Across Extreme Task Differences</a></em> by the students
-            <p><b>&nbsp;&nbsp;&nbsp;- </b>   Curriculum learning between tasks
-            -->
     <br>      
       <p align=right> 
       </p>
     </td>
 
     <td bgcolor="#FEEAE0">
-      <p>&#149; Quiz No 4</p>
+      <p>&#149; Quiz No 5</p>
       <p> <em> <a href="https://arxiv.org/pdf/2011.00613.pdf">(ICML-2021)-An Information-Geometric Distance on the Space of Tasks</a></em>. 
      </p>
       <p> <em> <a href="https://arxiv.org/pdf/2107.04384.pdf">(ICML-2021)-Continual Learning in the Teacher-Student Setup: Impact of Task Similarity</a></em>. 
@@ -389,186 +467,6 @@
   </tr>
 <!-- ==================================================================== -->
 <!-- ==================================================================== -->
-  <tr>
-    <td bgcolor="#D4FCFF">
-      <p><b>29-02-2024</b></p>
-      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
-    </td>
-
-    <td width="52%"> 
-      <p align="right">       (Antoine Cornu&eacute;jols)</p>
-
-     <p> <b><font color="#3397AD">When P(Y|X) changes (2)</font></b> </p>
-      <a href="Tr-collaborative_learning-2022-23.pdf">Slides of the class</a>
-      <ul>
-        <li>
-          <p> <a href="Tr_Curriculum_learning-23-24(124-146).pdf">Measuring the <b>difficulty of new examples</b></a></p>
-        </li>
-        <li>
-          <p> <a href="Tr_Ekinocs_catastrophic_forgetting-2024-02-27.pdf"><strong>Catastrophic forgetting</strong>: explanations and ways to mitigate it </a></p>
-        </li>
-<!--       <li>
-          <p> <strong>Invariant Risk Minimization</strong>: Tansfer learning and causality</p>
-        </li>
-      -->
-       <li>
-          <p> <a href="Tr_Continual_learning-23-24.pdf">The case of <strong>online learning </strong></a> (a succession of small transfers)</p>
-        </li>
-        <li>
-          <p> <b>Few shot</b> learning </strong> (<em>if time allows it</em>)</p>
-        </li>
-       </ul>
-
-
-
-
-
-<!--      <p>&#149; <a ><b>Online learning</b></a></p>      
-      <p><b>&nbsp;&nbsp;&nbsp;- </b>   Versus learning from time series</p>
-      <p><b>&nbsp;&nbsp;&nbsp;- </b>   Motivation, scenario, measure of performance</p>
-      <p><b>&nbsp;&nbsp;&nbsp;- </b>   Theoretical analysis against any sequence</p>
-      <p><b>&nbsp;&nbsp;&nbsp;- </b>   Heuristic approaches</p>
-      <p><b>&nbsp;&nbsp;&nbsp;- </b>   An intriguing idea: Tracking</p>
-  	  <p>&#149; <a  href="Tr-On-line-learning-2024.pdf"><b>Online learning</b></a></p>      
-      <p><b>&nbsp;&nbsp;&nbsp;- </b>   Versus learning from time series</p>
-      <p><b>&nbsp;&nbsp;&nbsp;- </b>   Motivation, scenario, measure of performance</p>
-      <p><b>&nbsp;&nbsp;&nbsp;- </b>   Theoretical analysis against any sequence</p>
-      <p><b>&nbsp;&nbsp;&nbsp;- </b>   Heuristic approaches</p>
-      <p><b>&nbsp;&nbsp;&nbsp;- </b>   An intriguing idea: Tracking</p>
-    -->
-<!--      <p>&nbsp;&nbsp;&nbsp;- Motivations, approaches, how to obtain guarantees </p> -->
-    <br>      
-      <p align=right>  
-      </p>
-    </td>
-    <td width="34%" bgcolor="#FEEAE0">
-      <p>&#149; Quiz No 5</p>
-    </td>
-
-  </tr>
-<!-- ==================================================================== -->
-<!-- ==================================================================== -->
-<!--  <tr>
-    <td bgcolor="#99F5FC">
-
-      <p><b>23-02-2024</b></p>
-      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
-    </td>
-    <td bgcolor="#FFFFFF"><p align="right">(Antoine Cornu&eacute;jols)</p>
-     <p>&#8226; <b>Presentation of scientific papers</b> by the students</p>
- <!--     (<font color="#FF0000">The presentations must be ready, in .pdf format on a usb storage device and/or on a laptop.</font>) -->
-<!--      (<font color="#FF0000">
-      The presentations will be done on site. Each group has 14' to present its work, followed by a 3' question time. All students are expected to participate in the presentations. </font>) </br></br>
-  <font color="#FF0000">The presentations should follow approximately the following schema: </br>
-      <p>&nbsp;&nbsp;&nbsp;- Presentation of the problem that is the focus of the paper and of the approch proposed by the authors (~5mn) </p>
-      <p>&nbsp;&nbsp;&nbsp;- What you have achieved (~7mn) </p>
-      <p>&nbsp;&nbsp;&nbsp;- Your conclusion: what you retain from the paper and from your experiments (~2mn)</p> </font>
-       </p>
-
-      <p>&#149; 9:05 - 9:22 :</p>      
-        <ul> 
-           <li><em> <a href="https://proceedings.mlr.press/v162/evci22a/evci22a.pdf">(ICML-2022)Head2toe: Utilizing intermediate representations for better transfer learning</a></em>. </br>
- 	(presented by: Ambre Baumann, Linday Goulet, George Marchment, Clemence Sebe)
-        </li> 
-       </ul>
-
-      <p>&#149; 9:24 - 9:41 :</p>      
-        <ul> 
-           <li><em> <a href="https://arxiv.org/pdf/2007.12684.pdf">(ICCV-2021)Deep co-training with task decomposition for semi-supervised domain adaptation</a></em>.
- </br>
- 	(presented by: Cl&eacute;ment Elliker, Tristan Jeromin, Romain Mussard)
-        </li> 
-      </ul>
-
-      <p>&#149; 9:43 - 10:00 :</p>      
-        <ul> 
-           <li><em> <a href="https://arxiv.org/pdf/2202.00155">(ICLR-2022)Fortuitous forgetting in connectionist networks</a></em>.  </br>
-  (presented by: Joseph Allyndre, Judith Coutrot, Auguste Gardette, No&eacute;mie Jacquet)
-        </li> 
-       </ul>
-
-      <p>&#149; 10:02 - 10:19 :</p>      
-        <ul> 
-           <li><em> <a href="https://ojs.aaai.org/index.php/AAAI/article/download/20740/20499">(AAAI-2022)Being Friends Instead of Adversaries- Deep Networks Learn from Data Simplified by Other Networks</a></em>.  </br>
-  (presented by: Luca Gortana, Louis Manceron, Etienne Perez)
-        </li> 
-       </ul>
-
-       
-      <p>&#149; 10:21 - 10:38 :</p>      
-       <ul> 
-           <li><em> <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Yim_A_Gift_From_CVPR_2017_paper.pdf">(CVPR-2017)A gift from knowledge distillation: Fast optimization, network minimization and transfer learning</a></em>. </br>
-  (presented by: Diyun Lu, Marwan Mashra, Salma Ouardi, Yihan Zhong)
-        </li> 
-        </li> 
-       </ul>
- 
-      <p> (Break: 22')  10:38 - 11:00 :</p>      
-       <ul> 
- <!-- <li><<em> <a href="PROJETS-M2-AIC/PROJETS-2020-2021/Parameterless_Semi-Supervised_Anomaly_Detection_in_Univariate_Time_Series.pdf">(ECML-2020)-Parameterless Semi-Supervised Anomaly Detection in Univariate Time Series</a></em>.  </br>
- 	(presented by: Joachim Hostachy, Roman Le Montagner, Mohamed Said Tadjer, Mohammed Amine Trabzi)
-        </li> -->
-<!--       </ul>
-
-       <p>&#149; 11:00 - 11:17 :</p>      
-        <ul> 
-<li><em> <a href="https://arxiv.org/pdf/2109.06165.pdf">(ICLR-2022)Cdtrans: Cross-domain transformer for unsupervised domain adaptation</a></em>.   </br>
-  (presented by: Nikita Kiselov, Ahmad Nasser, Sabrina Ni Wang, Tianyang Tao)
-        </li> 
-       </ul>
-
-      <p>&#149; 11:19 - 11:36 :</p>      
-        <ul> 
-           <li><em> <a href="https://openreview.net/pdf?id=Oa9RlXNggGy">(Neurips-2022)Does knowledge distillation really works?</a></em>. </br>
-  (presented by: Maria Belen Guaranda, Seoyoung Oh, Pau Rodriguez Inserte, Ziqian Peng)
-        </li>  
-       </ul>
-
-      <p>&#149; 11:38 - 11:55 :</p>      
-        <ul> 
-           <li><<em> <a href="https://arxiv.org/pdf/2002.08546.pdf">(ICML-2020)Do we really need to access the source data? source hypothesis transfer for unsupervised domain adaptation</a></em>. </br>
-  (presented by: Sara Droussi, Dalia Idrissou, Ouerdia Khaous, Kenza Yousfi)
-        </li>  
-       </ul>
-
-
-      <p>&#149; 11:57 - 12:14</p> 
-       <ul>     
-           <li><em> <a href="https://arxiv.org/pdf/2201.12604">(ICLR-2022)Learning fast, learning slow: A general continual learning method based on complementary learning system</a></em>. </br>
-  (presented by: Alexandre Combeau, Camelia Kazi Aoual, Aleksandra Kruchinina)
-        </li>  
-      </ul>
-
-
-
-      <p>&#149; 11:35 - 11:50 :</p>      
-       <ul> 
-
-<li><a href="PROJETS-M2-AIC/PROJETS-2018-2019/SOURCES-Pro-18-19/--ecml-18-Differentially Private Hypothesis Transfer Learning.pdf">(ECML-2018)-Differentially Private Hypothesis Transfer Learning</a> <br/>        
-        (presented by: BOUAZIZ Wassim and DITTRICK Gabriel and JOSLOVE Jeremy and RIOLACCI Paul-Matthieu)
-        </li>
-       </ul>
-
-      <p>&#149; 11:55 - 12:10 :</p>      
-       <ul> 
-<li><a href="PROJETS-M2-AIC/PROJETS-2018-2019/SOURCES-Pro-18-19/Teaching Semi-Supervised Classifier via Generalized Distillation.pdf">(IJCAI-2018)-Teaching Semi-Supervised Classifier via Generalized Distillation</a> <br/>        
-        (presented by: BOULANGER Hugo and CARPENTIER Valentin and MOULINE Louis and ZANI Yani)
-        </li>
-       </ul>
-  -->
-
-<!--   </td>
-
-    <td bgcolor="#FEEAE0">
-       Papers to be presented: -->
-
-
-
-      </td>
-      </p>
-    </td>
-  </tr>
-  
   
   
   
@@ -679,6 +577,7 @@ many important issues in Machine Learning as well.)
 This year, your assignment in the projects is to choose an article from the list provided below, understand it, and, most importantly, <strong>try to replicate the experiments</strong>.
 
 <ul></ul>
+<br>
 Rules are as follows:
 
 <ul>
@@ -686,18 +585,25 @@ Rules are as follows:
    </li>
 </ul>
    
+<br>
 The following deliverables are expected:
 
 <ol>
-   <li> Before (<strong><em> <font color="#990000">January 18th 2024 </font></em></strong>), the <strong>choice of the paper</strong> and the names of the members of the team.
+   <li> Before (<strong><em> <font color="#990000">January 16th 2025 </font></em></strong>), the <strong>choice of the paper</strong> and the names of the members of the team.
    </li>
-   <li> (<strong><em> <font color="#990000">February, 29th 2024 </font></em></strong>) <strong> Final report </strong> : 10 pages (strict. Reports longer than 10 pages will not be read!)
+   <li> (<strong><em> <font color="#990000">February, 20th 2025 </font></em></strong>) <strong> Final report </strong> : 10 pages (strict. Reports longer than 10 pages will not be read!)
    </li>
 </ol>
 
-The interlediary report and the final reports must be turned down in the ICML (Int. Conf. on Machine Learning) format for <a href="http://icml.cc/2016/?page_id=151">papers</a>.
+<br>
+The intermediary report and the final report must be turned down in the ICML (Int. Conf. on Machine Learning) format for <a href="http://icml.cc/2016/?page_id=151">papers</a>.
+
+<br>
+<br>
 The deliverables will be evaluated taking into account:
 
+<br>
+<br>
 <ul>
    <li>
    	The <strong>clarity of the analysis of the chosen article</strong>. The paper should briefly present, in no more than two to four pages (out of the 10 allotted), the problem studied in the article, the main ideas and statements presented in the paper. The remaining pages will present the experiments carried out by the team, the possible difficulties, the results obtained and a comparison with the results presented by the authors of the article used as a basis for the project.
@@ -712,6 +618,9 @@ The deliverables will be evaluated taking into account:
    </li> 
 </ul>
 
+<br>
+
+
 <HR WIDTH="100%">
 
 <strong>List of the papers to chose from</strong><a name="#Etudebiblio" id="Etudebiblio"></a> (all recent ones)
@@ -719,118 +628,63 @@ The deliverables will be evaluated taking into account:
 <br>
 
   <ol>
-       <li> <b>Taken</b> <em> <a href="https://arxiv.org/pdf/2007.01434.pdf">(2020) In search of lost domain generalization</a></em> Cited 823 times! 
+       <li> <b></b> <em> <a href="https://arxiv.org/pdf/2007.01434.pdf">(2020) In search of lost domain generalization</a></em> Cited 823 times! 
      </li>
 <p>
-       <li> <em> <a href="https://proceedings.mlr.press/v202/boudiaf23a/boudiaf23a.pdf">(ICML-2023) In Search for a Generalizable Method for Source Free Domain Adaptation</a></em>. 
+       <li> <b> New </b><em> <a href="https://seafile.agroparistech.fr/f/ce4e9558d2b1442a8857/">(ICLR-2024) Self-Supervised Dataset Distillation for Transfer Learning</a></em>. 
      </li>
 <p>
-       <li> <b>Taken</b> <em> <a href="https://proceedings.mlr.press/v202/he23b/he23b.pdf">(ICML-2023) Domain Adaptation for Time Series Under Feature and Label Shifts</a></em>. 
+       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/d4a139ea3b5f43ddb8de/">(ICLR-2024) Transferring Learning Trajectories of Neural Networks</a></em>. 
      </li>
 <p>
-       <li> <b>Taken</b> <em> <a href="https://proceedings.mlr.press/v202/liu23ap/liu23ap.pdf">(ICML-2023) Taxonomy-Structured Domain Adaptation</a></em>. 
+       <li> <b></b> <em> <a href="https://proceedings.mlr.press/v202/liu23ap/liu23ap.pdf">(ICML-2023) Taxonomy-Structured Domain Adaptation</a></em>. 
      </li>
 <p>
-       <li> <b>Taken</b> <em> <a href="https://arxiv.org/abs/2302.12091 ">(ICML-2023) Random Teachers are Good Teachers</a></em>. 
+       <li> <b></b> <em> <a href="https://arxiv.org/abs/2302.12091 ">(ICML-2023) Random Teachers are Good Teachers</a></em>. 
      </li>
 <p>
-       <li> <b>Taken</b> <em> <a href="https://arxiv.org/pdf/2306.09890.pdf">(ICML-Workshop-2023) Studying Generalization on Memory-Based Methods in Continual Learning</a></em>. 
+       <li> <b></b> <em> <a href="https://arxiv.org/pdf/2306.09890.pdf">(ICML-Workshop-2023) Studying Generalization on Memory-Based Methods in Continual Learning</a></em>. 
      </li>
 <p>
-       <li> <b>Taken</b> <em> <a href="https://ojs.aaai.org/index.php/AAAI/article/download/20740/20499">(AAAI-2022) Being Friends Instead of Adversaries- Deep Networks Learn from Data Simplified by Other Networks</a></em>. 
+       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/7f85c3bfa51e4b50b267/">(ICLR-2024) Understanding Transferable Representation Learning and Zero-shot Transfer in CLIP</a></em>. 
      </li>
 <p>
-       <li> <em> <a href="https://openreview.net/pdf?id=Oa9RlXNggGy">(Neurips-2022) Does knowledge distillation really works?</a></em>. 
+       <li> <b></b><em> <a href="https://openreview.net/pdf?id=Oa9RlXNggGy">(Neurips-2022) Does knowledge distillation really works?</a></em>. 
      </li>
 <p>
-       <li> <b>Taken</b> <em> <a href="http://proceedings.mlr.press/v139/lee21e/lee21e.pdf">(ICML-2021) Continual learning in the teacher-student setup: impact of task similarity</a></em>. 
+       <li> <b></b> <em> <a href="http://proceedings.mlr.press/v139/lee21e/lee21e.pdf">(ICML-2021) Continual learning in the teacher-student setup: impact of task similarity</a></em>. 
      </li>
 <p>
        <li> <em> <a href="https://arxiv.org/pdf/2002.08546.pdf">(ICML-2020) Do we really need to access the source data? source hypothesis transfer for unsupervised domain adaptation</a></em>. 
      </li>
 <p>
-       <li> <b>Taken</b> <em> <a href="https://arxiv.org/pdf/2007.12684.pdf">(ICCV-2021) Deep co-training with task decomposition for semi-supervised domain adaptation</a></em>. 
+       <li> <b></b> <em> <a href="https://arxiv.org/pdf/2007.12684.pdf">(ICCV-2021) Deep co-training with task decomposition for semi-supervised domain adaptation</a></em>. 
      </li>
 <p>
-       <li> <b>Taken</b> <em> <a href="https://proceedings.mlr.press/v162/evci22a/evci22a.pdf">(ICML-2022) Head2toe: Utilizing intermediate representations for better transfer learning</a></em>. 
+       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/7f3089f7a27241f4894f/">(ICML-2024) Transferring Knowledge From Large Foundation Models to Small Downstream Models</a></em>. 
      </li>
 <p>
-       <li>  <b>Taken</b> <em> <a href="https://arxiv.org/pdf/2202.00155">(ICLR-2022) Fortuitous forgetting in connectionist networks</a></em>. 
+       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/33a561fcef034256a522/">(ICML-2024) Pseudo-Calibration-Improving Predictive Uncertainty Estimation in Unsupervised Domain Adaptation</a></em>. 
+     </li>
+<p>
+       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/3971ab3ca4bd4175a5a9/">(ICML-2024) Soft_Contrastive_Learning</a></em>. 
+     </li>
+<p>
+       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/33a561fcef034256a522/">(ICML-2024) Let Go of Your Labels with Unsupervised Transfer</a></em>. 
+     </li>
+<p>
+       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/2aa53310fa794b5db619/">(IJCAI-2024) Alleviating Imbalanced Pseudo-label Distribution- Self-Supervised Multi-Source Domain Adaptation with Label-specific Confidence</a></em>. 
+     </li>
+<p>
+       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/51c7779d89e240568822/">(IJCAI-2024) Reconfgurability-Aware Selection for Contrastive Active Domain Adaptation</a></em>. 
+     </li>
+<p>
+       <li>  <b></b> <em> <a href="https://arxiv.org/pdf/2202.00155">(ICLR-2022) Fortuitous forgetting in connectionist networks</a></em>. 
      </li>
 <p>
     </ol>
 
-<!--   <ol>
-     <li>  <b>Taken</b> <em> <a href="https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_676.pdf">(ECML-PKDD-2021)-Follow Your Path:a Progressive Method for Knowledge Distillation</a></em>. 
-     </li>
-<!--<p>
-     <li> <em> <a href="https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_517.pdf">(ECML-PKDD-2021)-Unifying Domain Adaptation and Domain Generalization for Robust Prediction across Minority Racial Groups</a></em>. 
-     </li>
-<p>
-     <li> <em> <a href="https://arxiv.org/pdf/1709.10190.pdf">(ICCV-2017)-Unified Deep Supervised Domain Adaptation and Generalization
-</a></em>. 
-     </li>
-<p>
-     <li>  <b>Taken</b> <em> <a href="https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_962.pdf">(ECML-PKDD-2021)-Continual Learning with Dual Regularizations</a></em>. 
-     </li>
-<p>
-     <li> <em> <a href="https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_301.pdf">(ECML-PKDD-2021)-Source Hypothesis Transfer for Zero-Shot Domain Adaptation</a></em>. 
-     </li>
-<p>
-     <li> <b>Taken</b> <em> <a href="https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_1050.pdf">(ECML-PKDD-2021)-Streaming Decision Trees for Lifelong Learning</a></em>. 
-     </li>
-<p>
-     <li> <b>Taken</b> <em> <a href="https://arxiv.org/pdf/1907.02893.pdf">(ArXiv-2019)-Invariant Risk Minimization</a></em>. 
-     </li>
-<p>
-     <li> <b>Taken</b>  <em> <a href="https://arxiv.org/pdf/2112.09968.pdf">(AAAI-2024)-Being Friends Instead of Adversaries: Deep Networks Learn from Data Simplified by Other Networks</a></em>. 
-     </li>
-<p>
-     <li>  <b>Taken</b> <em> <a href="https://arxiv.org/pdf/1912.03624.pdf">(ICML-2021)-Bayesian Structure Adaptation for Continual Learning</a></em>. 
-     </li>
-<p>
-     <li> <em> <a href="PROJETS-M2-AIC/PROJETS-2021-2024/+-DriftSurf-Stable-State-Reactive-State-Learning-under-Concept-Drift.pdf">(ICML-2021)-DriftSurf- Stable-State / Reactive-State Learning under Concept Drift</a></em>. 
-     	<p><a href="PROJETS-M2-AIC/PROJETS-2021-2024/+-DriftSurf-Stable-State-Reactive-State-Learning-under-Concept-Drift(supp).pdf">DriftSurf- Stable-State / Reactive-State Learning under Concept Drift(supplementary material)</a>. </p>
-     	<p><a href="PROJETS-M2-AIC/PROJETS-2021-2024/+-DriftSurf-Stable-State-Reactive-State-Learning-under-Concept-Drift(code).zip">DriftSurf- Stable-State / Reactive-State Learning under Concept Drift (code)</a>. </p>
-     </li>
-<p>
-     <li> <em> <a href="https://arxiv.org/pdf/2106.07171.pdf">(ICML-2021)-Examining and Combating Spurious Features under Distribution Shift</a></em>. 
-     </li>
-<p>
-     <li> (Beware: difficult) <em> <a href="PROJETS-M2-AIC/PROJETS-2021-2024/LAMDA-Label-Matching-Deep-Domain-Adaptation.pdf">(ICML-2021)-LAMDA- Label Matching Deep Domain Adaptation</a></em>. 
-     	<p> <a href="PROJETS-M2-AIC/PROJETS-2021-2024/LAMDA-Label-Matching-Deep-Domain-Adaptation(supp).pdf">LAMDA- Label Matching Deep Domain Adaptation (supplementary material)</a> </p>
-     </li>
-<p>
-     <li> <em> <a href="https://arxiv.org/pdf/2107.00643.pdf">(ICML-2021)-Mandoline- Model Evaluation under Distribution Shift</a></em>. 
-     </li>
-<p>
-     <li> <em> <a href="https://arxiv.org/pdf/2106.00322.pdf">(ICML-2021)-Sequential Domain Adaptation by Synthesizing Distributionally Robust Experts</a></em>. 
-     </li>
-<p>
-     <li> <em> <a href="https://arxiv.org/pdf/1912.01238.pdf">(ICML-2021)-Overcoming Catastrophic Forgetting by Bayesian Generative Regularization</a></em>. 
-     </li>
-<p>
-     <li> <em> <a href="PROJETS-M2-AIC/PROJETS-2021-2024/Sharing-Less-is-More-Lifelong-Learning-in-Deep-Networks-with-Selective-Layer-Transfer.pdf">(ICML-2021)-Sharing Less is More- Lifelong Learning in Deep Networks with Selective Layer Transfer</a>
-     </em>. 
-     <p> <a href="PROJETS-M2-AIC/PROJETS-2021-2024/Sharing-Less-is-More-Lifelong-Learning-in-Deep-Networks-with-Selective-Layer-Transfer(supp).pdf">Sharing Less is More- Lifelong Learning in Deep Networks with Selective Layer Transfer (supplementary material)</a> </p>
-     </li>
-<p>
-     <li> <b>Taken</b> <em> <a href="https://openreview.net/pdf?id=tW4QEInpni">(ICLR-2021)-When Do Curricula Work?</a></em>. 
-     </li>
-<p>
-     <li> <b>Taken</b> <em> <a href="https://openreview.net/pdf?id=O3Y56aqpChA">(ICLR-2021)-Self-training For Few-shot Transfer Across Extreme Task Differences</a></em>. 
-     </li>
-<p>
-     <li> <b>Taken</b> <em> <a href="https://openreview.net/pdf?id=3AOj0RCNC2">(ICLR-2021)-Gradient Projection Memory for Continual Learning</a></em>. 
-     </li>
-<p>
-</p>
-<p>
-</p>
-<!--      
-    
-  </ol>
--->     
+   
  
 
 <p>
@@ -850,19 +704,19 @@ The deliverables will be evaluated taking into account:
 
   <tr>
      <td>
-        <li>Dorin DONCENCO</li>
-        <li>Ayoub HAMMAL</li>
-        <li>Quentin LETELLIER</li>
-        <li>Benjamin MAUDET</li>
+        <li>Student-1</li>
+        <li>Student-2</li>
+        <li>Student-3</li>
+        <li>Student-4</li>
      </td>
       <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://proceedings.mlr.press/v162/evci22a/evci22a.pdf">(ICML-2022) Head2toe: Utilizing intermediate representations for better transfer learning</a></em>. 
+        <li> <em> <a >(Conference) Paper title</a></em>. 
         </li>
         <li> (final report: <font color="#3fd859"> <b>YES</b> </font>)</li>
       </td>
   </tr>
   
-  <tr>
+<!--  <tr>
      <td>
         <li>Shah Fahad HOSSAIN</li>
         <li>Thanh Gia Hieu KHUONG</li>
@@ -876,187 +730,9 @@ The deliverables will be evaluated taking into account:
         <li> (final report: <font color="#3fd859"> <b>YES </font>)</li>
       </td>
   </tr>
-
-  <tr>
-     <td>
-        <li>Hala ALBAHLOUL</li>
-        <li>Gabriel BECQUET</li>
-        <li>Jacobo RUIZ</li>
-        <li>Bias SHI</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/pdf/2202.00155">(ICLR-2022) Fortuitous forgetting in connectionist networks</a></em>. 
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES </font>)</li>
-      </td>
-  </tr>
-  
-  <tr>
-     <td>
-        <li>Arthur BABIN</li>
-        <li>Rokaya BENAZZI</li>
-        <li>Cl&eacute;ment DILASSER</li>
-        <li>Nicolas RICHET</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/pdf/2007.01434.pdf">(2020) In search of lost domain generalization</a></em>.
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES </font>)</li>
-      </td>
-  </tr>
-  
-  <tr>
-     <td>
-        <li>Nathan Maligeay</li>
-        <li>Leonardo Masci</li>
-        <li>Hugo Pointier</li>
-        <li>Mahdiehsadat Seyedian</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/pdf/2007.12684.pdf">(ICCV-2021) Deep co-training with task decomposition for semi-supervised domain adaptation</a></em>.
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES </font>)</li>
-      </td>
-  </tr>
-  
- <tr>
-     <td>
-        <li>Ambroise BERTIN</li>
-        <li>Maelle CORNEC</li>
-        <li>Jules DUPONT</li>
-        <li>Suzanne GUILTEAUX</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/abs/2302.12091 ">(ICML-2023) Random Teachers are Good Teachers</a></em>.
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES </font>)</li>
-      </td>
-  </tr>
-  
- <tr>
-     <td>
-        <li>Sina Khanagha</li>
-        <li>Ignacio Lopez</li>
-        <li>Alberto Magina</li>
-        <li>Anooga Suresh</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/pdf/2306.09890.pdf">(ICML-Workshop-2023) Studying Generalization on Memory-Based Methods in Continual Learning</a></em>.
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES </font>)</li>
-      </td>
-  </tr>
-  
- <tr>
-     <td>
-        <li>Julian AGUDELO</li>
-        <li>Gabriel CLEREMPUY</li>
-        <li>Mathieu GUIMONT</li>
-        <li>lauriane MOUSSET</li>
-        <li>Anooga SURESH</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="http://proceedings.mlr.press/v139/lee21e/lee21e.pdf">(ICML-2021) Continual learning in the teacher-student setup: impact of task similarity</a></em>.
-        </li>
-        <li> (final report: <font color="#FF0000"> NO </font>)</li>
-      </td>
-  </tr>
-  
- <tr>
-     <td>
-        <li>Julien GIOVANAZZI</li>
-        <li>C&eacute;line GUO</li>
-        <li>Fiona HAK</li>
-        <li>Kamenan N'GADI</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://proceedings.mlr.press/v202/he23b/he23b.pdf">(ICML-2023) Domain Adaptation for Time Series Under Feature and Label Shifts</a></em>.
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES </font>)</li>
-      </td>
-  </tr>
-  
- <tr>
-     <td>
-        <li>Malek BAROUDI</li>
-        <li>Nada KASSARA</li>
-        <li>Afonso PONCE</li>
-        <li>Matthieu VERLYNDE</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://proceedings.mlr.press/v202/liu23ap/liu23ap.pdf">(ICML-2023) Taxonomy-Structured Domain Adaptation</a></em>.
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES </font>)</li>
-      </td>
-  </tr>
-
- <tr>
-     <td>
-        <li>Marine TOGNIA-TONOU</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/pdf/2002.08546.pdf">(ICML-2020) Do we really need to access the source data? source hypothesis transfer for unsupervised domain adaptation</a></em>.
-        </li>
-        <li> (final report: <font color="#3fd859"> YES </font>)</li>
-      </td>
-  </tr>
-
-<!--
-
-<tr>
-     <td>
-        <li>Alexandre Abhay</li>
-        <li>Donatien Leg&eacute;</li>
-        <li>Gustavo Maga&ntilde;a L&ograve;pez</li>
-        <li>Benjamin Vacus</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/pdf/1907.02893.pdf">(ArXiv-2019)-Invariant Risk Minimization</a></em>. 
-        </li>
-        <li> (Final report (<font color="#FF0000"> OK</font>) + Slides received: <font color="#FF0000"> YES</font>) </li>
-      </td>
-  </tr>
-<tr>
-     <td>
-        <li>Paul Cintra</li>
-        <li>Jonathan Colin</li>
-        <li>Nassim Tchoulak</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_962.pdf">(ECML-PKDD-2021)-Continual Learning with Dual Regularizations</a></em>. 
-        </li>
-        <li> (Final report (<font color="#FF0000">OK</font>) + Slides received: <font color="#FF0000"> YES</font>) </li>
-      </td>
-  </tr>
-
-
-   <tr>
-      <td>
-        <li>Student X</li>
-        <li>Student X</li>
-        <li>Student X</li>
-        <li>Student X</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em>  Title of the paper</em>. 
-        </li>
-        <li> (Rapport final (<font color="#FF0000">pas OK</font>) + Transparents re&ccedil;u : NON) </li>
-      </td>
-    </tr>
+-->
 
  
-   <tr>
-      <td>
-        <li>Student 1</li>
-        <li>Student 2</li>
-        <li>Student 3</li>
-      </td>
-      <td bgcolor="F3F3F3">      
-        <li><a >Title of the paper </a></li>
-        <li> (Rapport final + Rapport de mi-parcours + Transparents re&ccedil;u) </li>
-      </td>
-    </tr>
-  -->  
 
 <!-- ==================================================================== -->
   </table>
