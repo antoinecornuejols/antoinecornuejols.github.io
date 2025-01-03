@@ -40,7 +40,7 @@
   </tr>
 </table>
 
-<p><font color="#CC3333">Last update: &nbsp;<!-- #BeginDate format:En2 -->31-Dec-2025<!-- #EndDate --> 
+<p><font color="#CC3333">Last update: &nbsp;<!-- #BeginDate format:En2 -->03-January-2025<!-- #EndDate --> 
   </font></P>
 
 <H3>Course Organization:</H3>
@@ -157,7 +157,7 @@
     <td width="52%" bgcolor="#FFFFFF"> 
       <p align="right">(Antoine Cornu&eacute;jols)</p>
       <p> <b>&nbsp;&nbsp;&nbsp;- </b> Introduction to the course. Out-of-Distribution learning. </p>
-        <p> <b>Central question of the course</b>: <em>What makes you believe that what you have learned so far from training examples or task will be relevant to new examples or tasks? </em> </p>
+        <p> <b>Central question of the course</b>: <em>What makes you believe that what you have learned so far from (source) training examples or task will be relevant to new (target) examples or tasks? </em> </p>
       <p> <a href="Tr-intro-inductionS-2023-24.pdf"><font color="#3397AD">Examination of <b>classical induction</b></font></a></p>      
        <p><b>&nbsp;&nbsp;&nbsp;- </b>The statistical theory of learning for a stationary world. (The In-Distribution assumption)
       <p><a href="Tr_OOD_for_learning_better-2024-25.pdf"><font color="#3397AD">Out-of-Distribution learning <b>for the sake of learning better</b> or with less (annotated) examples</a> </font></p>
@@ -200,7 +200,7 @@
           <p>Co-training, self-training and tri-training </p>  
        </li> 
         <li>
-          <p>Boosting </p>  
+          <p>Boosting (after a reminder on SVMs)</p>  
        </li> 
         <li>
           <p>Blending </p>  
@@ -209,18 +209,15 @@
       <p> <b><font color="#3397AD">Domain adaptation and tracking</font></b> </p>
      <ul>
         <li>
-          <p>Tracking: an intriguing idea </p>  
+          <p>Domain adaptation (co-variate shift) </p>  
        </li> 
         <li>
-          <p>Domain adaptation (co-variate shift) </p>  
+          <p>Tracking: an intriguing idea. Domain adaptation without domain change!</p>  
        </li> 
      </ul>
 
        <li>
         <p>Extension to other ensemble methods?</p>
-       </li>
-        <li>
-        <p><a href="Tr_Course_LUPI_ECTS-2022-23.pdf">The LUPI framework</a>. Learning using a given input space, and being tested using an input space which is a subspace of the learning input space. Illustration with Early Classification of Time Series </p>
        </li>
        <br>
  
@@ -355,22 +352,20 @@
         </li>
        </ul>
 
-      <p> <b><font color="#3397AD">Curriculum learning</font></b> </p>
-
+      <p> <b><font color="#3397AD">Learning from a teacher</font></b> </p>
+      <a href="Tr-P_train-not-P_test.pdf">Slides of the class</a>
       <ul>
         <li>
-          <p> <b>Sequence of tasks</b>. How to organize them? </p>
+          <p> <b>LUPI</b> (Learning Using Privileged Information): not the same input space X between teacher and learner.</p>
         </li>
         <li>
-          <p>How to <b>measure the difficulty</b> of new examples</p>
+          <p><b>Distillation</b>. Not the same H.</p>
         </li>
         <li>
-          <p><b>Catastrophic forgetting</b>. </p>
-        </li>
-        <li>
-          <p><b>Curriculum</b>: the space of tasks and the space of biases.</p>
+          <p><b>Prompting</b> a foundation model.</p>
         </li>
       </ul>
+
  
 <!--
       <p>&#149; <a ><b>Co-learning</b></a>. Having independent and complementary views.</p>      
@@ -389,6 +384,13 @@
     </td>
     <td width="34%" bgcolor="#FEEAE0">
       <p>&#149; Quiz No 3</p>
+      <p> <a href="https://seafile.agroparistech.fr/f/c0da1fe0e7534d618c08/">CORNU&Eacute;JOLS, Antoine. <b>Some thoughts about transfer learning. What role for the source domain?</b>. <em>International Journal of Approximate Reasoning</em>, 2024, vol. 166, p. 109107.</a> 
+     </p>
+      <p><em> <a href="https://eprints.bbk.ac.uk/id/eprint/44038/1/KD_Survey-arxiv.pdf">Gou, J. and Yu, B. and Maybank, Stephen and Tao, Da. (2021) <b>Knowledge distillation: a survey</b>. International Journal of Computer Vision 129, pp.1789-1819.</a></em> 
+     </p>
+      <p><em> <a href="https://proceedings.mlr.press/v97/phuong19a/phuong19a.pdf">PHUONG, Mary et LAMPERT, Christoph. <b>Towards understanding knowledge distillation</b>. In : International conference on machine learning. PMLR, 2019. p. 5142-5151.</a></em> 
+     </p>
+
     </td>
 
   </tr>
@@ -402,17 +404,23 @@
     
     <td bgcolor="#FFFFFF"><p align="right">(Antoine Cornu&eacute;jols)</p>
       <p></p>
-      <p> <b><font color="#3397AD">When the teacher and the learner do not share the same cognitive capacities</font></b> </p>
-      <a href="Tr-P_train-not-P_test.pdf">Slides of the class</a>
+      <p> <b><font color="#3397AD">Curriculum learning</font></b> </p>
+
       <ul>
         <li>
-          <p> <b>LUPI</b> (Learning Using Privileged Information): not the same X.</p>
+          <p> <b>Sequence of tasks</b>. How to organize them? </p>
         </li>
         <li>
-          <p><b>Distillation</b>. Not the same H.</p>
+          <p>How to <b>measure the difficulty</b> of new examples</p>
+        </li>
+        <li>
+          <p><b>Catastrophic forgetting</b>. </p>
         </li>
         <li>
           <p><b>Coaching</b>. Not the same gain function.</p>
+        </li>
+        <li>
+          <p><b>Curriculum</b>: the space of tasks and the space of biases.</p>
         </li>
       </ul>
 
@@ -424,8 +432,7 @@
 
     <td bgcolor="#FEEAE0">
       <p>&#149; Quiz No 4</p>
-     </p>
-    </td>
+     </td>
 
   </tr>
 <!-- ==================================================================== -->
@@ -476,8 +483,13 @@
 <H3>&nbsp;</H3>
 <h3>References and web sites: <a name="references" id="references"></a></h3>
 <ul>
-  <li>&nbsp; Barra V. &amp; Cornu&eacute;jols A. &amp; Miclet L.: <u>Apprentissage artificiel. Concept et algorithmes. De Bayes et Hume au Deep Learning</u>. Eyrolles, 2021 (4&egrave;me &eacute;dition)<br>
+  <li>&nbsp; Barra V. &amp; Cornu&eacute;jols A. &amp; Miclet L.: <u><font color="#000099">Apprentissage artificiel. Concept et algorithmes. De Bayes et Hume au Deep Learning</font></u>. Eyrolles, 2021 (4&egrave;me &eacute;dition)<br>
   &nbsp; (A very comprehensive book on Machine Learning. In French.)</li>
+</ul>
+<p>
+<ul>
+  <li>&nbsp; Torralba A. &amp; Isola Ph. &amp; Freeman W.: <u><font color="#000099">Foundations of Computer Vision</font></u>. MIT Press, 2024.<br>
+  &nbsp; (Speaks mainly of computer vison obviously. But an incredible synthesis of learning problems and methods. <br> &nbsp; Highly recommended.)</li>
 </ul>
 
 <p><strong>Books on Machine Learning in general</strong>:</p>
@@ -486,6 +498,11 @@
     University Press,
     2012.<br>
     &nbsp;(A Bayesian perspective on Machine Learning.)
+</ul>
+<ul>
+  <li> &nbsp;Bishop Ch. :<u> <font color="#000099">Deep Learning. Foundations and Concepts</font></u>. MIT Press,
+    2024.<br>
+    &nbsp;(Quite pedagogical.)
 </ul>
 <ul>
   <li> &nbsp;Duda, Hart &amp; Stork :<u> Pattern classification</u> (2nd &eacute;d.).
@@ -497,12 +514,14 @@
         that make sense of data</u>.
       Cambridge University Press, 2012.<br>
 &nbsp;(A good introductory book on Machine Learning. Quick on some subjects and
-does not really cover data mining.)</li>
+does not really cover data mining. But a very original and often quite illuminating perspective.)</li>
 </ul>
+<!--
 <ul>
   <li>&nbsp;Hand, Mannila &amp; Smyth : <u>Data mining</u>. Springer, 2001.<br>
     &nbsp;(Livre assez complet, mais n&eacute;cessairement plus superficiel car couvrant aussi la fouille de donn&eacute;es)</li>
 </ul>
+-->
 <ul>
   <li>&nbsp;Hastie, Tibshirani &amp; Friedman : <u>The elements of statistical
        learning. Data mining, inference and prediction</u>. Springer, (2nd Ed.
@@ -521,22 +540,47 @@ does not really cover data mining.)</li>
 the reading.)
   </li>
 </ul>
+<!--
 <ul>
   <li> &nbsp;Mitchell T. : <u>Machine Learning</u>. McGraw Hill, 1997. <br>
     &nbsp; (A good introductory book, but outdated on many subjects.)</li>
 </ul>
+-->
+<!--
 <ul>
   <li> &nbsp;Marsland S. : <u>Machine Learning. An algorithmic perspective</u>.
     CRC Press, 2009. <br>
     &nbsp; (An introductory book, rather superficial, with bits of code in Python.)</li>
 </ul>
+-->
 <ul>
-  <li> &nbsp;Murphy S. : <u>Machine Learning. A probabilistic perspective</u>.
+  <li> &nbsp;Murphy K. : <u>Machine Learning. A probabilistic perspective</u>.
     MIT Press, 2012. <br>
 &nbsp; (The title says it all. A book incredibly comprehensive from a Bayesian
 perspective.)</li>
 </ul>
+<ul>
+  <li> &nbsp;Murphy K. : <u><font color="#000099">Probabilistic Machine Learning. A introduction</font></u>.
+    MIT Press, 2022. <br>
+&nbsp; (The new edition, first of two volumes.)</li>
+</ul>
+<ul>
+   <li> &nbsp;Murphy K. : <u><font color="#000099">Probabilistic Machine Learning. Advanced topics</font></u>.
+    MIT Press, 2022. <br>
+&nbsp; (The new edition, second of two volumes. Lots of recent works. A little bit of a patchwork.)</li>
+</ul>
+<ul>
+   <li> &nbsp;Sejnowski T. : <u><font color="#000099">The deep learning revolution</font></u>.
+    MIT Press, 2018. <br>
+&nbsp; (Provides a personal historical perspective. By someone who should have shared the 2024 Nobel Prize.)</li>
+</ul>
+<ul>
+   <li> &nbsp;Zou Zhi-Hua. : <u><font color="#000099">Machine Learning</font></u>.
+    Springer, 2016. <br>
+&nbsp; (A very good introductory book)</li>
+</ul>
 <p><strong></strong></p>
+
 <p><strong>Books on specific topics</strong>:</p>
 <ul>
   <li>&nbsp;Bishop C. : <u>Neural networks for pattern recognition</u>. Clarendon 
