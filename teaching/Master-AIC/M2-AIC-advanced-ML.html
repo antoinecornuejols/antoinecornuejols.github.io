@@ -40,7 +40,7 @@
   </tr>
 </table>
 
-<p><font color="#CC3333">Last update: &nbsp;<!-- #BeginDate format:En2 -->13-February-2025<!-- #EndDate --> 
+<p><font color="#CC3333">Last update: &nbsp;<!-- #BeginDate format:En2 -->18-February-2025<!-- #EndDate --> 
   </font></P>
 
 <H3>Course Organization:</H3>
@@ -334,9 +334,12 @@
         <li>
           <p>Invariant Risk Minimization</p>
         </li>
+        <li>
+          <p>Multi-task learning</p>
+        </li>
        </ul>
 
-      <p>(3) Transfering the <b>decision function</b> instead of the representation (<a href="https://seafile.agroparistech.fr/f/7c55ebd3df7d4fdd9247/">slides</a>)</p>
+      <p>(3) Transfering the <b>decision function</b> instead of a representation (<a href="https://seafile.agroparistech.fr/f/7c55ebd3df7d4fdd9247/">slides</a>)</p>
 
       <ul>
         <li>
@@ -390,40 +393,29 @@
         </li>
       </ul>
 
-       <p> <b><a href="https://seafile.agroparistech.fr/f/52b821640b2e438ebb1e/"><font color="#3397AD">Learning from a teacher</font></a></b> </p>
-
+       <p> <b><font color="#3397AD">Curriculum learning (1)</font></b> </p>
         <ul>
          <li>
-          <p> <b>LUPI</b> (Learning Using Privileged Information): not the same input space X between teacher and learner.</p>
+          <p><b>Teacher - student</b> </p>
+          <ul>
+            <li> LUPI (Learning Using Privileged Information)</li>
+            <li> Distillation </li>
+          </ul>
         </li>
         <li>
-          <p><b>Distillation</b>. Not the same H.</p>
+          <p><b>Interferences</b> between examples or between learning tasks</p>
+          <ul>
+            <li> Catastrophic forgetting </li>
+            <li> Ordering effects </li>
+          </ul> 
         </li>
-        <li>
-          <p><b>Coaching</b>. Not the same gain function.</p>
-        </li>
-        
       </ul>
 
-      <p> <b><a href="https://seafile.agroparistech.fr/f/c14aa152dd9643dcb89b/"><font color="#3397AD">Curriculum learning</font></a></b> </p>
-      <ul>
-          <p><b>Prompting</b> a foundation model.</p>
-        </li>
-      </ul>
-     <ul>
-        <li>
-          <p> <b>Sequence of tasks</b>. How to organize them? </p>
-        </li>
-        <li>
-          <p><b>Catastrophic forgetting</b>. </p>
-        </li>
-        <li>
-          <p>How to <b>measure the difficulty</b> of new examples</p>
-        </li>
-        <li>
-          <p><b>Curriculum</b>: the space of tasks and the space of biases.</p>
-        </li>
-      </ul>
+
+       <p> <b><font color="#3397AD"><a href="https://seafile.agroparistech.fr/f/52b821640b2e438ebb1e/">Learning from a teacher</font></a></b> </p>
+
+
+      <p> <b><font color="#3397AD"><a href="https://seafile.agroparistech.fr/f/c14aa152dd9643dcb89b/">Curriculum learning</font></a></b> </p>
 
 
    <br>      
@@ -455,17 +447,24 @@
     
     <td bgcolor="#FFFFFF"><p align="right">(Antoine Cornu&eacute;jols)</p>
       <p></p>
-     <p> <b><font color="#3397AD">On-line learning. A succession of small transfer steps</font></b> </p>
-      <a href="Tr_Curriculum_learning-23-24(1-123).pdf">Slides of the class</a>
-      <ul>
+      <p> <b><font color="#3397AD">Curriculum learning (2)</font></b> </p>
+        <ul>
+         <li>
+          <p>How to <b>measure the difficulty</b> of new examples </p>
+        </li>
         <li>
-          <p> A <b>theoretical</b> perspective. <br>
-          Can we still guarantee a performance level even against an adversary who controls the target concept and can change it arbitrarily?</p>
+          <p><b>A geometry</b> on the space of learning tasks</p>
         </li>
-       <li>
-          <p> <b>Empirical approaches</b>. </p>
+      </ul>
+
+     <p> <b><font color="#3397AD"><a href="https://seafile.agroparistech.fr/f/94c00f504c6440b28bc9/">On-line learning</a>. A succession of small transfer steps</font></b> </p>
+        <ul>
+         <li>
+          <p>Can we still guarantee a performance level when the teacher is an adversary who controls the target concept and can change it arbitrarily? </p>
         </li>
-       </ul>
+      </ul>
+
+      <p> <b><font color="#3397AD">An application of curriculum learning for long term recommandation: coaching</font></b> </p>
 
       <p> <b><font color="#3397AD">General conclusions</font></b> </p>
 
@@ -687,7 +686,7 @@ The deliverables will be evaluated taking into account:
        <li> <b><font color="#FF0000"> <b>Taken </font></b><em> <a href="https://seafile.agroparistech.fr/f/ce4e9558d2b1442a8857/">(ICLR-2024) Self-Supervised Dataset Distillation for Transfer Learning</a></em>. 
      </li>
 <p>
-       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/d4a139ea3b5f43ddb8de/">(ICLR-2024) Transferring Learning Trajectories of Neural Networks</a></em>. 
+       <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://seafile.agroparistech.fr/f/d4a139ea3b5f43ddb8de/">(ICLR-2024) Transferring Learning Trajectories of Neural Networks</a></em>. 
      </li>
 <p>
        <li> <b></b> <em> <a href="https://proceedings.mlr.press/v202/liu23ap/liu23ap.pdf">(ICML-2023) Taxonomy-Structured Domain Adaptation</a></em>. 
@@ -720,7 +719,7 @@ The deliverables will be evaluated taking into account:
        <li> <b><P>Partly taken</P></b> <em> <a href="https://seafile.agroparistech.fr/f/33a561fcef034256a522/">(ICML-2024) Pseudo-Calibration-Improving Predictive Uncertainty Estimation in Unsupervised Domain Adaptation</a></em>. 
      </li>
 <p>
-       <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://seafile.agroparistech.fr/f/3971ab3ca4bd4175a5a9/">(ICML-2024) Soft_Contrastive_Learning</a></em>. 
+       <li> <b><font color="#FF0000"> <b>Not taken anymore (pbs Mac OSX)</font></b> <em> <a href="https://seafile.agroparistech.fr/f/3971ab3ca4bd4175a5a9/">(ICML-2024) Soft_Contrastive_Learning</a></em>. 
      </li>
 <p>
        <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://seafile.agroparistech.fr/f/ff552f663abf41e59b69/">(ICML-2024) Let Go of Your Labels with Unsupervised Transfer</a></em>. 
@@ -729,7 +728,7 @@ The deliverables will be evaluated taking into account:
        <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/2aa53310fa794b5db619/">(IJCAI-2024) Alleviating Imbalanced Pseudo-label Distribution- Self-Supervised Multi-Source Domain Adaptation with Label-specific Confidence</a></em>. 
      </li>
 <p>
-       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/51c7779d89e240568822/">(IJCAI-2024) Reconfgurability-Aware Selection for Contrastive Active Domain Adaptation</a></em>. 
+       <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://seafile.agroparistech.fr/f/51c7779d89e240568822/">(IJCAI-2024) Reconfgurability-Aware Selection for Contrastive Active Domain Adaptation</a></em>. 
      </li>
 <p>
        <li>  <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://arxiv.org/pdf/2202.00155">(ICLR-2022) Fortuitous forgetting in connectionist networks</a></em>. 
@@ -819,7 +818,7 @@ The deliverables will be evaluated taking into account:
         <li>Timoth&eacute;e Sanchez</li>
      </td>
       <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://seafile.agroparistech.fr/f/3971ab3ca4bd4175a5a9/">(ICML-2024) Soft_Contrastive_Learning</a></em>. 
+        <li> <em> <a href="https://seafile.agroparistech.fr/f/51c7779d89e240568822/">(IJCAI-2024) Reconfgurability-Aware Selection for Contrastive Active Domain Adaptation</a></em>. 
         </li>
         <li> (final report: <font color="#FF0000"> <b>NO </font>)</li>
       </td>
@@ -932,6 +931,20 @@ The deliverables will be evaluated taking into account:
      </td>
       <td bgcolor="F3F3F3">      
         <li> <em> <a href="https://arxiv.org/pdf/2002.08546.pdf">(ICML-2020) Do we really need to access the source data? source hypothesis transfer for unsupervised domain adaptation</a></em>. 
+        </li>
+        <li> (final report: <font color="#FF0000"> <b>NO </font>)</li>
+      </td>
+  </tr>
+  
+   <tr>
+     <td>
+        <li>Lasha KOROSHINADZE</li>
+        <li>Student_2</li>
+        <li>Student-3</li>
+        <li>Student-4</li>
+     </td>
+      <td bgcolor="F3F3F3">      
+        <li> <em> <a href="https://seafile.agroparistech.fr/f/d4a139ea3b5f43ddb8de/">(ICLR-2024) Transferring Learning Trajectories of Neural Networks</a></em>. 
         </li>
         <li> (final report: <font color="#FF0000"> <b>NO </font>)</li>
       </td>
