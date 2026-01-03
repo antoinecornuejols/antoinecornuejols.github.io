@@ -17,7 +17,7 @@
 </CENTER>
 
 <CENTER>
-  <P><font face="Georgia, Times New Roman, Times, serif">Winter quarter 2024-2025</font></P>
+  <P><font face="Georgia, Times New Roman, Times, serif">Winter quarter 2025-2026</font></P>
 </CENTER>
 
 <CENTER>
@@ -51,7 +51,7 @@
   </tr>
 </table>
 
-<p><font color="#CC3333">Last update: &nbsp;<!-- #BeginDate format:En2 -->28-February-2025<!-- #EndDate --> 
+<p><font color="#CC3333">Last update: &nbsp;<!-- #BeginDate format:En2 -->03-January-2026<!-- #EndDate --> 
   </font></P>
 
 <H3>Course Organization:</H3>
@@ -78,8 +78,142 @@
 
 <!-- ==================================================================== -->
 <H3>Outline of the course:  <a name="program" id="program"></a></H3>
+<ol>
+  <li>
+    <b style="color:#3397AD";>Classical inductive learning: I.I.D.</b>
+    <ul>
+      <li>
+        Basic assumptions
+      </li>
+      <li>
+        What kinds of guarantees
+      </li>
+       <li>
+        Transductive learning
+      </li>
+       <li>
+        Types of distribution shifts and transfer learning (Out-of-Distribution (O.O.D.))
+      </li>
+     </ul>
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>Using O.O.D. learning to help solve an I.I.D. learning task</b>
+    <ul>
+      <li>
+        Semi-supervised learning (passive approach)
+      </li>
+      <li>
+        Imbalanced classes (active approach)
+      </li>
+       <li>
+        Active learning (active approach)
+      </li>
+       <li>
+        Multi-agent O.O.D. methods in the I.I.D. scenario
+         <ul>
+           <li>
+            Boosting
+           </li>
+           <li>
+            Co-learning
+           </li>
+           <li>
+            Blending
+           </li>
+         </ul>
+
+      </li>
+     </ul>
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>O.O.D. at testing time</b>
+    <ul>
+      <li>
+        Designed to stem learning: Adversarial examples
+      </li>
+      <li>
+        Co-variate shift (or domain adaptation)
+      </li>
+      <li>
+        A special case: Tracking
+      </li>
+    </ul>
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>O.O.D. in transfer learning (and multi-tasks learning)</b>
+    <p>Using the assumption that there is something in common between the source and the target, what can be transfered includes:</p>
+    <ul>
+      <li>
+        A representation
+      </li>
+      <li>
+        The decision function
+      </li>
+      <li>
+        Something invariant, for instance causality relationships
+      </li>
+      <li>
+        Others: the loss function, the optimizer, … 
+      </li>
+    </ul>
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>Analogy making</b>
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>Learning with a teacher: distillation</b>
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>Curriculum learning</b>
+    <ul>
+      <li>
+        A teacher
+      </li>
+      <li>
+        Interferences between tasks
+        <ul>
+          <li>
+            Measuring the difficulty of new examples
+          </li>
+          <li>
+            Catastrophic forgetting
+          </li>
+          <li>
+            A geometry on the space of tasks
+          </li>
+          <li>
+            The geometry can be non Euclidean. The path itself (order of tasks) conveys information
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>Online learning</b>
+    <ul>
+      <li>
+        Can we still guarantee something if the teacher acts as an adversary?
+      </li>
+      <li>
+        General empirical approaches to online learning. Solving the plasticity-stability trade-off
+      </li>
+    </ul>
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>Conclusion</b> 
+  </li>
+</ol>
+
 <ul>
-<!--    <div> <img src="Organisation_Course_AIC.pdf" align="center"  alt="Broad outline the course"  width="75%" height="50%" /></div> -->
+<!--    <div> <img src="Organisation_Course_AIC.pdf" align="center"  alt="Broad outline the course"  width="75%" height="50%" /></div> 
     <li> Learning is about <strong>extrapolating</strong> predictions and/or regularities from limited data (even if sometimes there is an apparently very large data set) either in a stationary environment (<em>classical induction</em>) or in a changing one (<em>domain adaptation, transfer learning</em>). <br><br>
       This brings <strong>questions</strong> that will be core topics of the course:
     	<br> 
@@ -111,7 +245,7 @@
   </ul>
 
 </ul>
-
+-->
 <br>
 
 <HR WIDTH="100%">
@@ -162,16 +296,33 @@
 
   <tr> 
     <td width="14%" bgcolor="#D4FCFF"> 
-      <p><b>09-01-2025</b></p>
-      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
+      <p><b>08-01-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-108</font>)</p>
     </td>
     <td width="52%" bgcolor="#FFFFFF"> 
       <p align="right">(Antoine Cornu&eacute;jols)</p>
       <p> <b>&nbsp;&nbsp;&nbsp;- </b> Introduction to the course. Out-of-Distribution learning. </p>
         <p> <b>Central question of the course</b>: <em>What makes you believe that what you have learned so far from (source) training examples or task will be relevant to new (target) examples or tasks? </em> </p>
-      <p> <a href="https://seafile.agroparistech.fr/f/15e94ce7121f4bafafb8/"><font color="#3397AD">Examination of <b>classical induction</b></font></a></p>      
-       <p><b>&nbsp;&nbsp;&nbsp;- </b>The statistical theory of learning for a stationary world. (The In-Distribution assumption)
 
+ <ol>
+  <li>
+    <b style="color:#3397AD";><a href="https://seafile.agroparistech.fr/f/15e94ce7121f4bafafb8/">Classical inductive learning: I.I.D.</a></b>
+    <ul>
+      <li>
+        Basic assumptions
+      </li>
+      <li>
+        What kinds of guarantees
+      </li>
+       <li>
+        Transductive learning
+      </li>
+       <li>
+        Types of distribution shifts and transfer learning (Out-of-Distribution (O.O.D.))
+      </li>
+     </ul>
+ </li>
+</ol>
     <br>      
         
     <td bgcolor="#FEEAE0">
@@ -180,37 +331,44 @@
 <!-- ==================================================================== -->
   <tr> 
     <td width="14%" height="120" bgcolor="#D4FCFF"> 
-      <p><b>16-01-2025</b></p>
-      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
+      <p><b>15-01-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-108</font>)</p>
     </td>
-
-    <td width="52%" bgcolor="#FFFFFF"> 
+   <td width="52%" bgcolor="#FFFFFF"> 
       <p align="right">(Antoine Cornu&eacute;jols)</p>
-      <p><a href="https://seafile.agroparistech.fr/f/e506d1c75c4e4fd7a656/"><font color="#3397AD">Out-of-Distribution learning <b>for the sake of learning better</b> or with less (annotated) examples</font></a> </p>
-      <ul>
-        <li> 
-          <p><b>Semi-supervised</b> learning </p> 
-        </li>
-        <li> 
-          <p>Learning when classes are severely <b>unbalanced</b> </p>
-        </li>
-        <li> 
-          <p>Learning from <b>positive examples only</b> </p>
-        </li>
-        <li> 
-          <p><b>Active</b> learning </p>
-        </li>
-      </ul>
-
-      <p> <b><a href="https://seafile.agroparistech.fr/f/a6f1c58da20b464d8604/"><font color="#3397AD">O.O.D. through multiple agents</font></a></b> </p>
-      <ul>
-        <li>
-          <p>Co-training, self-training and tri-training </p>  
-       </li> 
-        <li>
-          <p>Boosting (after a reminder on SVMs)</p>  
-       </li> 
+      <ol  start="2">
+    <li>
+      <b style="color:#3397AD";>Using O.O.D. learning to help solve an I.I.D. learning task</b>
+    </li>
+    <ul>
+      <li>
+        Semi-supervised learning (passive approach)
+      </li>
+      <li>
+        Imbalanced classes (active approach)
+      </li>
+       <li>
+        Active learning (active approach)
+      </li>
+       <li>
+        Multi-agent O.O.D. methods in the I.I.D. scenario
+         <ul>
+           <li>
+            Boosting
+           </li>
+           <li>
+            Co-learning
+           </li>
+           <li>
+            Blending
+           </li>
+         </ul>
+       </li>
      </ul>
+   </ol>
+
+    <br>      
+
  
        <br>
  
@@ -231,67 +389,13 @@
 <!-- ==================================================================== -->
   <tr> 
     <td width="14%" height="120" bgcolor="#D4FCFF"> 
-      <p><b>23-01-2025</b></p>
-      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
+      <p><b>22-01-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-108</font>)</p>
     </td>
 
     <td width="52%" bgcolor="#FFFFFF"> 
       <p align="right">(Antoine Cornu&eacute;jols)</p>
-      <p> <b><a href="https://seafile.agroparistech.fr/f/a6f1c58da20b464d8604/"><font color="#3397AD">O.O.D. through multiple agents</font></a></b> (follow up)</p>
-      <ul>
-        <li>
-          <p>Boosting (after a reminder on SVMs)</p>  
-       </li> 
-        <li>
-          <p>Blending </p>  
-       </li> 
-     </ul>
-      <p> <b><a href="https://seafile.agroparistech.fr/f/6b48e3f1220e49e09f01/"><font color="#3397AD">Domain adaptation and tracking</font></a></b> </p>
-     <ul>
-        <li>
-          <p>Domain adaptation (co-variate shift) </p>  
-       </li> 
-        <li>
-          <p>Tracking: an intriguing idea. Domain adaptation without domain change!</p>  
-       </li> 
-     </ul>
 
-      <p> <b><a href="https://seafile.agroparistech.fr/f/1f11ce0170dd4afb9c8b/"><font color="#3397AD">Transfer learning</font></a></b> </p>
-      <p>What can be transferred:</p>
-      <ol>
-        <li>
-          <p><b>Representation</b></p>
-        </li>
-        <li>
-          <p>Underlying <b>regularities</b> supposedly more stable among learning tasks</p>
-        </li>
-        <li>
-          <p>The <b>decision</b> function</p>
-        </li>
-        <li>
-          <p><b>Others</b>: the loss function, the optimizer, ... </p>
-        </li>
-      </ol>
-      <p>(1) <b>Learning a representation</b></p>
-
-      <ul>
-        <li>
-          <p>Fine tuning</p>
-        </li>
-        <li>
-          <p>Self-supervised learning</p>
-        </li>
-        <li>
-          <p>Contrastive learning</p>
-        </li>
-        <li>
-          <p>Foundation models. Prompting. Zero-shot learning</p>
-        </li>
-      </ul>
-
-       <br>
- 
- <!--       <p><b>&nbsp;&nbsp;&nbsp;- </b>The statistical theory of learning / The no-free-lunch theorem / Another perspective: Explanation-Based-Learning / What kind of validation? -->
     </td>
          
     <td width="34%" bgcolor="#FEEAE0">
@@ -308,8 +412,8 @@
 <!-- ==================================================================== -->
   <tr> 
     <td width="14%" height="120" bgcolor="#FFCCCC"> 
-      <p><b>30-01-2025</b></p>
-      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
+      <p><b>29-01-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-108</font>)</p>
     </td>
     
     <td bgcolor="#FDC9AF"><p align="right">(Antoine Cornu&eacute;jols)</p>
@@ -328,54 +432,16 @@
 <!-- ==================================================================== -->
   <tr> 
     <td width="14%" bgcolor="#D4FCFF"> 
-      <p><b>13-02-2025</b></p>
-      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
+      <p><b>12-02-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-108</font>)</p>
     </td>
     
     <td width="52%"> 
       <p align="right">       (Antoine Cornu&eacute;jols)</p>
-      <p> <b><a href="https://seafile.agroparistech.fr/f/1f11ce0170dd4afb9c8b/"><font color="#3397AD">Transfer learning</font></a></b> </p>
 
-      <p>(2) <b>Discovering underlying regularities</b> to transfer</p>
-
-      <ul>
-        <li>
-          <p>Domain adversarial learning</p>
-        </li>
-        <li>
-          <p>Invariant Risk Minimization</p>
-        </li>
-        <li>
-          <p>Multi-task learning</p>
-        </li>
-       </ul>
-
-      <p>(3) Transfering the <b>decision function</b> instead of a representation (<a href="https://seafile.agroparistech.fr/f/7c55ebd3df7d4fdd9247/">slides</a>)</p>
-
-      <ul>
-        <li>
-          <p><b>TransBoost</b></p>
-          <ul><b>- </b>   What are the <strong>ingredients</strong> for a successful (detrimental) transfer? </ul>
-          <ul><b>- </b>   What <strong>role for the source</strong>? Role and measure of similarity between source and target in TL? </ul>
-        </li>
-      </ul>
-
- 
-<!--
-      <p>&#149; <a ><b>Co-learning</b></a>. Having independent and complementary views.</p>      
-     <p>&#149; <a ><b>Unsupervised Collaborative learning</b></a> and the question of which methods are to be combined in order to get the best collaboration. Which lessons here?</p>      
-     <p>&#149; <a > <b>The LUPI framework</b></a>. Idea. Learning using a given input space, and being tested using another one. </p>
-      <p><b>&nbsp;&nbsp;&nbsp;- </b> <a >Illustration: Early classification of time series.</a></p>
-     <p>&#8226; <a ><b>Domain adaptation</b></a>. </p>
-      <p>&#149; <a ><b>Co-learning</b></a>. Having independent and complementary views.</p>      
-      <p>&#149; <a href="Tr-collaborative_learning-2021-22-v2.pdf"><b>Co-learning</b></a>. Having independent and complementary views.</p>
-           <p>&#149; <a href="Tr_collaborative_clustering.pdf"><b>Unsupervised Collaborative learning</b></a> and the question of which methods are to be combined in order to get the best collaboration. Which lessons here?</p>      
-     <p>&#149; <a href="Tr_Course_LUPI_ECTS-2021-22-v1.pdf"> <b>The LUPI framework</b></a>. Idea. Learning using a given input space, and being tested using another one. </p>
-      <p><b>&nbsp;&nbsp;&nbsp;- </b> <a >Illustration: Early classification of time series.</a></p>
-     <p>&#8226; <a href="Tr_Domain_Adaptation_21-22.pdf"><b>Domain adaptation</b></a>. </p>
-   -->
     <br>      
     </td>
+
     <td width="34%" bgcolor="#FEEAE0">
       <p>&#149; Quiz No 3</p>
       <p> <a href="https://seafile.agroparistech.fr/f/c0da1fe0e7534d618c08/">CORNU&Eacute;JOLS, Antoine. <b>Some thoughts about transfer learning. What role for the source domain?</b>. <em>International Journal of Approximate Reasoning</em>, 2024, vol. 166, p. 109107.</a> 
@@ -388,50 +454,13 @@
 <!-- ==================================================================== -->
   <tr> 
     <td width="14%" height="120" bgcolor="#D4FCFF"> 
-      <p><b>14-02-2025</b></p>
-      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
+      <p><b>19-02-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-108</font>)</p>
     </td>
     
     <td bgcolor="#FFFFFF"><p align="right">(Antoine Cornu&eacute;jols)</p>
-      <p></p>
-        <ul>
-         <li>
-          <p><b>Analogy</b> making and ordering effects. The MDLp (Minimum Description Length Problem)</p>
-        </li>
-        <li>
-          <p><b>Cognitive tunnel effect</b></p>
-          <ul><b>- </b>   How to transfer from one conceptual domain to another one. Is there a better ordering?</ul> 
-        </li>
-      </ul>
-
-       <p> <b><font color="#3397AD">Curriculum learning (1)</font></b> </p>
-        <ul>
-         <li>
-          <p><b>Teacher - student</b> </p>
-          <ul>
-            <li> LUPI (Learning Using Privileged Information)</li>
-            <li> Distillation </li>
-          </ul>
-        </li>
-        <li>
-          <p><b>Interferences</b> between examples or between learning tasks</p>
-          <ul>
-            <li> <a href="https://seafile.agroparistech.fr/f/fe0ce6ac0bb949859ce3/">Catastrophic forgetting</a> </li>
-            <li> Ordering effects </li>
-          </ul> 
-        </li>
-      </ul>
 
 
-       <p> <b><font color="#3397AD"><a href="https://seafile.agroparistech.fr/f/52b821640b2e438ebb1e/">Learning from a teacher</font></a></b> </p>
-
-
-      <p> <b><font color="#3397AD"><a href="https://seafile.agroparistech.fr/f/85d7965960c046eea875/">Curriculum learning</font></a></b> </p>
-
-
-   <br>      
-      <p align=right> 
-      </p>
     </td>
 
     <td bgcolor="#FEEAE0">
@@ -452,42 +481,17 @@
 <!-- ==================================================================== -->
   <tr> 
     <td width="14%" height="120" bgcolor="#D4FCFF"> 
-      <p><b>20-02-2025</b></p>
-      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-107</font>)</p>
+      <p><b>20-02-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Salle B-108</font>)</p>
     </td>
     
     <td bgcolor="#FFFFFF"><p align="right">(Antoine Cornu&eacute;jols)</p>
       <p></p>
-      <p> <b><font color="#3397AD"><a href="https://seafile.agroparistech.fr/f/85d7965960c046eea875/">Curriculum learning (2)</a></font></b> </p>
-        <ul>
-         <li>
-          <p>How to <b>measure the difficulty</b> of new examples </p>
-        </li>
-        <li>
-          <p><b>A geometry</b> on the space of learning tasks</p>
-        </li>
-      </ul>
-
-     <p> <b><font color="#3397AD"><a href="https://seafile.agroparistech.fr/f/94c00f504c6440b28bc9/">On-line learning</a>. A succession of small transfer steps</font></b> </p>
-        <ul>
-         <li>
-          <p>Can we still guarantee a performance level when the teacher is an adversary who controls the target concept and can change it arbitrarily? </p>
-        </li>
-      </ul>
-
-      <p> <b><font color="#3397AD">An application of curriculum learning for long term recommandation: coaching</font></b> </p>
-
-      <p> <b><font color="#3397AD">General conclusions</font></b> </p>
-
-
-    <br>      
-      <p align=right> 
-      </p>
     </td>
 
     <td bgcolor="#FEEAE0">
       <p>&#149; Quiz No 5</p>
-      <p>&#149; <b>Final reports</b>. New date: <font color="#FF0000"><blink><b>February, 27, 2025</b></blink></font></p>
+      <p>&#149; <b>Final reports</b>. Due date: <font color="#FF0000"><blink><b>February, 19th, 2026</b></blink></font></p>
     </td>
 
   </tr>
@@ -652,9 +656,9 @@ Rules are as follows:
 The following deliverables are expected:
 
 <ol>
-   <li> Before (<strong><em> <font color="#990000">January 16th 2025 </font></em></strong>), the <strong>choice of the paper</strong> and the names of the members of the team.
+   <li> Before (<strong><em> <font color="#990000">January 15th 2026 </font></em></strong>), the <strong>choice of the paper</strong> and the names of the members of the team.
    </li>
-   <li> (<strong><em> <font color="#990000">February, 20th 2025 </font></em></strong>) <strong> Final report </strong> : 10 pages (strict. Reports longer than 10 pages will not be read!)
+   <li> (<strong><em> <font color="#990000">February, 19th 2026 </font></em></strong>) <strong> Final report </strong> : 10 pages (strict. Reports longer than 10 pages will not be read!)
    </li>
 </ol>
 
@@ -686,63 +690,72 @@ The deliverables will be evaluated taking into account:
 
 <HR WIDTH="100%">
 
-<strong>List of the papers to chose from</strong><a name="#Etudebiblio" id="Etudebiblio"></a> (all recent ones)
+<strong>List of the papers to chose from</strong><a name="#Etudebiblio" id="Etudebiblio"></a> 
       <br> 
 <br>
 
   <ol>
-       <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://arxiv.org/pdf/2007.01434.pdf">(2020) In search of lost domain generalization</a></em>.  
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://arxiv.org/pdf/2506.18221">(2025) These Are Not All the Features You Are Looking For- A Fundamental Bottleneck in Supervised Pretraining</a></em></b>.  
+     </li>
+<br>
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://arxiv.org/pdf/2506.18221">(2022) Emergent world representations- Exploring a sequence model trained on a synthetic task</a></em></b>.  (Playing Othello with LLMs)
+     </li>
+<br>
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://arxiv.org/pdf/2403.15498?">(2022) Emergent World Models and Latent Variable Estimation in Chess-Playing Language Models</a></em></b>. (and the <a href="https://adamkarvonen.github.io/machine_learning/2024/01/03/chess-world-models.html">blog entry</a>, even more detailed.) (Playing Chess with LLMs)
+     </li>
+<br>
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://openreview.net/attachment?id=c9klnr4Cb9&name=pdf">(AAI-2025) Tabular out-of-distribution data synthesis for enhancing robustness</a></em></b>.  (Experiments without deep learning. Interesting nonetheless.)
+     </li>
+<br>
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://ojs.aaai.org/index.php/AAAI/article/view/34841/36996">(AAAI-2025) RUNA- Object-level Out-of-Distribution Detection via Regional Uncertainty Alignment of Multimodal Representations.</a></em></b>.  
+     </li>
+<br>
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32162/34317">(AAAI-2025)-Progressive Self-Learning for Domain Adaptation on Symbolic Regression of Integer Sequences.</a></em></b>.  
+     </li>
+<br>
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://arxiv.org/pdf/2007.01434.pdf">(2020) In search of lost domain generalization</a></em></b>. 
+     </li>
+<br>
+       <li> <b><font color="#FF0000"> <b> </font></b><em> <a href="https://seafile.agroparistech.fr/f/ce4e9558d2b1442a8857/">(ICLR-2024) Self-Supervised Dataset Distillation for Transfer Learning</a></em></b>. (Powerful computational ressources required)
      </li>
 <p>
-       <li> <b><font color="#FF0000"> <b>Taken </font></b><em> <a href="https://seafile.agroparistech.fr/f/ce4e9558d2b1442a8857/">(ICLR-2024) Self-Supervised Dataset Distillation for Transfer Learning</a></em>. 
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://seafile.agroparistech.fr/f/d4a139ea3b5f43ddb8de/">(ICLR-2024) Transferring Learning Trajectories of Neural Networks</a></em></b>. 
      </li>
 <p>
-       <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://seafile.agroparistech.fr/f/d4a139ea3b5f43ddb8de/">(ICLR-2024) Transferring Learning Trajectories of Neural Networks</a></em>. 
+       <li> <b> <em> <a href="https://proceedings.mlr.press/v202/liu23ap/liu23ap.pdf">(ICML-2023) Taxonomy-Structured Domain Adaptation</a></em></b>. 
      </li>
 <p>
-       <li> <b></b> <em> <a href="https://proceedings.mlr.press/v202/liu23ap/liu23ap.pdf">(ICML-2023) Taxonomy-Structured Domain Adaptation</a></em>. 
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://arxiv.org/abs/2302.12091 ">(ICML-2023) Random Teachers are Good Teachers</a></em></b>. 
      </li>
 <p>
-       <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://arxiv.org/abs/2302.12091 ">(ICML-2023) Random Teachers are Good Teachers</a></em>. 
+       <li> <b> <em> <a href="https://arxiv.org/pdf/2306.09890.pdf">(ICML-Workshop-2023) Studying Generalization on Memory-Based Methods in Continual Learning</a></em></b>. 
      </li>
 <p>
-       <li> <b></b> <em> <a href="https://arxiv.org/pdf/2306.09890.pdf">(ICML-Workshop-2023) Studying Generalization on Memory-Based Methods in Continual Learning</a></em>. 
+       <li> <b> <em> <a href="https://seafile.agroparistech.fr/f/7f85c3bfa51e4b50b267/">(ICLR-2024) Understanding Transferable Representation Learning and Zero-shot Transfer in CLIP</a></em></b>. 
      </li>
 <p>
-       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/7f85c3bfa51e4b50b267/">(ICLR-2024) Understanding Transferable Representation Learning and Zero-shot Transfer in CLIP</a></em>. 
+       <li> <b><font color="#FF0000"> <b> </font></b><em> <a href="https://openreview.net/pdf?id=Oa9RlXNggGy">(Neurips-2022) Does knowledge distillation really works?</a></em></b>. 
      </li>
 <p>
-       <li> <b><font color="#FF0000"> <b>Taken </font></b><em> <a href="https://openreview.net/pdf?id=Oa9RlXNggGy">(Neurips-2022) Does knowledge distillation really works?</a></em>. 
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="http://proceedings.mlr.press/v139/lee21e/lee21e.pdf">(ICML-2021) Continual learning in the teacher-student setup: impact of task similarity</a></em></b>. 
      </li>
 <p>
-       <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="http://proceedings.mlr.press/v139/lee21e/lee21e.pdf">(ICML-2021) Continual learning in the teacher-student setup: impact of task similarity</a></em>. 
+       <li> <b></b> <b><em> <a href="https://arxiv.org/pdf/2002.08546.pdf">(ICML-2020) Do we really need to access the source data? source hypothesis transfer for unsupervised domain adaptation</a></em></b>. (Powerful computational ressources required)
      </li>
 <p>
-       <li> <b>Partly taken</b> <em> <a href="https://arxiv.org/pdf/2002.08546.pdf">(ICML-2020) Do we really need to access the source data? source hypothesis transfer for unsupervised domain adaptation</a></em>. 
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://arxiv.org/pdf/2007.12684.pdf">(ICCV-2021) Deep co-training with task decomposition for semi-supervised domain adaptation</a></em></b>. 
      </li>
 <p>
-       <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://arxiv.org/pdf/2007.12684.pdf">(ICCV-2021) Deep co-training with task decomposition for semi-supervised domain adaptation</a></em>. 
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://seafile.agroparistech.fr/f/7f3089f7a27241f4894f/">(ICML-2024) Transferring Knowledge From Large Foundation Models to Small Downstream Models</a></em>. 
      </li>
 <p>
-       <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://seafile.agroparistech.fr/f/7f3089f7a27241f4894f/">(ICML-2024) Transferring Knowledge From Large Foundation Models to Small Downstream Models</a></em>. 
+       <li> <b><P></P></b> <em> <a href="https://seafile.agroparistech.fr/f/33a561fcef034256a522/">(ICML-2024) Pseudo-Calibration-Improving Predictive Uncertainty Estimation in Unsupervised Domain Adaptation</a></em></b>. (Powerful computational ressources required)
      </li>
 <p>
-       <li> <b><P>Partly taken</P></b> <em> <a href="https://seafile.agroparistech.fr/f/33a561fcef034256a522/">(ICML-2024) Pseudo-Calibration-Improving Predictive Uncertainty Estimation in Unsupervised Domain Adaptation</a></em>. 
+       <li> <b><font color="#FF0000"> <b> </font></b> <em> <a href="https://seafile.agroparistech.fr/f/ff552f663abf41e59b69/">(ICML-2024) Let Go of Your Labels with Unsupervised Transfer</a></em>. 
      </li>
 <p>
-       <li> <b><font color="#FF0000"> <b>Not taken anymore (pbs Mac OSX)</font></b> <em> <a href="https://seafile.agroparistech.fr/f/3971ab3ca4bd4175a5a9/">(ICML-2024) Soft_Contrastive_Learning</a></em>. 
-     </li>
-<p>
-       <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://seafile.agroparistech.fr/f/ff552f663abf41e59b69/">(ICML-2024) Let Go of Your Labels with Unsupervised Transfer</a></em>. 
-     </li>
-<p>
-       <li> <b>New</b> <em> <a href="https://seafile.agroparistech.fr/f/2aa53310fa794b5db619/">(IJCAI-2024) Alleviating Imbalanced Pseudo-label Distribution- Self-Supervised Multi-Source Domain Adaptation with Label-specific Confidence</a></em>. 
-     </li>
-<p>
-       <li> <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://seafile.agroparistech.fr/f/51c7779d89e240568822/">(IJCAI-2024) Reconfgurability-Aware Selection for Contrastive Active Domain Adaptation</a></em>. 
-     </li>
-<p>
-       <li>  <b><font color="#FF0000"> <b>Taken </font></b> <em> <a href="https://arxiv.org/pdf/2202.00155">(ICLR-2022) Fortuitous forgetting in connectionist networks</a></em>. 
+       <li> <b></b> <em> <a href="https://seafile.agroparistech.fr/f/2aa53310fa794b5db619/">(IJCAI-2024) Alleviating Imbalanced Pseudo-label Distribution- Self-Supervised Multi-Source Domain Adaptation with Label-specific Confidence</a></em>. 
      </li>
 <p>
     </ol>
@@ -775,190 +788,10 @@ The deliverables will be evaluated taking into account:
       <td bgcolor="F3F3F3">      
         <li> <em> <a >(Conference) Paper title</a></em>. 
         </li>
-        <li> (final report: <font color="#3fd859"> <b>YES</b> </font>)</li>
+        <li> (final report: <font color="#3fd859"> <b>YES</b> </font> <font color="#FF0000"> <b>NO</b> </font>)</li>
       </td>
   </tr>
   
-  <tr>
-     <td>
-        <li>Biruk Abere Ambaw</li>
-        <li>Emirhan Bilgi&ccedil;</li>
-        <li>Amruth Srivathsan</li>
-        <li>Aaron Weissberg</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://openreview.net/pdf?id=Oa9RlXNggGy">(Neurips-2022) Does knowledge distillation really works?</a></em>. 
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES</b></font>)</li>
-      </td>
-  </tr>
-
-  <tr>
-     <td>
-        <li>Ying Lai</li>
-        <li>Huichi Kuo</li>
-        <li>Niloofar Sahebalzamany</li>
-        <li>Student-4</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/abs/2302.12091 ">(ICML-2023) Random Teachers are Good Teachers</a></em>. 
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES</b> </font>)</li>
-      </td>
-  </tr>
-
-  <tr>
-     <td>
-        <li>Titouan Chambe</li>
-        <li>Maiwen Demeulle</li>
-        <li>Antoine Loth</li>
-        <li>Titouan Chambe</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://seafile.agroparistech.fr/f/7f3089f7a27241f4894f/">(ICML-2024) Transferring Knowledge From Large Foundation Models to Small Downstream Models</a></em>. 
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES</b> </font>)</li>
-      </td>
-  </tr>
-
-  <tr>
-     <td>
-        <li>Adrien Bouchet</li>
-        <li>Vincent Fourmigu&eacute;</li>
-        <li>Elise Roth</li>
-        <li>Timoth&eacute;e Sanchez</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://seafile.agroparistech.fr/f/51c7779d89e240568822/">(IJCAI-2024) Reconfgurability-Aware Selection for Contrastive Active Domain Adaptation</a></em>. 
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES</b>  </font>)</li>
-      </td>
-  </tr>
-
-   <tr>
-     <td>
-        <li>Lisa Achard</li>
-        <li>Manon Chartrin</li>
-        <li>Sovanleng Ly</li>
-        <li>Nabil Meridja</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="http://proceedings.mlr.press/v139/lee21e/lee21e.pdf">(ICML-2021) Continual learning in the teacher-student setup: impact of task similarity</a></em>. 
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES</b> </font>)</li>
-      </td>
-  </tr>
-  
-   <tr>
-     <td>
-        <li>Linh Dinh</li>
-        <li>M&eacute;lodie Fleury</li>
-        <li>Nicolas Geffroy</li>
-        <li>Mat&eacute;o Petitet</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/pdf/2202.00155">(ICLR-2022) Fortuitous forgetting in connectionist networks</a></em>. 
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES</b> </font>)</li>
-      </td>
-  </tr>
-  
-   <tr>
-     <td>
-        <li>Camille De Amorim</li>
-        <li>Mapathe Faye</li>
-        <li>Jaffar Gura</li>
-        <li>Negin Heidarifard</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/pdf/2007.01434.pdf">(2020) In search of lost domain generalization</a></em>. 
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES</b> </font>)</li>
-      </td>
-  </tr>
-  
-   <tr>
-     <td>
-        <li>Jose Espinosa</li>
-        <li>Martin Masson</li>
-        <li>Dana Zlotenko </li>
-        <li>Ali Khayat</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://seafile.agroparistech.fr/f/ce4e9558d2b1442a8857/">(ICLR-2024) Self-Supervised Dataset Distillation for Transfer Learning</a></em>. 
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES</b></font>)</li>
-      </td>
-  </tr>
-  
-   <tr>
-     <td>
-        <li>Jhonatan Felix</li>
-        <li>Aristide Lauront</li>
-        <li>Rapha&euml;l Rubrice</li>
-        <li>Student-4</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://seafile.agroparistech.fr/f/33a561fcef034256a522/">(ICML-2024) Pseudo-Calibration-Improving Predictive Uncertainty Estimation in Unsupervised Domain Adaptation</a></em>. 
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES</b> </font>)</li>
-      </td>
-  </tr>
-  
-   <tr>
-     <td>
-        <li>No&eacute;mie Bozier</li>
-        <li>Nathan Carr&eacute;</li>
-        <li>Anakim Gualdoni</li>
-        <li>Georges Hanna</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://seafile.agroparistech.fr/f/ff552f663abf41e59b69/">(ICML-2024) Let Go of Your Labels with Unsupervised Transfer</a></em>. 
-        </li>
-        <li> (final report: <font color="#FF0000"> <b>NO </font>)</li>
-      </td>
-  </tr>
-  
-   <tr>
-     <td>
-        <li>Tim&eacute;o Hennebelle</li>
-        <li>Martin Simonovietz</li>
-        <li>Student-3</li>
-        <li>Student-4</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/pdf/2007.12684.pdf">(ICCV-2021) Deep co-training with task decomposition for semi-supervised domain adaptation</a></em>. 
-        </li>
-        <li> (final report: <font color="#FF0000"> <b>NO </font>)</li>
-      </td>
-  </tr>
-  
-   <tr>
-     <td>
-        <li>Younes Djemmal</li>
-        <li>Lokman Ouali</li>
-        <li>Esteban Payares</li>
-        <li>Maryam Aggab</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://arxiv.org/pdf/2002.08546.pdf">(ICML-2020) Do we really need to access the source data? source hypothesis transfer for unsupervised domain adaptation</a></em>. 
-        </li>
-        <li> (final report: <font color="#3fd859"> <b>YES</b></font>)</li>
-      </td>
-  </tr>
-  
-   <tr>
-     <td>
-        <li>Lasha KOROSHINADZE</li>
-        <li>Student_2</li>
-        <li>Student-3</li>
-        <li>Student-4</li>
-     </td>
-      <td bgcolor="F3F3F3">      
-        <li> <em> <a href="https://seafile.agroparistech.fr/f/d4a139ea3b5f43ddb8de/">(ICLR-2024) Transferring Learning Trajectories of Neural Networks</a></em>. 
-        </li>
-        <li> (final report: <font color="#FF0000"> <b>NO </font>)</li>
-      </td>
   </tr>
   
 
