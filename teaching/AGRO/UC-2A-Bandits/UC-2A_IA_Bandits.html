@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Intelligence Artificielle - Game Playing - Bandits - Reinformcement Learning - AgroParisTech</TITLE>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="User-Agent: Mozilla/3.0Gold (Macintosh; I; PPC)">
+</HEAD>
+<BODY>
+
+<!-- ==================================================================== -->
+<table width="100%" border="0" height="64" bordercolordark="#003399" name="Identit&eacute;">
+<!-- ==================================================================== -->
+  <tr>
+    <td width="63%" height="30">
+      <div align="center"><b><a href="https://antoinecornuejols.github.io/">Homepage</a></b> </div>
+    </td>
+    <td width="37%" height="30">
+      <div align="center"><img src="../../../ID-photo-USA-08-1.jpg" width="44" height="56"></div>
+    </td>
+  </tr>
+<!-- ==================================================================== -->
+</table>
+<table width="100%" border="1" cellspacing = 1 cellpadding = 3>
+<!-- ==================================================================== -->
+  <tr bgcolor="#CCCCFF" align="center">
+    <td width = 20%> <a href="https://antoinecornuejols.github.io/research/">Research</a> </td>
+    <td width = 20%>
+      <div align="center"> <a href="https://antoinecornuejols.github.io/publications/papers.html">Papers</a> </div>
+    </td>
+    <td width = 20% bgcolor="#FFCCCC">
+      <div align="center"><b><font color="#BF0F00"><a href="https://antoinecornuejols.github.io/teaching/">Teaching</a></font></b><font color="#BF0F00"> <br>
+        (mostly in French)</font></div>
+    </td>
+    <td width = 20%> <a href="https://antoinecornuejols.github.io/students/">Students</a> </td>
+    <td width = 20%> <a href="https://antoinecornuejols.github.io/research/#projects">Research contracts</a> </td>
+  </tr>
+<!-- ==================================================================== -->
+</table>
+<H2 ALIGN=CENTER><FONT COLOR="#1C74BD">Cours 2A &nbsp; :&nbsp; La place des bandits en Intelligence Artificielle. 
+<br>R&eacute;solution de probl&egrave;mes, d&eacute;cisions en milieu incertain et apprentissage par renfocement&nbsp;&nbsp; </FONT></H2>
+
+<CENTER><P>
+<HR WIDTH="100%"></CENTER>
+
+<CENTER>
+</CENTER>
+
+<CENTER>
+  <P>Ann&eacute;e 2025-2026</P>
+</CENTER>
+
+<CENTER>
+  <P>Enseignants :&nbsp;&nbsp;&nbsp;
+     <b> <font color="#000099">Antoine Cornu&eacute;jols </font></b>,&nbsp;<b> <font color="#000099">Christine Martin</font></b>
+<!--	 &amp; <b> <font color="#000099">Joon Kwon</font></b> -->
+  </P>
+</CENTER>
+
+<P>
+<HR WIDTH="100%">
+<p><font color="#CC3333">Derni&egrave;re mise &agrave; jour : &nbsp;
+  <!-- #BeginDate format:fEn2 -->07-Mars-2026<!-- #EndDate --> 
+  </font></P>
+
+<!-- ==================================================================== -->
+<H3>Organisation du cours :</H3>
+<UL>
+  <LI>Contr&ocirc;le :</LI>
+  <UL>
+    <LI>&nbsp;Un petit projet informatique
+      <ul>
+        <br>
+      </ul>
+    </LI>
+  </UL>
+<!-- ==================================================================== -->
+  <li>Documents : 
+    <ul>
+      <li>&nbsp;Les transparents mis &agrave; disposition sur le site</li>
+    </ul>
+  </li>
+</UL>
+
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+<H3>&nbsp;</H3>
+<H3>Programme pr&eacute;visionnel :</H3>
+<table width="100%" border="1">
+<!-- ==================================================================== -->
+  <tr>
+    <td width="14%" bgcolor="#CCCCFF"><b><font color="#990000">Dates :</font></b></td>
+    <td width="45%" bgcolor="#CCCCFF"><b><font color="#990000">Programme :</font></b></td>
+    <td width="41%" bgcolor="#CCCCFF"><b><font color="#990000">Exercices et notes
+          diverses :</font></b></td>
+  </tr>
+<!-- ==================================================================== -->
+  <tr>
+    <td width="14%" bgcolor="#D4FCFF">
+      <p><b>16-03-2026</b></p>
+      <p align="right">13h00 - 14h30  (<font color="#FF0000">C.2.1.45</font>) </p>
+    </td>
+    <td width="45%" bgcolor="#FFFFFF">
+       <p align="right">(<em>Antoine Cornu&eacute;jols</em>)</p>
+       <p>&#8226; <a href="">Introduction au cours</a>
+       </p>
+       <p>&#8226; <a href="Tr-cours-IA-1-v2024.pdf">Bref historique de l'Intelligence
+        Artificielle</a>
+       </p>
+       <p>&#8226; <a href="">Situation de ce que nous allons voir en cours par rapport &agrave; cet historique</a>
+       </p>
+    </td>
+    <td bgcolor="#FEEAE0" width="41%">
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+<!-- ==================================================================== -->
+  <tr>
+    <td width="14%" bgcolor="#B5F7E5">
+      <p><b>17-03-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">C.2.1.45 et iC2.1.48</font>) </p>
+    <td width="45%" bgcolor="#FFFFFF">
+       <p align="right">(<em>Antoine Cornu&eacute;jols</em>)</p>
+      <p>&#8226; <a href="Tr-IA-graphes(2024).pdf">R&eacute;solution
+          de probl&egrave;mes par exploration de graphe</a> 
+      </p>
+      <p>&#8226; <a href="Tr-IA-Jeux-2024.pdf">R&eacute;solution de probl&egrave;mes
+        en environnement non d&eacute;terministe (avec adversaire) (algorithmes de jeux)</a></p>
+      </td>
+
+    <td bgcolor="#FEEAE0" width="41%">
+      <p>Examen du code des algorithme MinMax et Alpha-Beta</p>
+      <p><font color="#FF0000">
+<!--         <strong>Devoir &agrave; la maison </strong>&agrave; rendre
+    le 16 octobre</font></p>  -->
+      <p><font color="#FF0000">
+
+    </td>
+  </tr>
+<!-- ==================================================================== -->
+  <tr>
+    <td bgcolor="#B5F7E5">
+      <p><b>17-03-2026</b></p>
+      <p align="right">14h00 - 17h15  (<font color="#FF0000">C.2.1.45 et iC2.1.48</font>) </p>
+    <td bgcolor="#FFFFFF">
+           <p align="right">(<em>Antoine Cornu&eacute;jols</em>)</p>
+      <p>
+         &#8226; <a href="Tr-intro-MCTS-2024.pdf">Les bandits et l'Algorithme Monte-Carlo Tree Search (MCTS). Comment optimiser le compromis exploration vs. exploitation</a>
+      </p>
+
+    <td bgcolor="#FEEAE0" width="41%">
+         <font color="#FF0000"><a  href="">TP pour comparer des algorithmes et des heuristiques d'&eacute;valuation</font>
+         </p>
+      <p>&#8226; <a href="https://banditalgs.com/2016/09/18/the-upper-confidence-bound-algorithm/">Une entr&eacute;e de blog sur UCB et les bandits multi-bras</a>
+      </p>
+      <p>&#8226; <a href="https://tor-lattimore.com/downloads/book/book.pdf">Et pour ceux qui veulent aller plus loin sur UCB et les bandits multi-bras</a>
+      </p>
+      <p> &#8226; <a href="MCTSSurvey.pdf"> Article sur MCTS <em>A Survey of Monte Carlo Tree Search Methods</em> (2012)</a></p>
+      <p> &#8226; <a href="https://arxiv.org/pdf/2103.04931.pdf"> Article sur MCTS plus r&eacute;cent : <em>Monte Carlo Tree Search: A Review of Recent Modifications and Applications</em> (2021)</a></p>
+
+    </td>
+  </tr>
+<!-- ==================================================================== -->
+  <tr>
+    <td bgcolor="#D4FCFF">
+      <p><b>18-03-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">C.2.1.45 et iC2.1.48</font>) </p>
+
+    <td bgcolor="#FFFFFF">
+           <p align="right">(<em>Antoine Cornu&eacute;jols</em>)</p>
+      <p>&#8226; <a href="https://seafile.agroparistech.fr/f/c8fb2254acd240659464/">Introduction &agrave; l'apprentissage par renforcement avec l'algorithme du Q-learning</a></p>
+      <br>
+      <p> <strong>Lancement du mini-projet </strong>
+      </p>
+    </td>
+    </td>
+    <td bgcolor="#FEEAE0" width="41%">
+      <p></p>
+<!--       <p><a href="tp_pretraitements-orange.pdf">TP pr&eacute;traitements sur Orange</a></p>
+      <p><a href="TP_pretraitements.zip">Archives sur pr&eacute;traitements sur Orange (.zip)</a></p>
+       -->
+      <p>&nbsp;</p>
+      <font color="#FF0000"><strong><a >Sujet du miniprojet</a></strong> par groupe de 2 &eacute;l&egrave;ves &agrave; rendre <strong>le 20 mars avec soutenance orale</strong></font></p>
+      </td>
+  </tr>
+<!-- ==================================================================== -->
+  <tr>
+    <td bgcolor="#D4FCFF">
+      <p><b>18-03-2026</b></p>
+      <p align="right">14h00 - 17h15  (<font color="#FF0000">C.2.1.45 et iC2.1.48</font>) </p>
+
+    <td bgcolor="#FFFFFF">
+           <p align="right">(<em>Antoine Cornu&eacute;jols</em>)</p>
+      <p>
+         &#8226; <strong>S&eacute;ance de projet </strong>
+      </p>
+   </td>
+    </td>
+    <td bgcolor="#FEEAE0" width="41%">
+      <p></p>
+ <!-- <p><a href="tp_pretraitements-orange.pdf">TP pr&eacute;traitements sur Orange</a></p>
+      <p><a href="TP_pretraitements.zip">Archives sur pr&eacute;traitements sur Orange (.zip)</a></p>
+       -->
+      </td>
+  </tr>
+<!-- ==================================================================== -->
+  <tr>
+    <td width="14%" bgcolor="#B5F7E5">
+      <p><b>20-03-2026</b> </p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">C.2.1.45 et iC2.1.48</font>)</p></td>
+
+    <td width="45%" bgcolor="#FFFFFF">
+       <p align="right">(<em>Antoine Cornu&eacute;jols</em>)</p>
+
+      <p>&#8226; <a  > L'apprentissage par renforcement en espace continu</a></p>
+      <p>&#8226; <a>Pr&eacute;sentation de AlphaGo zero</a></p>
+      <p> &#8226; <strong>S&eacute;ance de projet </strong></p>
+
+    </td>
+    </td>
+    <td bgcolor="#FEEAE0" width="41%">
+      <p></p>
+      <p><a href="nature16961(AlphaGo)-jan-2016.pdf">Article sur AlphaGo</a></p>
+      <p><a href="https://www.nature.com/articles/nature24270.epdf?author_access_token=VJXbVjaSHxFoctQQ4p2k4tRgN0jAjWel9jnR3ZoTv0PVW4gB86EEpGqTRDtpIz-2rmo8-KG06gqVobU5NSCFeHILHcVFUeMsbvwS-lxjqQGg98faovwjxeTUgZAUMnRQ">Article sur AlphaGo zero</a></p>
+
+      <p></p>
+      <p>&nbsp;</p>
+      </td>
+ </tr>
+<!-- ==================================================================== -->
+  <tr>
+    <td width="14%" bgcolor="#B5F7E5">
+      <p><b>20-03-2026</b></p>
+      <p align="right">14h00 - 17h15  (<font color="#FF0000">C.2.1.45 et iC2.1.48</font>) </p></td>
+
+    <td width="45%" bgcolor="FFFFFF">
+        <p align="right">(<em>Antoine Cornu&eacute;jols</em>)</p>
+      <p>&#8226; <a  > <strong>Soutenenances</strong> des projets</a></p>
+   </td>
+    <td bgcolor="#FEEAE0" width="41%">
+      <p></p>
+      </td>
+  </tr>
+<!-- ==================================================================== -->
+</table>
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+<H3>&nbsp;</H3>
+<h3>Sources bibliographiques et url :</h3>
+<p><strong>Livres sur l'intelligence artificielle en g&eacute;n&eacute;ral </strong> :</p>
+<ul>
+  <li>&nbsp;Callan, Rob (2003) &quot;<strong>Artificial Intelligence</strong>&quot;,
+  Palgrave Macmillan.</li>
+  <li>&nbsp;Millington, I. &amp; Funge, J. (2009) &quot;<strong>Artificial Intelligence
+      for Games</strong>&quot;,
+    Morgan Kaufmann.</li>
+  <li> &nbsp;Nilsson, Nils (1998) &quot;<strong>Artificial Intelligence: A New Synthesis</strong>&quot;,
+      Morgan Kaufmann.</li>
+   <li> &nbsp;Pumperla, Max &amp; Ferguson, Kevin, (2019) &quot;<strong>Deep Learning and the Game of Go</strong>&quot;,
+      Manning.</li>
+ <li>&nbsp;Russel, S. &amp; Norvig, P. (2021, 4th ed.) &quot;<strong>Artificial
+    Intelligence: A Modern Approach</strong>&quot;</li>
+</ul>
+<p><font color="#0033CC">Et pour ceux int&eacute;ress&eacute;s par <strong>l'histoire de la discipline</strong> :</font></p>
+<ul>
+  <li> &nbsp;Crevier, Richard (1999) &quot;<strong>A la recherche de l'intelligence
+      artificielle</strong>&quot;.
+    Champs, Flammarion.</li>
+  <li>&nbsp;Nilsson, Nils (2010) &quot;<strong>The Quest for Artificial Intelligence</strong>&quot;.
+      Cambridge University Press.</li>
+</ul>
+<p>&nbsp;</p>
+<h3><br>
+
+</h3>
+
+</BODY>
+</HTML>
