@@ -1,0 +1,881 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Learning Theory and Advanced Machine Learning course</TITLE>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="User-Agent: Mozilla/3.0Gold (Macintosh; I; PPC)">
+</HEAD>
+<BODY>
+
+<H2 ALIGN=CENTER><FONT COLOR="#1C74BD">Course Master BIBS-IA: Out-of-Distribution Machine
+    Learning</FONT></H2>
+
+<CENTER><P>
+<HR WIDTH="100%"><p></P></CENTER>
+<CENTER>
+<P><font face="Georgia, Times New Roman, Times, serif">Master 2 Bioinformatique - (Course <em>Out-of-Distribution Machine
+    Learning</em>)</font></P>
+</CENTER>
+
+<CENTER>
+  <P><font face="Georgia, Times New Roman, Times, serif">Winter quarter 2026-2027</font></P>
+</CENTER>
+
+<CENTER>
+  <P><font face="Georgia, Times New Roman, Times, serif">Teacher</font><font face="Georgia, Times New Roman, Times, serif">:&nbsp;&nbsp;&nbsp;<b> <font color="#000099">Antoine
+          Cornu&eacute;jols</font></b>  </P>
+</CENTER>
+
+<!-- ==================================================================== -->
+<P>
+<HR WIDTH="100%">
+
+<table width="100%" border="0" height="64" bordercolordark="#CCCCCC" name="Identit&eacute;">
+  <tr>
+    <td width="63%" height="30">
+      <div align="center"><b><a href="https://antoinecornuejols.github.io/">Homepage</a></b> </div>
+    </td>
+    <td width="37%" height="30"> 
+      <div align="center"><img src="../../ID-photo-USA-08-1.jpg" width="44" height="56"></div>
+    </td>
+  </tr>
+</table>
+
+<table width="100%" border="2" cellpadding = 3 cellspacing = 1 bordercolorlight="#CCCCCC" bordercolordark="#999999">
+  <tr bgcolor="#FFCC99" align="center">
+    <td width = 20%> <a href="#program">Program of the class</a> </td>
+    <td width = 20%> <a href="#schedule">Tentative schedule of the classes</a> </td>
+    <td width = 20%> <a href="#references">References</a> </td>
+    <td width = 20%> <a href="#Etudebiblio">Articles to chose from</a> </td>
+    <td width = 20%> <a href="#Projets">Projects</a> </td>
+    <td width = 20%> <a href="#Stages">Internships</a> </td>
+  </tr>
+</table>
+
+<p><font color="#CC3333">Last update: &nbsp;<!-- #BeginDate format:En2 -->August-2-2026<!-- #EndDate --> 
+  </font></P>
+
+<H3>Course Organization:</H3>
+
+<ul>
+        <li><b>&nbsp;Evaluation </b><!-- (<font color="#FF0000">ATTENTION nouveau</font>)</b>-->: 
+        </li>
+        <ul>
+          <li>&nbsp;Quiz &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 5 * 6% = 30%</li>
+           <li>&nbsp;Project replication of the results of a scientific paper + critical analysis  &nbsp;&nbsp;&nbsp;: 70%  &nbsp;&nbsp; (groups of 4 students)</li>
+        </ul>
+      <blockquote>
+        <p>		</p>
+      </blockquote>
+      <li>&nbsp;<strong>Documents</strong>: </li>
+  <ul>
+    <li>&nbsp;Slides of the courses (see below in the course's schedule)</li>
+<!--     <li>&nbsp;<a  href=M2-AIC_2017-2018-notes(app-avanc).pdf>Grades for the quizz 1, 2 and 3</a></li>
+ -->
+   </ul>
+      <blockquote>
+        <p>   </p>
+      </blockquote>
+   <li>&nbsp;<strong>Structure of each class</strong>:</li>
+   <ul>
+    <li> A <font color="#CC3333"><em>quiz</em></font> followed by the answers </li>
+    <li> The <font color="#CC3333"><em>course</em></font> enlighting concepts related to the topic of the day </li>
+    <li> A <font color="#CC3333"><em>thought-provoking segment</em></font> designed to broaden the mind: research questions and opening new perspectives 
+  </ul>
+</ul>
+
+<HR WIDTH="100%">
+
+<!-- ==================================================================== -->
+<H3>Outline of the course:  <a name="program" id="program"></a></H3>
+<ol>
+  <li>
+    <b style="color:#3397AD";>Classical inductive learning: I.I.D. (Independent and Identically Distributed data)</b>
+    <ul>
+      <br>
+      <li>
+        The goal: to learn a function that is valid under a hypothesis across the entire input space X
+      </li>
+      <li>
+        True risk and empirical risk
+      </li>
+       <li>
+        The necessity of bias
+      </li>
+       <li>
+        The possibility of a theory of induction: PAC learning and statistical learning theory
+      </li>
+      <li>
+        A fundamental reliance on the assumption of a stationary world.
+      </li>
+      <li>
+        The question of the scope of this theory for superparameterized models: LLMs and foundation models
+      </li>
+     <br>
+     <li><font color="#CC3333"><em>Opening the mind</em></font>:
+     </li>
+     <ul>
+      <li> Double descent and groking
+     </ul>
+  </li>
+</ul>
+  <br>
+  <li>
+    <font color="#3397AD"><b>Classical Inductive Learning (continued)</b>. When the distribution of training examples is not the same as the generalization distribution</font>
+    <ul>
+      <br>
+       <li>
+        Imbalanced classes (active approach)
+      </li>
+       <li>
+        Active learning (active approach)
+      </li>
+     <li>
+        Semi-supervised learning (passive approach)
+      </li>
+       <li>
+        Covariate shift (active approach)
+      </li>
+      <li> 
+        Boosting (active approach)
+      </li>
+     <br>
+     <li><font color="#CC3333"><em>Opening the mind</em></font>:
+     </li>
+     <ul>
+      <li> 
+        Co-learning
+      </li>
+     </ul>
+</ul>
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>A Context-Specific Perspective on Inductive Learning: transductive learning</b>
+    <ul>
+      <br>
+      <li>
+        What is transductive learning and why it should be more efficient that classical inductive learning
+      </li>
+      <li>
+        Attentional models. Transformers as a specific approach
+      </li>
+      <li>
+        Few-shot learning
+      </li>
+      <li>
+        Fine-tuning large models
+      </li>
+
+    <br>
+     <li><font color="#CC3333"><em>Opening the mind</em></font>:
+     </li>
+     <ul>
+      <li> A side view on transformers </li>
+      <li> Playing Othello and chess with LLMs. What it tells about representation learning </li>
+     </ul>
+   </li>
+ </ul>
+
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>Transfer learning by a single agent</b>
+    <p>Inside a <b>single domain</b></p>
+    <ul>
+      <li>
+        Domain adaptation
+      </li>
+      <li>
+        Measuring the difficulty of new examples
+      </li>
+      <li>
+        Adversarial learning
+      </li>
+    </ul>
+
+    <p><b>Between domains</b></p>
+    <ul>
+      <li>
+        Source and target domains
+      </li>
+      <li>
+        Transfer learning in neural networks
+      </li>
+      <li>
+        The Transboost method
+      </li>
+      <li>
+        What role for the source?
+      </li>
+    </ul>
+
+    <p>A fundamental question: <b>what is transfered</b> between the source and the target?</p>
+    <ul>
+      <li>Assuming something in common and constant</li>
+      <ul>
+      <li>
+        The representation: common embedding
+      </li>
+      <li>
+        Causality relationships
+      </li>
+      <li>
+        The decision function
+      </li>
+      <li>
+        Others: the loss function, the optimizer, ... 
+      </li>
+    </ul>
+    <li>Assumpingh maximum relevance of the source for the target queries: minimizing the adaptation to solve the target query
+  </ul>
+<br>
+     <font color="#CC3333"><em>Opening the mind</em></font>:
+     
+     <ul>
+      <li> Analogical making and the MDLP (Minimum Description Length principle) </li>
+      <li> Cognitive blending </li>
+      <li> The cognitive tunnel effect </li>
+     </ul>
+   </li>
+
+
+    </ul>
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>Transfer learning with multiple agents</b>
+  </li>
+      <ul>
+      <br>
+      <li>
+        LUPI: Learning with Privileged Information
+      </li>
+      <li>
+        Multimodal and multi task learning
+      </li>
+      <li>
+        Learning with a teacher: distillation
+      </li>
+      <li>
+        Learning with a teacher: curriculum learning
+      </li>
+
+    <br>
+     <li><font color="#CC3333"><em>Opening the mind</em></font>:
+     </li>
+     <ul>
+      <li> Fiber bundle space and curvature </li>
+      <li> Sequencing effects in Human and Machine Learning </li>
+      <li> The path itself (order of tasks) conveys information </li>
+     </ul>
+   </li>
+ </ul>
+
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>Online learning</b>
+    <ul>
+      <br>
+      <li>
+        Tracking
+      </li>
+      <li>
+        Online learning against any distribution changes. Can we still guarantee something if the teacher acts as an adversary?
+      </li>
+      <li>
+        Catastrophic forgetting
+      </li>
+      <li>
+        General empirical approaches to online learning. Solving the plasticity-stability trade-off
+      </li>
+
+    <br>
+     <li><font color="#CC3333"><em>Opening the mind</em></font>:
+     </li>
+     <ul>
+      <li> How to measure sequencing effects in LLMs?  </li>
+     </ul>
+   </li>
+ </ul>
+
+    </ul>
+  </li>
+  <br>
+  <li>
+    <b style="color:#3397AD";>Conclusion</b> 
+  </li>
+</ol>
+
+<ul>
+<!--    <div> <img src="Organisation_Course_AIC.pdf" align="center"  alt="Broad outline the course"  width="75%" height="50%" /></div> 
+    <li> Learning is about <strong>extrapolating</strong> predictions and/or regularities from limited data (even if sometimes there is an apparently very large data set) either in a stationary environment (<em>classical induction</em>) or in a changing one (<em>domain adaptation, transfer learning</em>). <br><br>
+      This brings <strong>questions</strong> that will be core topics of the course:
+    	<br> 
+  <ol>
+    </li>
+    	<br>
+    <li> In the case of stationary environments, there is a well developed theory called "the statistical theory of learning", but <b style="color:#3397AD";>what can be done when the environment changes</b> between the <em>training data</em> and the <em>testing one</em>?
+    </li>
+   <p> </p>	
+     <li> Learning may imply several learning agents as in ensemble learning: <b style="color:#3397AD";>what information should they exchange?</b>
+    </li>
+    <p> </p>	
+    <li> Learning may also imply several learning tasks, as in domain adaptation, transfer learning or online learning. Again, <b style="color:#3397AD";>what should be exchanged between contexts?</b>
+    </li>
+  </ol>
+  <br>
+  In this class, we will ask ourselves: 
+    <ul>
+    </li>
+      <br>
+    <li> <b style="color:#3397AD";>What is transferred in learning</b>, and specially in non stationary environments?
+    </li>
+   <p> </p> 
+     <li> How to measure the <b style="color:#3397AD";>difficulty of learning an example</b>?
+    </li>
+    <p> </p>  
+    <li> What is the best way to <b style="color:#3397AD";>organize a curriculum?</b> Or what is a <b style="color:#3397AD";>good teaching strategy</b>
+    </li>
+  </ul>
+
+</ul>
+-->
+<br>
+
+<HR WIDTH="100%">
+
+<!-- ==================================================================== -->
+<H3>What you will acquire in the course:  <a name="program" id="program"></a></H3>
+<ul>
+  <ol>
+<!--    <div> <img src="Organisation_Course_AIC.pdf" align="center"  alt="Broad outline the course"  width="75%" height="50%" /></div> -->
+    <li> <font color="#000099">
+      You will get <b>a deeper understanding of the problem of induction</b>. You will ponder about the kind of guarantees that we can try to obtain as well as to which assumptions should we make and then be aware of when claiming theorems. In order to do so, you will look at the standard statistical learning theory and examine extensions to it. This will prepare you to understand the challenges of out-of-distribution (O.O.D.) learning</font> 
+    </li>
+  
+   <p> </p> 
+     <li>  <font color="#000099"> You will know what are the problems that face <b>"out of distribution" learning</b>, and get knowledge about some recent directions of research on this problem.</font>
+    </li>
+    <p> </p>  
+    <li>  <font color="#000099"> As part of a project group of students, you will <b>study in depth a recent research paper</b> and try to <b>replicate its results</b>.</font>
+    </li>
+   <p> </p> 
+    <li>  <font color="#000099">As part of a project group of students, you will exercice a <b>critical apparaisal of a research paper</b>.</font>
+    </li>
+ <!--   <p> </p>  
+   <li>  <font color="#000099">You will beneficiate from the results obtained by other groups of students on other research papers.</font>-->
+    </li>
+  </ol>
+  <br>
+
+
+<!-- ==================================================================== -->
+
+<HR WIDTH="100%">
+
+<table width="100%" border="1">
+  <tr> 
+    <td width="14%" bgcolor="#CCCCFF"><b><font color="#990000">Dates :</font></b></td>
+    <td width="52%" bgcolor="#CCCCFF"><b><font color="#990000">Topics &nbsp;&nbsp;(tentative schedule)</font></b></td>
+    <td width="34%" bgcolor="#CCCCFF"><b><font color="#990000">References, exercises and
+    homeworks</font></b></td>
+  </tr>
+
+
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+<H3>Tentative schedule:  <a name="schedule" id="schedule"></a></H3>
+
+  <tr> 
+    <td width="14%" bgcolor="#D4FCFF"> 
+      <p><b>08-01-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Room C1.2.04 (AgroParisTech)</font>)</p>
+    </td>
+    <td width="52%" bgcolor="#FFFFFF"> 
+      <p align="right">(Antoine Cornu&eacute;jols)</p>
+      <p> <b>&nbsp;&nbsp;&nbsp;- </b> Introduction to the course. Out-of-Distribution learning. </p>
+        <p> <b>Central question of the course</b>: <em><font color="#000099">What makes you believe that what has been learned so far from (source) training examples or task will be relevant to new (target) examples or tasks? </font></em> </p>
+
+ <ol>
+  <li>
+    <b style="color:#3397AD";><a href="https:(1)Tr-OOD_intro-induction-2025-26.pdf">Classical inductive learning: I.I.D.</a></b>
+    <ul>
+      <li>
+        Basic assumptions
+      </li>
+      <li>
+        What kinds of guarantees
+      </li>
+       <li>
+        Transductive learning
+      </li>
+<!--        <li>
+        Types of distribution shifts and transfer learning (Out-of-Distribution (O.O.D.))
+      </li>
+    -->
+     </ul>
+ </li>
+</ol>
+    <br>      
+        
+    <td bgcolor="#FEEAE0">
+  </tr>
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr> 
+    <td width="14%" height="120" bgcolor="#D4FCFF"> 
+      <p><b>15-01-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Room C1.2.04 (AgroParisTech)</font>)</p>
+    </td>
+   <td width="52%" bgcolor="#FFFFFF"> 
+      <p align="right">(Antoine Cornu&eacute;jols)</p>
+
+    <br>      
+
+ 
+       <br>
+ 
+ <!--       <p><b>&nbsp;&nbsp;&nbsp;- </b>The statistical theory of learning / The no-free-lunch theorem / Another perspective: Explanation-Based-Learning / What kind of validation? -->
+    </td>
+         
+    <td width="34%" bgcolor="#FEEAE0">
+          <p>&#149; Quiz No 1</p>
+<!--          <p>&#149; <a href="exercice-boosting.pdf">Exercise on boosting</a> </p> 
+
+<p>&#149; -->
+         
+
+    </td>
+
+  </tr>
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr> 
+    <td width="14%" height="120" bgcolor="#D4FCFF"> 
+      <p><b>22-01-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Room C1.2.01 (AgroParisTech)</font>)</p>
+    </td>
+
+    <td width="52%" bgcolor="#FFFFFF"> 
+      <p align="right">(Antoine Cornu&eacute;jols)</p>
+
+         
+
+  </li>
+
+
+    <td width="34%" bgcolor="#FEEAE0">
+          <p>&#149; Quiz No 2</p>
+<!--          <p>&#149; <a href="exercice-boosting.pdf">Exercise on boosting</a> </p> 
+
+<p>&#149; <a href="Tr-collaborative_learning-2023-24-v2.pdf">Slides of the class</a>
+          <p></p>
+-->
+    </td>
+
+  </tr>
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr> 
+    <td width="14%" height="120" bgcolor="#D4FCFF"> 
+      <p><b>29-01-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Room C1.2.01 (AgroParisTech)</font>)</p>
+    </td>
+    
+    <td bgcolor="#FFFFFF"><p align="right">(Antoine Cornu&eacute;jols)</p>
+
+
+ 
+
+    </td>
+
+    <td width="34%" bgcolor="#FEEAE0">
+          <p>&#149; Quiz No 3</p>
+   </td>
+
+  </tr>
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr> 
+    <td width="14%" bgcolor="#D4FCFF"> 
+      <p><b>05-02-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Room C1.3.05 (AgroParisTech)</font>)</p>
+    </td>
+    
+    <td bgcolor="#FFFFFF""> 
+      <p align="right">       (Antoine Cornu&eacute;jols)</p>
+
+
+    </td>
+
+    <td width="34%" bgcolor="#FEEAE0">
+      <p>&#149; Quiz No 4</p>
+
+
+    </td>
+
+  </tr>
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr> 
+    <td width="14%" height="120" bgcolor="#D4FCFF"> 
+      <p><b>12-02-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Room C1.3.01 (AgroParisTech)</font>)</p>
+    </td>
+    
+    <td bgcolor="#FFFFFF"><p align="right">(Antoine Cornu&eacute;jols)</p>
+
+
+
+    </td>
+
+    <td bgcolor="#FEEAE0">
+      <p>&#149; Quiz No 5</p>
+
+
+     </td>
+
+  </tr>
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  <tr> 
+    <td width="14%" height="120" bgcolor="#D4FCFF"> 
+      <p><b>19-02-2026</b></p>
+      <p align="right">09h00 - 12h15  (<font color="#FF0000">Room C1.3.01 (AgroParisTech)</font>)</p>
+    </td>
+    
+    <td bgcolor="#FFFFFF"><p align="right">(Antoine Cornu&eacute;jols)</p>
+      <p></p>
+    </td>
+
+    <td bgcolor="#FEEAE0">
+     <p>&#149; <b>Final reports</b>. Due date: <font color="#FF0000"><blink><b>February, XXX, 2027</b></blink></font></p>
+    </td>
+
+  </tr>
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+  
+  
+  
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+</table>
+<H3>&nbsp;</H3>
+<h3>References and web sites: <a name="references" id="references"></a></h3>
+<ul>
+  <li>&nbsp; Barra V. &amp; Cornu&eacute;jols A. &amp; Miclet L.: <u><font color="#000099">Apprentissage artificiel. Concept et algorithmes. De Bayes et Hume au Deep Learning</font></u>. Eyrolles, 2021 (4&egrave;me &eacute;dition)<br>
+  &nbsp; (A very comprehensive book on Machine Learning. In French.)</li>
+</ul>
+<p>
+<ul>
+  <li>&nbsp; Torralba A. &amp; Isola Ph. &amp; Freeman W.: <u><font color="#000099">Foundations of Computer Vision</font></u>. MIT Press, 2024.<br>
+  &nbsp; (Speaks mainly of computer vison obviously. But an incredible synthesis of learning problems and methods. <br> &nbsp; Highly recommended.)</li>
+</ul>
+
+<p><strong>Books on Machine Learning in general</strong>:</p>
+<ul>
+  <li> &nbsp;Barber D. :<u> Bayesian Learning and Machine Learning</u>. Cambridge
+    University Press,
+    2012.<br>
+    &nbsp;(A Bayesian perspective on Machine Learning.)
+  </li>
+<br>
+  <li> &nbsp;Bishop Ch. :<u> <font color="#000099">Deep Learning. Foundations and Concepts</font></u>. MIT Press,
+    2024.<br>
+    &nbsp;(Quite pedagogical.)
+  </li>
+<br>
+  <li> &nbsp;Duda, Hart &amp; Stork :<u> Pattern classification</u> (2nd &eacute;d.).
+    Wiley-Interscience, 2001.<br>
+&nbsp;(Oriented towards Pattern Recognition. Very good graphics. Still a reference.)
+</li>
+<br>
+  <li>&nbsp;Flach P. : <u>Machine Learning. The art and science of algorithms
+        that make sense of data</u>.
+      Cambridge University Press, 2012.<br>
+&nbsp;(A good introductory book on Machine Learning. Quick on some subjects and
+does not really cover data mining. But a very original and often quite illuminating perspective.)</li>
+</ul>
+<br>
+<!--
+<ul>
+  <li>&nbsp;Hand, Mannila &amp; Smyth : <u>Data mining</u>. Springer, 2001.<br>
+    &nbsp;(Livre assez complet, mais n&eacute;cessairement plus superficiel car couvrant aussi la fouille de donn&eacute;es)</li>
+</ul>
+-->
+<ul>
+  <li>&nbsp;Hastie, Tibshirani &amp; Friedman : <u>The elements of statistical
+       learning. Data mining, inference and prediction</u>. Springer, (2nd Ed.
+       2009).<br>
+    &nbsp;(A bit demanding, but very informative. The form is outstanding.)</li>
+</ul>
+<br>
+<ul>
+  <li>&nbsp;Haykin S. : <u>Neural netwoks. A comprehensive foundation</u>. Prentice 
+    Hall, 1999.<br>
+  &nbsp;(An incredible source of information)</li>
+</ul>
+<br>
+ <ul>
+  <li>&nbsp;Haykin S. : <u>Neural netwoks and Learning Machines</u>. Prentice
+    Hall, 2008.<br>
+&nbsp;(Different from the 1999 edition, and yet still remarkable, and worth
+the reading.)
+  </li>
+</ul>
+<!--
+<ul>
+  <li> &nbsp;Mitchell T. : <u>Machine Learning</u>. McGraw Hill, 1997. <br>
+    &nbsp; (A good introductory book, but outdated on many subjects.)</li>
+</ul>
+-->
+<!--
+<ul>
+  <li> &nbsp;Marsland S. : <u>Machine Learning. An algorithmic perspective</u>.
+    CRC Press, 2009. <br>
+    &nbsp; (An introductory book, rather superficial, with bits of code in Python.)</li>
+</ul>
+-->
+<ul>
+  <li> &nbsp;Murphy K. : <u>Machine Learning. A probabilistic perspective</u>.
+    MIT Press, 2012. <br>
+&nbsp; (The title says it all. A book incredibly comprehensive from a Bayesian
+perspective.)</li>
+</ul>
+<br>
+<ul>
+  <li> &nbsp;Murphy K. : <u><font color="#000099">Probabilistic Machine Learning. A introduction</font></u>.
+    MIT Press, 2022. <br>
+&nbsp; (The new edition, first of two volumes.)</li>
+</ul>
+<br>
+<ul>
+   <li> &nbsp;Murphy K. : <u><font color="#000099">Probabilistic Machine Learning. Advanced topics</font></u>.
+    MIT Press, 2022. <br>
+&nbsp; (The new edition, second of two volumes. Lots of recent works. A little bit of a patchwork.)</li>
+</ul>
+<br>
+<ul>
+   <li> &nbsp;Sejnowski T. : <u><font color="#000099">The deep learning revolution</font></u>.
+    MIT Press, 2018. <br>
+&nbsp; (Provides a personal historical perspective. By someone who should have shared the 2024 Nobel Prize.)</li>
+</ul>
+<br>
+<ul>
+   <li> &nbsp;Zou Zhi-Hua. : <u><font color="#000099">Machine Learning</font></u>.
+    Springer, 2016. <br>
+&nbsp; (A very good introductory book)</li>
+</ul>
+<p><strong></strong></p>
+
+<p><strong>Books on specific topics</strong>:</p>
+<ul>
+  <li>&nbsp;Bishop C. : <u>Neural networks for pattern recognition</u>. Clarendon 
+    Press, 1995.<br>
+&nbsp;(A good introductory book. Oriented towards connectionism but discusses
+many important issues in Machine Learning as well.)
+  </li>
+</ul>
+<br>
+<ul>
+  <li>&nbsp;Cristianini N. &amp; Shawe-Taylor J. : <u>Support Vectors Machines
+      and other kernel-based learning methods</u>. Cambridge University Press,
+      2000.</li>
+</ul>
+<br>
+<ul>
+  <li>&nbsp;Webb A. : <u>Statistical pattern recognition</u>. Wiley, (3rd. Ed.,
+    2011).<br>
+    &nbsp;(A good introductory book that deserves to be better known.) <br>
+  </li>
+</ul>
+<!-- <p><strong>Web sites</strong> :</p>
+<ul>
+  <li>&nbsp;<a href="http://www.ai.univie.ac.at/oefai/ml/ml-resources.html">http://www.support-vector.net</a><br>
+    &nbsp; (Un point d'entr&eacute;e sur les machines &agrave; vecteurs de support)</li>
+</ul>
+<ul>
+  <li>&nbsp;<a href="http://www.ai.univie.ac.at/oefai/ml/ml-resources.html">http://www.ai.univie.ac.at/oefai/ml/ml-resources.html</a><br>
+    &nbsp; (Un site recensant de tr&egrave;s nombreuses ressources en Apprentissage 
+    Artificiel)</li>
+</ul>
+-->
+
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+<HR WIDTH="100%">
+<h3><font color="#000099">Guidelines for the projects<a name="Projets"></a>:</font></h3>
+<!-- ==================================================================== -->
+
+This year, your assignment in the projects is to choose an article from the list provided below, understand it, and, most importantly, <strong>try to replicate the experiments</strong>.
+
+<ul></ul>
+<br>
+Rules are as follows:
+
+<ul>
+   <li> Projects are conducted by <strong>team of 4 students</strong>. Team members are responsible for decompose the work so that all members contribute meaningfully to the project.  
+   </li>
+</ul>
+   
+<br>
+The following deliverables are expected:
+
+<ol>
+   <li> Before (<strong><em> <font color="#990000">January XXX 2027 </font></em></strong>), the <strong>choice of the paper</strong> and the names of the members of the team.
+   </li>
+   <li> (<strong><em> <font color="#990000">February, XXX 2027 </font></em></strong>) <strong> Final report </strong> : 10 pages (strict. Reports longer than 10 pages will not be read!)
+   </li>
+</ol>
+
+<br>
+The intermediary report and the final report must be turned down in the ICML (Int. Conf. on Machine Learning) format for <a href="http://icml.cc/2016/?page_id=151">papers</a>.
+
+<br>
+<br>
+The deliverables will be evaluated taking into account:
+
+<br>
+<br>
+<ul>
+   <li>
+   	The <strong>clarity of the analysis of the chosen article</strong>. The paper should briefly present, in no more than two to four pages (out of the 10 allotted), the problem studied in the article, the main ideas and statements presented in the paper. The remaining pages will present the experiments carried out by the team, the possible difficulties, the results obtained and a comparison with the results presented by the authors of the article used as a basis for the project.
+   </li>
+   <br>
+   <li> 
+   	The <strong>rigor</strong> and the extensive character of the analysis and/or the experiments carried out. A project that really answers the questions and possible doubts of the reviewers on the interest of the method and on the announced performances will obtain a higher score.
+   </li>
+   <br>
+   <li> 
+   	Expression, <strong>clarity of explanation</strong> and quality of exposition. Reports can be written in French or English, as long as they are clear and well written.
+   </li> 
+</ul>
+
+<br>
+
+
+<HR WIDTH="100%">
+
+<strong>List of the papers to chose from:</strong><a name="#Etudebiblio" id="Etudebiblio"></a> 
+      <br> 
+<br>
+
+  <ol>
+
+    </ol>
+
+   
+ 
+
+<p>
+</p>
+
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+<HR WIDTH="100%">
+<H3>Projects chosen by the students:</H3>
+  <table width="100%" border="0"  cellspacing="12">
+  <tr> 
+    <td width="25%" bgcolor="#CCCCFF"><b><font color="#990000">Names :</font></b></td>
+    <td width="75%" bgcolor="#CCCCFF"><b><font color="#990000">Projects :</font></b>
+  </tr>
+<!-- ==================================================================== -->
+
+
+
+  
+   <tr>
+     <td>
+        <li>Student_1</li>
+        <li>Student_2</li>
+        <li>Student_3</li>
+        <li>Student_4</li>
+     </td>
+      <td bgcolor="F3F3F3">      
+        <li> <em> <a >(Conference) Paper title</a></em>. 
+        </li>
+        <li> (final report: <font color="#3fd859"> <b>YES</b> </font> <font color="#FF0000"> <b>NO</b> </font>)</li>
+      </td>
+  </tr>
+  
+  </tr>
+  
+
+
+ 
+
+<!-- ==================================================================== -->
+  </table>
+</UL>
+<p><br>
+  
+  
+<!-- ==================================================================== -->
+<!-- ==================================================================== -->
+<HR WIDTH="100%">
+<h3><font color="#000099">Propositions for internships<a name="Stages"></a> :</font></h3>
+<!-- ==================================================================== -->
+
+<!-- ==================================================================== -->
+</table>
+<!-- 
+<p>&nbsp;</p>
+<HR WIDTH="100%">
+<H3>Propositions de stages<a name="Stages"></a> :</H3>
+-->
+<UL>
+  <blockquote>
+    <p>&nbsp;</p>
+  </blockquote>
+  <table width="852" border="0" cellspacing="12">
+    <!--DWLayoutTable-->
+  <!--  <tr>
+       <td bgcolor="#F3F3F3"><a href="../STAGES-Master/stage-Orange-flux-data-2018.pdf">Apprentissage &agrave; partir de flux de donn&eacute;s : d&eacute;tection d'anomalies</a></td>
+      <td>Orange Labs / AgroParisTech</td>
+    </tr>
+    <tr>
+      <td bgcolor="E9F9F6"><a href="../STAGES-Master/Sujet-Stage Arkyan Classifier Brevet.pdf">Classification automatique de brevets</a></td>
+      <td>Arkian (Montpellier)</td>
+    </tr>
+    <tr>
+      <td bgcolor="F3F3F3"><a href="../STAGES-Master/sujet-stage-WP1PhDStage-agro-SHIFT.pdf">Personnalized recommendation system for food choices</td>
+      <td>AgroParisTech / Danone</td>
+    </tr>
+   -->
+   <tr>
+      <td bgcolor="E9F9F6">sujet</td>
+      <td>Institution</td>
+    </tr>
+    <tr>
+      <td bgcolor="F3F3F3">sujet</td>
+      <td><p>Institution</p>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="F3F3F3">sujet</td>
+      <td>Institution</td>
+    </tr>
+    <tr>
+      <td bgcolor="F3F3F3">sujet</td>
+      <td>Institution</td>
+    </tr>
+    <tr>
+      <td bgcolor="F3F3F3">sujet</td>
+      <td>Institution</td>
+    </tr>
+  </table>
+</UL>
+<p><br>
+</p>
+<P>
+<!-- ==================================================================== -->
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</BODY>
+</HTML>
